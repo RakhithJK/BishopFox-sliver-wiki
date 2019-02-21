@@ -5,6 +5,7 @@ Requirements for Compiling:
 * `make`, `sed`, `tar`, `wget`, `zip` commands
 * [dep](https://golang.github.io/dep/)
 * [protoc](https://github.com/golang/protobuf)
+* packr (v1) `go get -u github.com/gobuffalo/packr/packr`
 
 Build thin server (for developement)
 
