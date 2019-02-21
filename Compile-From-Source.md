@@ -6,6 +6,7 @@ Requirements for Compiling:
 * [dep](https://golang.github.io/dep/)
 * [protoc](https://github.com/golang/protobuf)
 * packr (v1) `go get -u github.com/gobuffalo/packr/packr`
+* Clone the project into `$GOPATH/src/`
 
 Build thin server (for developement)
 
@@ -16,6 +17,7 @@ $ make
 ```
 
 Statically compile and bundle server with all dependencies and assets:
+
 
 ```
 $ dep ensure
