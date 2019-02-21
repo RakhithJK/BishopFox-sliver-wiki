@@ -8,7 +8,7 @@ Requirements for Compiling:
 * packr (v1) `go get -u github.com/gobuffalo/packr/packr`
 * Clone the project into `$GOPATH/src/`
 
-Build thin server (for developement)
+Build thin server (for development):
 
 ```
 $ dep ensure
@@ -17,7 +17,6 @@ $ make
 ```
 
 Statically compile and bundle server with all dependencies and assets:
-
 
 ```
 $ dep ensure
