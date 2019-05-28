@@ -9,7 +9,7 @@ From scratch without Docker, requirements for compiling:
 * [dep](https://golang.github.io/dep/)
 * [protoc](https://github.com/golang/protobuf)
 * packr (v1) `go get -u github.com/gobuffalo/packr/packr`
-* Clone the project into `$GOPATH/src/`
+* Clone the project into `$GOPATH/src/github.com/bishopfox/sliver`
 
 Build thin server (for development):
 
