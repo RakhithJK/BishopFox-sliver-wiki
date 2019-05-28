@@ -1,7 +1,9 @@
 You'll want to compile from a MacOS or Linux machine, compiling from Windows should work but none of the scripts are designed to run on Windows (you can compile the Windows binaries from MacOS or Linux).
 
-First `git clone` the Sliver repo, then run the `build.py` script, you'll also need to have Docker installed on the machine. 
+### Docker Build
+First `git clone` the Sliver repo, then run the `build.py` script, you'll also need to have Docker installed on the machine. The Docker build includes mingw and Metasploit, so it can take a while to build from scratch but Docker should cache the layers effectively. Sliver will also run it's unit tests as part of the build, and that takes a few minutes too.
 
+### From Scratch
 From scratch without Docker, requirements for compiling:
 
 * Go v1.11 or later
