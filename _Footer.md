@@ -1,1 +1,1 @@
-![](https://www.bishopfox.com/wp-content/themes/bishopfox/img/header-logo_2x.png)
+ 
