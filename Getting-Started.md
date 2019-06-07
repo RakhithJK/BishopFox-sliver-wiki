@@ -15,5 +15,7 @@ __NOTE:__ Sliver has two external dependancies for optional features MinGW and M
 apt-get install mingw-w64 binutils-mingw-w64 g++-mingw-w64
 ```
 
+## Metasploit Setup
 
+We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers). Sliver expects version 5 or later.
 
