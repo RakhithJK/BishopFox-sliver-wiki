@@ -61,6 +61,13 @@ MUSHY_TRADITIONALISM    windows/amd64  false  SHARED_LIB
 SICK_SPY                darwin/amd64   false  EXECUTABLE
 ```
 
+If you need to redownload a previously generated implant use the `regenerate` command:
+
+```
+sliver > regenerate --save /Users/moloch/Desktop/ NEW_GRAPE
+
+[*] Sliver binary saved to: /Users/moloch/Desktop/NEW_GRAPE.exe
+```
 
 
 ## Getting Shells
