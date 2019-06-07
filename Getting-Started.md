@@ -1,4 +1,4 @@
-### Server Setup
+## Server Setup
 
 The server supports Linux, Windows, and MacOS however we recommend running the server on a Linux host, some features may be more difficult to get working on a Windows or MacOS server but all basic built-in functionality should work fine.
 
