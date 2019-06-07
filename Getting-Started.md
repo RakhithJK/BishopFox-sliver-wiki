@@ -6,6 +6,8 @@ Download the latest [release](https://github.com/BishopFox/sliver/releases) for 
 
 __NOTE:__ Sliver has two external dependancies for optional features: MinGW and Metasploit. To enable shellcode/staged payloads you need to install MinGW. To enable MSF integrations you'll need Metasploit installed.
 
+The `Dockerfile` build of Sliver includes both MinGW and Metasploit, but if you plan to run the server using Docker you'll need to forward the appropriate TCP ports (e.g. 80, 443, 31337) yourself.
+
 
 ## MinGW Setup
 
