@@ -9,23 +9,38 @@ __NOTE:__ Sliver has two external dependancies for optional features: MinGW and 
 The `Dockerfile` build of Sliver includes both MinGW and Metasploit, but if you plan to run the server using Docker you'll need to forward the appropriate TCP ports (e.g. 80, 443, 31337) yourself.
 
 
-## MinGW Setup
+### MinGW Setup
 
 In order to enable shellcode/staged/DLL payloads you'll need to install MinGW on the server (clients connecting to the server do not need it installed). By default Sliver will look in the usual places for MinGW binaries but you can override this using the [environment variable](https://github.com/BishopFox/sliver/wiki/Environment-Variables) `SLIVER_CC`.
 
-### Linux
+#### Linux
 
 ```
 apt-get install mingw-w64 binutils-mingw-w64 g++-mingw-w64
 ```
 
-### MacOS
+#### MacOS
 
 ```
 brew install mingw-w64
 ```
 
-## Metasploit Setup
+### Metasploit Setup
 
 We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers), Sliver expects version 5 or later.
 
+## Generating Implants
+
+Generating implants is done using the `generate` command, you must specify at least one C2 endpoint using `--mtls`, `--http`, or `--dns`. Note that when an implant attempts to connect to an endpoint specified using `--http` it will try both HTTPS and then HTTP (if HTTPS fails). We recommend using mutual TLS (`--mtls`) whenever possible. You can also specify an output directory with `--save`, by default the implant will be saved to the current working directory.
+
+```
+sliver > generate --mtls example.com --save /Users/moloch/Desktop
+[*] Generating new windows/amd64 Sliver binary
+[*] Symbol obfuscation is enabled, this process takes about 15 minutes
+
+```
+
+__NOTE:__ The symbol obfuscation process can take 15+ mintues to complete depending on your server's CPU resources. You can skip this step with `--skip-symbols` but a lot of sketchy information will end up in the binaries that get generated. You should only use this flage if you're just playing around, or do not care about stealth.
+
+
+## Getting Shells
