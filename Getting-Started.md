@@ -40,7 +40,7 @@ sliver > generate --mtls example.com --save /Users/moloch/Desktop
 
 ```
 
-__NOTE:__ The symbol obfuscation process can take 15+ mintues to complete depending on your server's CPU resources. You can skip this step with `--skip-symbols` but a lot of sketchy information will end up in the binaries that get generated. You should only use this flage if you're just playing around, or do not care about stealth.
+__IMPORTANT:__ The symbol obfuscation process can take 15+ mintues to complete depending on your server's CPU resources. You can skip this step with `--skip-symbols` but a lot of sketchy information will end up in the binaries that get generated. You should only use this flag if you're just playing around, or do not care about stealth.
 
 
 ## Getting Shells
