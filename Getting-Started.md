@@ -23,5 +23,5 @@ brew install mingw-w64
 
 ## Metasploit Setup
 
-We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers). Sliver expects version 5 or later.
+We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers), Sliver expects version 5 or later.
 
