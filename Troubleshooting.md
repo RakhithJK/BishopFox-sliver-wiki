@@ -2,13 +2,13 @@
 
 ### Server logs
 
-Text log: `~/.sliver/logs/sliver.log`
+`~/.sliver/logs/sliver.log`
 
-JSON log (includes timestamps): `~/.sliver/logs/sliver.json` 
+JSON formatted log (includes timestamps): `~/.sliver/logs/sliver.json` 
 
 ### Client logs
 
-`~/sliver-client/sliver-client.log`
+`~/.sliver-client/sliver-client.log`
 
 # Implants
 
