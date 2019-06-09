@@ -55,7 +55,7 @@ sliver > generate --mtls example.com --save /Users/moloch/Desktop --skip-symbols
 [*] Sliver binary saved to: /Users/moloch/Desktop/PROPER_ANTHONY
 ```
 
-The server will also assign codenames to each generated binary i.e. `NEW_GRAPE.exe` you can rename file to anything you need to but these codenames will still uniquely identify the generated binary. You can also view all previously generated implant binaries with the `slivers` command:
+The server will also assign codenames to each generated binary i.e. `NEW_GRAPE.exe` you can rename the file to anything you need to, but these codenames will still uniquely identify the generated binary (they're inserted at compile-time). You can also view all previously generated implant binaries with the `slivers` command:
 
 ```
 sliver > slivers
@@ -71,7 +71,7 @@ MUSHY_TRADITIONALISM    windows/amd64  false  SHARED_LIB
 SICK_SPY                darwin/amd64   false  EXECUTABLE
 ```
 
-If you need to redownload a previously generated implant use the `regenerate` command:
+If you need to re-download a previously generated implant use the `regenerate` command:
 
 ```
 sliver > regenerate --save /Users/moloch/Desktop/ NEW_GRAPE
