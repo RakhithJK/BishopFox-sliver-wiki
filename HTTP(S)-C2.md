@@ -17,3 +17,12 @@ sliver > http
 ## Static Content
 
 You can manage static content using the `website` command.
+
+## SSL/TLS Certificates
+
+The `http` listener also supports automatic TLS certificates via Let's Encrypt, which can be enabled using the `--lets-encrypt` flag.
+
+```
+sliver > http --domain example.com --lets-encrypt
+
+```
