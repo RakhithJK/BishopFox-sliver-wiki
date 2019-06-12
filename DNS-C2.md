@@ -16,5 +16,5 @@ __IMPORTANT:__ Remember to disable Cloudflare's "cloud" when configuring these r
 
 ### DNS Canaries
 
-DNS Canaries are unique per-binary domains that are optionally inserted during the string obfuscation process that can be used to detect manual analysis of Sliver binaries. These domains are not actually used by the implant code and are deliberately _not obfuscated_ so that the domains show up if someone runs `strings` on the implant. If these domains are ever resolve (and you have a `dns` listener running) you'll get an alert telling which specific file was discovered.
+DNS Canaries are unique per-binary domains that are optionally inserted during the string obfuscation process. These domains are not actually used by the implant code and are deliberately _not obfuscated_ so that they show up if someone runs `strings` on the implant. If these domains are ever resolve (and you have a `dns` listener running) you'll get an alert telling which specific file was discovered.
 
