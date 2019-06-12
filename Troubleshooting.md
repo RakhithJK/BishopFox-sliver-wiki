@@ -1,4 +1,4 @@
-# Logs
+## Logs
 
 ### Server logs
 
@@ -10,6 +10,6 @@ JSON formatted log (includes timestamps): `~/.sliver/logs/sliver.json`
 
 `~/.sliver-client/sliver-client.log`
 
-# Implants
+## Slivers (Implants)
 
 If you need to trouble shoot an issue (connectivity, etc) with an implant try generating it with the `--debug` flag.
