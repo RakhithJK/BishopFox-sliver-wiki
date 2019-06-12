@@ -6,7 +6,7 @@ Use the following steps to configure a domain for DNS C2 (and DNS Canaries), you
 2. Create an `A` record for `ns1` subdomain (i.e. `ns1.example.com`) that points to your `sliver-server`(or redirector) IP address.
 3. Create an NS record with an arbitrary subdomain, for example `1` (i.e. `1.example.com`) which is managed by `ns1.example.com`.
 
-The final configuration should look like:
+The final configuration should look like for the domain `lil-peep.rip`:
 ![DNS Configuration](https://i.imgur.com/hpOnGJp.png)
 
 
