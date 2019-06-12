@@ -1,4 +1,4 @@
-### Setup
+## Setup
 
 Use the following steps to configure a domain for DNS C2 (and DNS Canaries), you can use any DNS provider you wish as long as you setup the records correctly. I recommend setting a TTL of ~5 minutes for each record.
 
@@ -14,7 +14,7 @@ The final configuration should look like for the domain `lil-peep.rip`:
 __IMPORTANT:__ Remember to disable Cloudflare's "cloud" when configuring these records, and to adjust the TTLs.
 
 
-### DNS Canaries
+## DNS Canaries
 
 DNS Canaries are unique per-binary domains that are optionally inserted during the string obfuscation process. These domains are not actually used by the implant code and are deliberately _not obfuscated_ so that they show up if someone runs `strings` on the implant. If these domains are ever resolve (and you have a `dns` listener running) you'll get an alert telling which specific file was discovered.
 
