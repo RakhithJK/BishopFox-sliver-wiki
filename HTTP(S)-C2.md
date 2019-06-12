@@ -17,7 +17,12 @@ sliver > http
 
 ## Static Content
 
-You can manage static content using the `website` command.
+Sliver can stand up a website on your HTTP(S) listener in order to make the server look more legitimate. For example, you could put a default IIS index page here and mimic a normal-looking server in case someone comes by snooping. You can manage static content using the `websites` command. 
+
+```
+websites --website index --web-path / --content ./index.html add
+```
+
 
 ## SSL/TLS Certificates
 
