@@ -8,8 +8,4 @@
 
 `SLIVER_CC_32` - Override path to 32 bit mingw cross compiler
 
-## Infrastructure
 
-`CF_API_KEY` - Cloudflare API key (can also be configured with `config`)
-
-`CF_API_EMAIL` - Cloudflare account email  (can also be configured with `config`)
