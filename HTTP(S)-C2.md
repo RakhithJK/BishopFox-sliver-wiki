@@ -1,3 +1,6 @@
+
+⚠️ __This page is a work in progress__
+
 Sliver supports proxy-aware C2 over both HTTP and HTTPS, however since Sliver does not rely upon the SSL/TLS layer for security these protocols are considered somewhat synonymous.
 
 ## Generate the Sliver (implant)
@@ -12,7 +15,10 @@ sliver > generate --http example.com
 
 ```
 sliver > http
+```
 
+```
+sliver > https
 ```
 
 ## Static Content
@@ -20,7 +26,7 @@ sliver > http
 Sliver can stand up a website on your HTTP(S) listener in order to make the server look more legitimate. For example, you could put a default IIS index page here and mimic a normal-looking server in case someone comes by snooping. You can manage static content using the `websites` command. 
 
 ```
-websites --website index --web-path / --content ./index.html add
+websites --website fake-blog --web-path / --content ./index.html add
 ```
 
 
