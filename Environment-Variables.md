@@ -4,8 +4,9 @@
 
 ## Generate
 
-`SLIVER_CC` - Override path to mingw cross compiler
+`SLIVER_CC_64` - Override path to 64 bit mingw cross compiler
 
+`SLIVER_CC_32` - Override path to 32 bit mingw cross compiler
 
 ## Infrastructure
 
