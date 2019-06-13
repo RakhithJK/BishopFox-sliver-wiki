@@ -24,4 +24,4 @@ Sliver has lots of features that other C2 tools don't have, such as:
 
 Slivers are the best five-color creature tribe in [Magic: The Gathering](https://magic.wizards.com/en), of course! Each sliver is connected to a hive mind and takes on the abilities of every other sliver, exponentially increasing in strength as they gather. 
 
-![Sliver](/.github/images/sliver.jpeg)
+![Sliver](https://raw.githubusercontent.com/BishopFox/sliver/master/.github/images/sliver.jpeg?token=AAGVUDRDHPMSBO5JFR3Q7RC5BL2YA)
