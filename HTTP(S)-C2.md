@@ -35,6 +35,6 @@ websites --website fake-blog --web-path / --content ./index.html add
 The `http` listener also supports automatic TLS certificates via Let's Encrypt, which can be enabled using the `--lets-encrypt` flag.
 
 ```
-sliver > http --domain example.com --lets-encrypt
+sliver > https --domain example.com --lets-encrypt
 
 ```
