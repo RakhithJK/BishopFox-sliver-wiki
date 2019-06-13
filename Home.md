@@ -4,7 +4,7 @@ If you want to use sliver and you're not sure where to start, checkout [getting 
 
 # What is sliver?
 
-Sliver is a Command and Control (C2) system made for penetration testers, red teams, and advanced persistent threat groups. It generates implants (slivers) that can run on virtually every architecture out there, and securely manage these connections through a central server. Sliver supports multiple callback protocols including DNS, TCP, and HTTP to make egress simple. You can even have multiple operators (players) simultaneously commanding your sliver army.
+Sliver is a Command and Control (C2) system made for penetration testers, red teams, and advanced persistent threat groups. It generates implants (slivers) that can run on virtually every architecture out there, and securely manage these connections through a central server. Sliver supports multiple callback protocols including DNS, TCP, and HTTP(S) to make egress simple, even when those pesky blue teams block your domains. You can even have multiple operators (players) simultaneously commanding your sliver army.
 
 TODO: Network diagram
 
