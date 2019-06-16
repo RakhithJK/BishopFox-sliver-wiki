@@ -6,14 +6,15 @@ When the implant cannot directly route TCP traffic back to the C2 server or redi
 
 ## Session Keys
 
-1. Implant requests an public RSA key from the server in the "clear"
+1. Implant requests a public RSA key from the server in the "clear"
 2. Server response with public RSA key in the "clear" (X.509 2048 bit)
-3. Implant verfies RSA public key is signed by trusted authority embedded at compile-time
-4. Implant generates AES session key, encrypts it with the RSA key, and sends it to the server
+3. Implant verfies RSA public key is signed by the trusted authority embedded at compile-time
+4. Implant generates AES session key, encrypts it with the public RSA key, and sends it to the server
 5. Server generates a session ID, encrypts it with the session key using AES-GCM-256, and sends it back
-6. All messages are encrypted with the session key using AES-GCM 256 and associated with via the session ID
+6. All messages are encrypted with the session key using AES-GCM-256 and associated with via the session ID
+7. Each side stores a SHA2-256 hash of each message's ciphertext to detect replayed messages.
 
-__Note:__ "Clear" data may still be encoded/obfuscated but is considered public. Session IDs are also considered public parameters. It's up to the protocol specific `tansports` to handle any data encoding/obfuscation.
+__Note:__ "Clear" data may still be encoded/obfuscated but is considered public. Session IDs are also considered public parameters. It's up to the protocol specific `tansports` to handle any data encoding/obfuscation. Session keys are only stored in memory
 
 ```
 [implant] ---[ Do you have an RSA Key? ]-----> [server]
