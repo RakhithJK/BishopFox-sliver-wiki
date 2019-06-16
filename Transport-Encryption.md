@@ -7,8 +7,8 @@ When the implant cannot directly route TCP traffic back to the C2 server or redi
 ## Session Keys
 
 1. Implant requests a public RSA key from the server in the "clear"
-2. Server response with public RSA key in the "clear" (X.509 2048 bit)
-3. Implant verfies RSA public key is signed by the trusted authority embedded at compile-time
+2. Server responds with a public RSA key in the "clear" (X.509 2048-bit)
+3. Implant verifies RSA public key is signed by the trusted authority embedded at compile-time
 4. Implant generates AES session key, encrypts it with the public RSA key, and sends it to the server
 5. Server generates a session ID, encrypts it with the session key using AES-GCM-256, and sends it back
 6. All messages are encrypted with the session key using AES-GCM-256 and associated with via the session ID
