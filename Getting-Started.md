@@ -124,3 +124,4 @@ You can specify multiple domains and protocols during the generation process. Ri
 sliver > generate --mtls example.com --http foobar.com --dns 1.lil-peep.rip
 ```
 
+Eventually we'll add a feature to manually specify the fallback protocols, or you can add this feature and send up a PR :).
