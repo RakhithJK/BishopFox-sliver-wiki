@@ -16,9 +16,10 @@ When the implant cannot directly route TCP traffic back to the C2 server or redi
 __Note:__ "Clear" data may still be encoded/obfuscated but is considered public. Session IDs are also considered public parameters. It's up to the protocol specific `tansports` to handle any data encoding/obfuscation.
 
 ```
-[implant] ---[ Do you have an RSA Key? ]--> [server]
-[implant] <--[ Here is my RSA Key ]-------- [server]
-[implant] ---[ RSA encrypted AES key ]----> [server]
-[implant] <--[ AES encrypted session ID ]-- [server]
-[implant] <--[ AES encrypted data ]-------> [server]
+[implant] ---[ Do you have an RSA Key? ]-----> [server]
+[implant] <--[ Here is my RSA Key ]----------- [server]
+[implant] ---[ RSA encrypted AES key ]-------> [server]
+[implant] <--[ AES encrypted session ID ]----- [server]
+
+[implant] <--[ AES encrypted session data ]--> [server]
 ```
