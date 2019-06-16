@@ -2,7 +2,7 @@ This document describes the various ways Sliver implants secure communication ba
 
 ## Transport Encryption for HTTP(S) / DNS
 
-When the implant cannot directly route TCP traffic back to the C2 server or redirector the implant may, when configured to do so, connect back to the C2 server over HTTP, HTTPS, or DNS. In an operational environment it may not be posssible to establish a trusted HTTPS connect back to the server, and HTTP/DNS do not implement any tranport encryption so Sliver "brings it's own crypto" to all of these protocols including HTTPS. This allows use to establish secure connections even if the only way out of the network is over a TLS/HTTPS interception proxy.
+When the implant cannot directly route TCP traffic back to the C2 server or redirector the implant may, when configured to do so, connect back to the C2 server over HTTP, HTTPS, or DNS. In an operational environment it may not be posssible to establish a trusted HTTPS connect back to the server, and HTTP/DNS do not implement any tranport encryption so Sliver "brings it's own crypto" to all of these protocols including HTTPS. This allows us to establish secure connections even if the only way out of the network is over a TLS/HTTPS interception proxy.
 
 ## Session Keys
 
@@ -13,7 +13,7 @@ When the implant cannot directly route TCP traffic back to the C2 server or redi
 5. Server generates a session ID, encrypts it with the session key using AES-GCM-256, and sends it back
 6. All messages are encrypted with the session key using AES-GCM 256 and associated with via the session ID
 
-__Note:__ "Clear" data may still be encoded/obfuscated but is considered public. Session IDs are also considered public parameters.
+__Note:__ "Clear" data may still be encoded/obfuscated but is considered public. Session IDs are also considered public parameters. It's up to the protocol specific `tansports` to handle any data encoding/obfuscation.
 
 ```
 [implant] ---[ Do you have an RSA Key? ]--> [server]
