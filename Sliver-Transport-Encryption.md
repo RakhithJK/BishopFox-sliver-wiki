@@ -4,6 +4,8 @@ This document describes the various ways Sliver implants secure communication ba
 
 When the implant cannot directly route TCP traffic back to the C2 server or redirector the implant may, when configured to do so, connect back to the C2 server over HTTP, HTTPS, or DNS. In an operational environment it may not be posssible to establish a trusted HTTPS connect back to the server, and HTTP/DNS do not implement any tranport encryption so Sliver "brings it's own crypto" to all of these protocols including HTTPS. This allows use to establish secure connections even if the only way out of the network is over a TLS/HTTPS interception proxy.
 
+## Session Keys
+
 1. Implant requests an public RSA key from the server in the "clear"
 2. Server response with public RSA key in the "clear" (X.509 2048 bit)
 3. Implant verfies RSA public key is signed by trusted authority embedded at compile-time
