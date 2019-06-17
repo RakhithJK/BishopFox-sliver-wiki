@@ -1,4 +1,4 @@
-This document describes the various ways Sliver implants secure communication back to the C2 server. Note that this does not apply when Mutual TLS is availible.
+This document describes the various ways Sliver implants secure communication back to the C2 server. Note that this does not apply when Mutual TLS is used.
 
 ## Transport Encryption for HTTP(S) / DNS
 
