@@ -4,7 +4,7 @@ This document describes the various ways Sliver implants secure communication ba
 
 When the implant cannot directly route TCP traffic back to the C2 server or redirector the implant may, when configured to do so, connect back to the C2 server over HTTP, HTTPS, or DNS. In an operational environment it may not be posssible to establish a trusted HTTPS connect back to the server and HTTP/DNS do not implement any tranport encryption so Sliver "brings it's own crypto" to all of these protocols including HTTPS. This allows us to establish secure connections even if the only way out of the network is over a HTTPS interception proxy.
 
-## Key Exchange
+### Key Exchange
 
 1. Implant requests a public RSA key from the server in the "clear"
 2. Server responds with a public RSA key in the "clear" (X.509 2048-bit)
@@ -33,7 +33,7 @@ The security goals of this key exchange/setup are:
 * Protection against replay attacks
 * Protection against bit-flipping, padding oracle, etc. attacks
 
-## Known Limitations
+### Known Limitations
 
 The key exchange should provide a reasonable amount of security, however when possible we still recommend using Mutual TLS. There are some known limitations in this scheme that we plan to address in the future, if you spot any or have ideas on improvements please file a ticket or contact us.
 
