@@ -82,7 +82,7 @@ sliver > regenerate --save /Users/moloch/Desktop/ NEW_GRAPE
 
 ## Getting Shells
 
-Before you can catch the shell, you'll first need to start a listener. You use the commands `mtls`, `http`, and `dns` to start listeners for each protocol (`http` is also used for HTTPS). You can use the `jobs` command to view and manage listeners running in the background.
+Before you can catch the shell, you'll first need to start a listener. You use the commands `mtls`, `http`, `https`, and `dns` to start listeners for each protocol (remember endpoints specified with `--http` can connect to a listener started with `https`). You can use the `jobs` command to view and manage listeners running in the background.
 
 ```
 sliver > mtls
