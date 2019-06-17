@@ -118,7 +118,7 @@ PROPER_ANTHONY            6.3 MiB
 
 ## Multiple Domains/Protocols
 
-You can specify multiple domains and protocols during the generation process. Right now Sliver will attempt to use the most performant protcolts first (MTLS -> HTTP(S) -> DNS) using subsequent domains/protocols when connections fail.
+You can specify multiple domains and protocols during the generation process. Right now Sliver will attempt to use the most performant protocols first (MTLS -> HTTP(S) -> DNS) using subsequent domains/protocols when connections fail.
 
 ```
 sliver > generate --mtls example.com --http foobar.com --dns 1.lil-peep.rip
