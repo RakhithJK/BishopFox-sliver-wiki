@@ -1,15 +1,14 @@
 This document describes the various ways Sliver implants secure communication back to the C2 server. Note that this does not apply when Mutual TLS is availible.
 
+## Transport Encryption for HTTP(S) / DNS
+
+When the implant cannot directly route TCP traffic back to the C2 server or redirector the implant may, when configured to do so, connect back to the C2 server over HTTP, HTTPS, or DNS. In an operational environment it may not be posssible to establish a trusted HTTPS connect back to the server, and HTTP/DNS do not implement any tranport encryption so Sliver "brings it's own crypto" to all of these protocols including HTTPS. This allows us to establish secure connections even if the only way out of the network is over a TLS/HTTPS interception proxy.
+
 ### Security Goals
 * Robust data secrecy, integrity, and authenticity
 * Protection against MitM attacks
 * Protection against replay attacks
 * Protection against bit-flipping, padding oracle, etc. attacks
-
-
-## Transport Encryption for HTTP(S) / DNS
-
-When the implant cannot directly route TCP traffic back to the C2 server or redirector the implant may, when configured to do so, connect back to the C2 server over HTTP, HTTPS, or DNS. In an operational environment it may not be posssible to establish a trusted HTTPS connect back to the server, and HTTP/DNS do not implement any tranport encryption so Sliver "brings it's own crypto" to all of these protocols including HTTPS. This allows us to establish secure connections even if the only way out of the network is over a TLS/HTTPS interception proxy.
 
 ## Key Exchange
 
