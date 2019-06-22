@@ -1,4 +1,6 @@
-You'll want to compile from a MacOS or Linux machine, compiling from Windows should work but none of the scripts are designed to run on Windows (you can compile the Windows binaries from MacOS or Linux). If all you have is a Windows machine, using the Docker build will probably the easiest choice.
+You'll want to compile from a MacOS or Linux machine, compiling from native Windows in theory should work but none of the scripts are designed to run on Windows (you can compile the Windows binaries from MacOS or Linux).
+
+If all you have is a Windows machine, the easiest way to build Sliver is using [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and following the Linux instructions below.
 
 ### Docker Build
 The Docker builds are mostly designed for running unit tests, but can be useful if you want a "just do everything" build, you just need to have Docker installed on the machine. First `git clone` the Sliver repo, then run the `build.py` script (the script isn't required but has a few short cuts see `./build.py --help`). Alternatively, execute the following command: 
