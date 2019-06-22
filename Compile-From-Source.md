@@ -17,13 +17,13 @@ From scratch without Docker, requirements for compiling:
 * [dep](https://golang.github.io/dep/) 
   * Linux `curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh`
   * MacOS `brew install dep`
-* [Protobuf 3.7 or later](https://github.com/golang/protobuf) You need both `protoc` and `protoc-gen-go` on your `$PATH`
+* [Protobuf 3.7 or later](https://github.com/golang/protobuf) You need both `protoc` and `protoc-gen-go`
   * [protoc](https://github.com/protocolbuffers/protobuf/releases)
   * `go get -u github.com/golang/protobuf/protoc-gen-go`
 * packr (v1) `go get -u github.com/gobuffalo/packr/packr`
 * Clone the project into `$GOPATH/src/github.com/bishopfox/sliver`
 
-__NOTE:__ Check that you `$GOPATH/bin` is on your `$PATH`
+__NOTE:__ Note that you `$GOPATH/bin` (i.e. `packr`, `protoc-gen-go`) on your `$PATH` as well as `protoc`
 
 Build thin server (for development):
 
