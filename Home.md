@@ -8,7 +8,7 @@ Sliver is a Command and Control (C2) system made for penetration testers, red te
 
 ![image](https://user-images.githubusercontent.com/43555923/59543161-56a38c00-8ebe-11e9-8eb2-ecea457976d1.png)
 
-## Why sliver and not Cobalt Strike / Metasploit / other C2 systems?
+## Why Sliver and not Cobalt Strike / Metasploit / other C2 systems?
 
 Sliver has lots of features that other C2 tools don't have, such as:
 * Dynamic code generation with per-binary obfuscation
