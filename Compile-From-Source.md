@@ -46,4 +46,4 @@ $ make static-windows
 
 ### Windows Builds
 
-If all you have is a Windows machine, the easiest way to build Sliver is using [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and following the Linux instructions below. However, the `sliver-server` cannot be run directly under WSL (database limitations), so you'll want to use WSL to cross-compile a native Windows binary.
+If all you have is a Windows machine, the easiest way to build Sliver is using [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and following the Linux instructions above. However, the `sliver-server` cannot be run directly under WSL (database limitations), so you'll want to use WSL to cross-compile a native Windows binary `make static-windows` and copy it to your Windows file system (i.e. `/mnt/c/Users/foo/Desktop`) and run it using a terminal that supports ANSI sequences such as the [Windows Terminal](https://github.com/microsoft/terminal).
