@@ -29,7 +29,6 @@ __NOTE:__ Note that you need `$GOPATH/bin` (i.e. `packr`, `protoc-gen-go`) on yo
 Build thin server (for development):
 
 ```
-$ dep ensure
 $ ./go-assets.sh
 $ make
 ```
@@ -37,7 +36,6 @@ $ make
 Statically compile and bundle server with all dependencies and assets:
 
 ```
-$ dep ensure
 $ ./go-assets.sh
 $ make static-macos
 $ make static-linux
