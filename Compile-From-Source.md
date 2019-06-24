@@ -24,7 +24,7 @@ From scratch without Docker, requirements for compiling:
 * packr (v1) `go get -u github.com/gobuffalo/packr/packr`
 * Clone the project into `$GOPATH/src/github.com/bishopfox/sliver`
 
-__NOTE:__ Note that you `$GOPATH/bin` (i.e. `packr`, `protoc-gen-go`) on your `$PATH` as well as `protoc`
+__NOTE:__ Note that you need `$GOPATH/bin` (i.e. `packr`, `protoc-gen-go`) on your `$PATH` as well as `protoc`
 
 Build thin server (for development):
 
