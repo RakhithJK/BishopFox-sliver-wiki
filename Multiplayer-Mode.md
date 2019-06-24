@@ -14,6 +14,8 @@ sliver > new-player --operator moloch --lhost example.com
 [*] Saved new client config to: /Users/moloch/Desktop/moloch_example.com.cfg
 ```
 
+__Important:__ Before clients can connect to a server you must start an RPC listener with the `multiplayer` command. The default port is TCP/31337.
+
 You can now give this configuration file `moloch_example.com.cfg` to the operator and they can connect to the server using the `sliver-client` binary. The sliver client will look for configuration files in `~/.sliver-client/configs/` or you can specify an exact config file with the `-config` flag. The configs directory can contain multiple configs for different servers.
 
 ```
