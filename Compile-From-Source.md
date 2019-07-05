@@ -13,7 +13,7 @@ The Docker build includes mingw and Metasploit, so it can take a while to build 
 ### From Scratch (No Docker)
 From scratch without Docker, requirements for compiling:
 
-* Go v1.11 or later
+* Go v1.12 or later
 * `make`, `sed`, `tar`, `wget`, `zip` commands
 * [dep](https://golang.github.io/dep/) 
   * Linux `curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh`
