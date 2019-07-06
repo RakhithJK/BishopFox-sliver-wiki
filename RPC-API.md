@@ -24,9 +24,18 @@ message Envelope {
 }
 ```
 
-There are currently two client RPC implementations written in Go (console client) `client/transport/` and TypeScript/JavaScript (GUI) `gui/rpc/`.
+* __Type__ - Type is a magic constants that tells the recipient the how the message should be parsed. Note that there type values are globally unique, between both `clientpb` and `sliverpb`.
+* __ID__ - Optional random numeric value used to correlate request and responses.
+* __Timeoute__ - Nanoseconds timeout.
+* __Data__ - Protobuf message content.
+* __Err__ - Optional response value that contains error information.
+
+There are currently two client RPC implementations written in Go (console client) located in `client/transport/` and TypeScript/JavaScript (GUI) in `gui/rpc/`.
 
 ## Server-to-Implant RPC
+
+The server-to-implant communication reuses much of the client-to-server code and concepts. However, denoting the start and end of messages is done using protocol-specific symantics; i.e. length prefix encoding is only used if the implant is communicating to the server over mTLS.
+
 
 
 
