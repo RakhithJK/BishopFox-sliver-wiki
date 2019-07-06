@@ -26,7 +26,7 @@ message Envelope {
 
 * __Type__ - Type is a magic constant that tells the recipient how the message should be parsed. Note that Type values are globally unique, between both `clientpb` and `sliverpb`.
 * __ID__ - Optional random numeric value used to correlate request and responses.
-* __Timeoute__ - Nanoseconds timeout.
+* __Timeout__ - Nanoseconds timeout.
 * __Data__ - Protobuf message content.
 * __Err__ - Optional response value that contains error information.
 
