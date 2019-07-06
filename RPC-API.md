@@ -24,4 +24,10 @@ message Envelope {
 }
 ```
 
+There are currently two client RPC implementations written in Go (console client) `client/transport/` and TypeScript/JavaScript (GUI) `gui/rpc/`.
+
+## Server-to-Implant RPC
+
+
+
 
