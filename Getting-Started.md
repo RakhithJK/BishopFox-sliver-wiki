@@ -11,7 +11,7 @@ The `Dockerfile` build of Sliver is mostly designed to run the unit tests but in
 
 ### MinGW Setup (Optional)
 
-In order to enable shellcode/staged/DLL payloads you'll need to install MinGW on the server (clients connecting to the server do not need it installed). By default Sliver will look in the usual places for MinGW binaries but you can override this using the [environment variable](https://github.com/BishopFox/sliver/wiki/Environment-Variables) `SLIVER_CC`.
+In order to enable shellcode/staged/DLL payloads you'll need to install MinGW on the server (clients connecting to the server do not need it installed). By default Sliver will look in the usual places for MinGW binaries but you can override this using the [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables).
 
 #### Linux
 
