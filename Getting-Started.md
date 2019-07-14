@@ -71,7 +71,7 @@ MUSHY_TRADITIONALISM    windows/amd64  false  SHARED_LIB
 SICK_SPY                darwin/amd64   false  EXECUTABLE
 ```
 
-If you need to re-download a previously generated implant use the `regenerate` command:
+If you need to re-download a previously generated implant use the `regenerate` command, note that positional arguments come after the `--flags`:
 
 ```
 sliver > regenerate --save /Users/moloch/Desktop/ NEW_GRAPE
