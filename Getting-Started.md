@@ -4,12 +4,12 @@ The server supports Linux, Windows, and MacOS however we recommend running the s
 
 Download the latest [release](https://github.com/BishopFox/sliver/releases) for your platform, and just run the binary. The first time you run the server it'll need to unpack some assets, which may take a minute or two, subsequent start ups should be faster.
 
-__NOTE:__ Sliver has two external dependancies for optional features: MinGW and Metasploit. To enable shellcode/staged payloads you need to install MinGW. To enable MSF integrations you'll need Metasploit installed.
+__NOTE:__ Sliver has two external dependancies for _optional_ features: MinGW and Metasploit. To enable shellcode/staged payloads you need to install MinGW. To enable MSF integrations you'll need Metasploit installed.
 
 The `Dockerfile` build of Sliver is mostly designed to run the unit tests but includes both MinGW and Metasploit. If you plan to run the server using Docker you'll need to forward the appropriate TCP ports (e.g. 80, 443, 31337) yourself.
 
 
-### MinGW Setup
+### MinGW Setup (Optional)
 
 In order to enable shellcode/staged/DLL payloads you'll need to install MinGW on the server (clients connecting to the server do not need it installed). By default Sliver will look in the usual places for MinGW binaries but you can override this using the [environment variable](https://github.com/BishopFox/sliver/wiki/Environment-Variables) `SLIVER_CC`.
 
@@ -25,7 +25,7 @@ apt-get install mingw-w64 binutils-mingw-w64 g++-mingw-w64
 brew install mingw-w64
 ```
 
-### Metasploit Setup
+### Metasploit Setup (Optional)
 
 We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers), Sliver expects version 5 or later.
 
