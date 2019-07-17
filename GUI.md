@@ -1,3 +1,6 @@
+⚠️ The GUI is still under active developement, see the `gui` branch.
+
+
 # Sliver GUI
 
 Electron based Sliver GUI written in Angular/TypeScript.
