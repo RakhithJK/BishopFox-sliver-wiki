@@ -29,7 +29,7 @@ This is my attempt at making a _reasonably_ secure Electron application. High le
 * Node v12.4.0
 * npm v6.9.0
 
-From this directory:
+From the `gui/` directory:
 
 ```bash
 npm install
