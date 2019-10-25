@@ -35,4 +35,20 @@ sliver > dns --domains 1.example.com.
 
 You can view previously generated canaries with the `canaries` command.
 
+## Ubuntu
 
+__NOTE:__ On recent versions of Ubuntu, you may need to disable the piece of shit that is `systemd-resolved` as this binds to your local UDP:53 and fucks up everything about how DNS is supposed to work. To use a sane DNS configuration run the following commands as root because `resolved` probably broke `sudo` too:
+
+```bash
+systemctl disable systemd-resolved.service
+systemctl stop systemd-resolved
+rm -f /etc/resolv.conf
+vim /etc/resolv.conf
+```
+
+Add a normal `resolv.conf`:
+
+```
+nameserver 1.1.1.1
+nameserver 8.8.8.8
+```
