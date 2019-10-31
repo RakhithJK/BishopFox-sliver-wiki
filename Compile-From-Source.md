@@ -13,11 +13,8 @@ The Docker build includes mingw and Metasploit, so it can take a while to build 
 ### From Scratch (No Docker)
 From scratch without Docker, requirements for compiling:
 
-* Go v1.12 or later
+* Go v1.13 or later
 * `make`, `sed`, `tar`, `wget`, `zip` commands
-* [dep](https://golang.github.io/dep/) 
-  * Linux `curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh`
-  * MacOS `brew install dep`
 * [Protobuf 3.7 or later](https://github.com/golang/protobuf) You need both `protoc` and `protoc-gen-go`
   * [protoc](https://github.com/protocolbuffers/protobuf/releases)
   * `go get -u github.com/golang/protobuf/protoc-gen-go`
