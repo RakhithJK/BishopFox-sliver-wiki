@@ -37,7 +37,7 @@ You can view previously generated canaries with the `canaries` command.
 
 ### Ubuntu
 
-__NOTE:__ On recent versions of Ubuntu, you may need to disable the piece of shit that is `systemd-resolved` as this binds to your local UDP:53 and fucks up everything about how DNS is supposed to work. To use a sane DNS configuration run the following commands as root because `resolved` probably broke `sudo` too:
+__NOTE:__ On recent versions of Ubuntu, you may need to disable `systemd-resolved` as this binds to your local UDP:53 and fucks up everything about how DNS is supposed to work. To use a sane DNS configuration run the following commands as root because `resolved` probably broke `sudo` too:
 
 ```bash
 systemctl disable systemd-resolved.service
