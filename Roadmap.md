@@ -15,7 +15,18 @@
   * DNS record management 
   * Pivot generation (API Gateway, etc)
 * Better support for asynchronous commands
+* Staging (Eggs)
+  * Separate the listener / stager logic in two distinct RPC commands
+* Agent --> Server RPC requests (agent triggered sliver generation)
+* MacOS
+  * Mach-O loader
+* Windows
+  * Process injection profiles
+  * Enhance evasion techniques (PPID/Args spoofing, protect, etc.)
 
 ## Backlog
 
 * Remote builders to avoid tricky cross-compiler targets 
+* 3rd party C2 channels (Slack, Teams, S3, etc.)
+* Fix SMB named pipe pivots
+* Better scripting support (agent and server)
