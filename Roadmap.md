@@ -3,6 +3,7 @@
 ## Roadmap
 
 * gRPC for Client to Server communication
+* Better documentation for code, deployment, and usage
 * C2 Improvements
   * DNS code cleanup/refactor
   * DNS case-sensitive encoder fingerprint/detection
