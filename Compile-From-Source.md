@@ -21,7 +21,7 @@ From scratch without Docker, requirements for compiling:
   * [protoc](https://github.com/protocolbuffers/protobuf/releases)
 * `protoc-gen-go` (v1.3.5, see below)
 * `packr` (v1.30.1, see below)
-* Clone the project into `$GOPATH/src/github.com/bishopfox/sliver`
+* Clone `github.com/bishopfox/sliver`
 
 __NOTE:__ Note that you will need `packr`, `protoc-gen-go`, and `protoc` on your `$PATH`
 
