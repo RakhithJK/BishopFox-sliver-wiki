@@ -17,8 +17,8 @@ From scratch without Docker, requirements for compiling:
 * `make`, `sed`, `tar`, `wget`, `zip` commands
 * [Protobuf 3.7 or later](https://github.com/golang/protobuf) You need both `protoc` and `protoc-gen-go`
   * [protoc](https://github.com/protocolbuffers/protobuf/releases)
-  * `go get -u github.com/golang/protobuf/protoc-gen-go`
-* packr (v1) `go get -u github.com/gobuffalo/packr/packr`
+  * `protoc-gen-go` (v1.3.5)
+  * `packr` (v1.30.1)
 * Clone the project into `$GOPATH/src/github.com/bishopfox/sliver`
 
 __NOTE:__ Note that you need `$GOPATH/bin` (i.e. `packr`, `protoc-gen-go`) on your `$PATH` as well as `protoc`
