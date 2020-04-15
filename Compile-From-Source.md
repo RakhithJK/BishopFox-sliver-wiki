@@ -2,6 +2,7 @@ You'll want to compile from a MacOS or Linux machine, compiling from native Wind
 
 
 ### Docker Build
+
 The Docker builds are mostly designed for running unit tests, but can be useful if you want a "just do everything" build, you just need to have Docker installed on the machine. First `git clone` the Sliver repo, then run the `build.py` script (the script isn't required but has a few short cuts see `./build.py --help`). Alternatively, execute the following command: 
 
 ```
@@ -11,17 +12,42 @@ docker build -t sliver .
 The Docker build includes mingw and Metasploit, so it can take a while to build from scratch but Docker should cache the layers effectively. Sliver will also run it's unit tests as part of the build, and that takes a few minutes too.
 
 ### From Scratch (No Docker)
+
 From scratch without Docker, requirements for compiling:
 
 * Go v1.13 or later
 * `make`, `sed`, `tar`, `wget`, `zip` commands
 * [Protobuf 3.7 or later](https://github.com/golang/protobuf) You need both `protoc` and `protoc-gen-go`
   * [protoc](https://github.com/protocolbuffers/protobuf/releases)
-  * `protoc-gen-go` (v1.3.5)
-  * `packr` (v1.30.1)
+  * `protoc-gen-go` (v1.3.5, see below)
+  * `packr` (v1.30.1, see below)
 * Clone the project into `$GOPATH/src/github.com/bishopfox/sliver`
 
 __NOTE:__ Note that you need `$GOPATH/bin` (i.e. `packr`, `protoc-gen-go`) on your `$PATH` as well as `protoc`
+
+#### `protoc-gen-go`
+
+To install v1.3.5 you'll need to run the following commands:
+
+```
+wget -O protoc-gen-go.tar.gz https://github.com/golang/protobuf/archive/v1.3.5.tar.gz
+tar xvf protoc-gen-go.tar.gz
+cd protobuf-1.3.5
+make install
+```
+
+#### `packr`
+
+To install v1.30.1 you'll need to run the following commands:
+
+```
+wget -O packr.tar.gz https://github.com/gobuffalo/packr/archive/v1.30.1.tar.gz
+tar xvf packr.tar.gz
+cd packr-1.30.1
+make install
+```
+
+#### Sliver Server
 
 Build thin server (for development):
 
