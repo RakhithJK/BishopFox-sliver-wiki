@@ -23,7 +23,7 @@ From scratch without Docker, requirements for compiling:
 * `packr` (v1.30.1, see below)
 * Clone `github.com/bishopfox/sliver`
 
-__NOTE:__ Note that you will need `packr`, `protoc-gen-go`, and `protoc` on your `$PATH`
+__NOTE:__ Make sure you have `packr`, `protoc-gen-go`, and `protoc` on your `$PATH`
 
 #### `protoc-gen-go`
 
