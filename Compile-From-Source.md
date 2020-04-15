@@ -17,7 +17,7 @@ From scratch without Docker, requirements for compiling:
 
 * Go v1.14 or later
 * `make`, `sed`, `tar`, `wget`, `zip` commands
-* [Protobuf 3.11 or later](https://github.com/golang/protobuf)
+* Protobuf compiler (i.e., `protoc`) 3.11 or later
   * [protoc](https://github.com/protocolbuffers/protobuf/releases)
 * `protoc-gen-go` (v1.3.5, see below)
 * `packr` (v1.30.1, see below)
