@@ -15,9 +15,9 @@ The Docker build includes mingw and Metasploit, so it can take a while to build 
 
 From scratch without Docker, requirements for compiling:
 
-* Go v1.13 or later
+* Go v1.14 or later
 * `make`, `sed`, `tar`, `wget`, `zip` commands
-* [Protobuf 3.7 or later](https://github.com/golang/protobuf)
+* [Protobuf 3.11 or later](https://github.com/golang/protobuf)
   * [protoc](https://github.com/protocolbuffers/protobuf/releases)
 * `protoc-gen-go` (v1.3.5, see below)
 * `packr` (v1.30.1, see below)
