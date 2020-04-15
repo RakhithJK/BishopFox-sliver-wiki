@@ -55,7 +55,7 @@ Sliver embeds its own version of the Go compiler and related tools. Run the foll
 $ ./go-assets.sh
 ```
 
-#### Sliver Server
+#### Sliver
 
 Build thin server (for development):
 
