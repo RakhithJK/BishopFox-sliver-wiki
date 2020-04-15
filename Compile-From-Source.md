@@ -71,7 +71,7 @@ $ make static-linux
 $ make static-windows
 ```
 
-__NOTE:__ Static builds do not include the optional dependencies: mingw and Metasploit.
+__NOTE:__ Static builds do not include the optional runtime dependencies: mingw and Metasploit.
 
 ### Windows Builds
 
