@@ -47,19 +47,25 @@ cd packr-1.30.1
 make install
 ```
 
+#### Go Assets
+
+Sliver embeds its own version of the Go compiler and related tools. Run the following script to download these static assets. You need to do this at least once before running `make`:
+
+```
+$ ./go-assets.sh
+```
+
 #### Sliver Server
 
 Build thin server (for development):
 
 ```
-$ ./go-assets.sh
 $ make
 ```
 
 Statically compile and bundle server with all dependencies and assets:
 
 ```
-$ ./go-assets.sh
 $ make static-macos
 $ make static-linux
 $ make static-windows
