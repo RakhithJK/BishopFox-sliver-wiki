@@ -32,3 +32,4 @@
 * 3rd party C2 channels (Slack, Teams, S3, etc.)
 * Fix SMB named pipe pivots
 * Better scripting support (agent and server)
+* Seemless process migration on Windows
