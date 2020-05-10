@@ -22,4 +22,4 @@ $ cat ~/.sliver/configs/server.json
 
 #### systemd
 
-With this config you can easily setup a [systemd sevice](https://www.linode.com/docs/quick-answers/linux/start-service-at-boot/)
+With this config you can easily setup a [systemd service](https://www.linode.com/docs/quick-answers/linux/start-service-at-boot/) or init script.
