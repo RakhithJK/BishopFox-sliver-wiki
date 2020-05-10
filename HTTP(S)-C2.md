@@ -41,6 +41,24 @@ The implant attempts to auto-detect proxy settings using a modified version of t
 1. HTTPS direct connect
 1. HTTP direct connect
 
+Windows:
+   * Configuration File
+   * Environment Variable: HTTPS_PROXY, HTTP_PROXY, FTP_PROXY, or ALL_PROXY. NO_PROXY is respected.
+   * Internet Options: Automatically detect settings (WPAD)
+   * Internet Options: Use automatic configuration script (PAC)
+   * Internet Options: Manual proxy server
+   * WINHTTP: (netsh winhttp)
+
+Linux:
+    * Configuration File
+    * Environment Variable: HTTPS_PROXY, HTTP_PROXY, FTP_PROXY, or ALL_PROXY. NO_PROXY is respected.
+
+MacOS:
+    * Configuration File
+    * Environment Variable: HTTPS_PROXY, HTTP_PROXY, FTP_PROXY, or ALL_PROXY. NO_PROXY is respected.
+    * Network Settings: scutil
+
+
 
 ## Start the Listener 
 
