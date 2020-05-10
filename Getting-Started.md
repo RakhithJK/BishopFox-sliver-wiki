@@ -79,6 +79,11 @@ sliver > regenerate --save /Users/moloch/Desktop/ NEW_GRAPE
 [*] Sliver binary saved to: /Users/moloch/Desktop/NEW_GRAPE.exe
 ```
 
+#### Additional Details
+
+For addition details about each C2 please see:
+* [HTTP(S) C2](https://github.com/BishopFox/sliver/wiki/HTTP(S)-C2)
+* [DNS C2](https://github.com/BishopFox/sliver/wiki/DNS-C2)
 
 ## Getting Shells
 
