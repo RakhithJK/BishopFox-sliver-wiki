@@ -45,18 +45,15 @@ The implant attempts to auto-detect proxy settings using a modified version of t
 #### Proxy Configuration
 
 The priority of retrieval is the following:
--  **Windows**:
-   - Configuration File
+-  **Windows**
    - Environment Variable: `HTTPS_PROXY`, `HTTP_PROXY`, `FTP_PROXY`, or `ALL_PROXY`. `NO_PROXY` is respected.
    - Internet Options: Automatically detect settings (`WPAD`)
    - Internet Options: Use automatic configuration script (`PAC`)
    - Internet Options: Manual proxy server
    - WINHTTP: (`netsh winhttp`)
-- **Linux**:
-   - Configuration File
+- **Linux**
    - Environment Variable: `HTTPS_PROXY`, `HTTP_PROXY`, `FTP_PROXY`, or `ALL_PROXY`. `NO_PROXY` is respected.
-- **MacOS**:
-   - Configuration File
+- **MacOS**
    - Environment Variable: `HTTPS_PROXY`, `HTTP_PROXY`, `FTP_PROXY`, or `ALL_PROXY`. `NO_PROXY` is respected.
    - Network Settings: `scutil`
 
