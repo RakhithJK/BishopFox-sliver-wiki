@@ -4,7 +4,7 @@ __Note:__ This protocol may go across various `transports` like HTTP, HTTPS, mTL
 
 ### Envelope
 
-All messages are wrapped in an Envelope protobuf data structure, which describes the message and contiains some other metadata about the message.
+All messages are wrapped in an Envelope protobuf data structure, which describes the message and contains some other metadata about the message.
 
 ```protobuf
 message Envelope {
