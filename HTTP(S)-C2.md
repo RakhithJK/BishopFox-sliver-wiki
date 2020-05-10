@@ -93,7 +93,7 @@ sliver > http --website fake-blog --domain example.com
 
 ## SSL/TLS Certificates
 
-The `http` listener also supports automatic TLS certificates via Let's Encrypt, which can be enabled using the `--lets-encrypt` flag.
+By default when using the `https` listener Sliver will simply generate a random self-signed certificate. However, other options do exist. The `https` listener also supports automatic TLS certificates via Let's Encrypt, which can be enabled using the `--lets-encrypt` flag.
 
 ```
 sliver > https --domain example.com --lets-encrypt
