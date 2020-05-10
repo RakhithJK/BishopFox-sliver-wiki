@@ -1,4 +1,4 @@
-## Setup
+# Setup
 
 Use the following steps to configure a domain for DNS C2 (and DNS Canaries), you can use any DNS provider you wish as long as you setup the records correctly. I recommend setting a TTL of ~5 minutes for each record.
 
@@ -52,3 +52,5 @@ Add a normal `resolv.conf`:
 nameserver 1.1.1.1
 nameserver 8.8.8.8
 ```
+
+# Under the Hood
