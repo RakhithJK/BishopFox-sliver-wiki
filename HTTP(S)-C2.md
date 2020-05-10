@@ -91,6 +91,9 @@ sliver > https --domain example.com --lets-encrypt
 
 ```
 
+This uses Let's Encrypt/ACME HTTP validation, so the listener will need the ability to start a public listener and you'll need to have the DNS for your `--domain` pointed to the Sliver server.
+
+
 # Under the Hood
 
 
