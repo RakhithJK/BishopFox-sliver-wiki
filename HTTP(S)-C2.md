@@ -85,6 +85,12 @@ Each "website" is identified by a name (`fake-blog` in the example above) and is
 
 __Note:__ C2 related messages are identified, intercepted, and responded to prior to checking for user-provided `website` content, so you can actually map content to any URL used for C2.
 
+To use your website with an HTTP(S) listener, specify it using `--website` when you start the listener:
+
+```
+sliver > http --website fake-blog --domain example.com
+```
+
 ## SSL/TLS Certificates
 
 The `http` listener also supports automatic TLS certificates via Let's Encrypt, which can be enabled using the `--lets-encrypt` flag.
@@ -96,6 +102,11 @@ sliver > https --domain example.com --lets-encrypt
 
 This uses Let's Encrypt/ACME HTTP validation, so the listener will need the ability to start a public listener and you'll need to have the DNS for your `--domain` pointed to the Sliver server.
 
+You can also upload your own SSL/TLS certificate/key pairs:
+
+```
+sliver > https --domain example.com --cert ./cert.pem --key ./key.pem --website fake-blog
+```
 
 # Under the Hood
 
