@@ -75,12 +75,15 @@ sliver > http --domain example.com
 
 ## Static Content
 
-Sliver can stand up a website on your HTTP(S) listener in order to make the server look more legitimate. For example, you could put a default IIS index page here and mimic a normal-looking server in case someone comes by snooping. You can manage static content using the `websites` command. 
+Sliver can stand up a website on your HTTP(S) listener in order to make the server look more legitimate. For example, you could put a default IIS index page here and mimic a normal-looking server in case someone comes by snooping. You can manage static content using the `websites` command (see `websites --help`):
 
 ```
 websites --website fake-blog --web-path / --content ./index.html add
 ```
 
+Each "website" is identified by a name (`fake-blog` in the example above) and is essentially just key<->value pairs request paths (e.g. `/foo/bar.html`) and response's content. Currently we don't support any regex matching for paths, it has to be an exact match, so keep that in mind if you're linking to content.
+
+__Note:__ C2 related messages are identified, intercepted, and responded to prior to checking for user-provided `website` content, so you can actually map content to any URL used for C2.
 
 ## SSL/TLS Certificates
 
