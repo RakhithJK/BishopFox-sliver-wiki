@@ -1,4 +1,6 @@
-This page documents the protocol used to communicate between the server and the implant (sliver), not that this protocol may go across various `transports` like HTTP, HTTPS, mTLS, or DNS.
+This page documents the protocol used to communicate between the server and the implant. 
+
+__Note:__ This protocol may go across various `transports` like HTTP, HTTPS, mTLS, or DNS. It's up to each transport to decided how to encoder and transfer the protobuf messages.
 
 ### Envelope
 
