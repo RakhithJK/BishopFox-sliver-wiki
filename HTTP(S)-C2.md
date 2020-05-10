@@ -44,13 +44,18 @@ The implant attempts to auto-detect proxy settings using a modified version of t
 
 ## Start the Listener 
 
+To start an HTTP listener use the `http` command, with no parameters this will start a listener on port 80 and respond to any domain (i.e., HTTP `Host:`) that comes in:
+
 ```
 sliver > http
 ```
 
+You can optionally restrict the listener to only respond to specific domains using the `--domain` flag:
+
 ```
-sliver > https
+sliver > http --domain example.com
 ```
+
 
 ## Static Content
 
