@@ -1,4 +1,4 @@
-__⚠️__ The GUI is still under active development and NOT feature complete, but the code may be of interested to other developers or curious hackers. See the `gui` branch.
+__⚠️ IMPORTANT:__ The GUI is still under active development and NOT feature complete, but the code may be of interested to other developers or curious hackers. See the `gui` branch.
 
 Electron based Sliver GUI written in Angular/TypeScript, for an overview of the GUI architecture and security considerations please read [Reasonably Secure Electron](https://know.bishopfox.com/research/reasonably-secure-electron).
 
