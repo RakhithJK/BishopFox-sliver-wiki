@@ -10,6 +10,8 @@ Sliver supports proxy-aware (auto-detected) C2 over both HTTP and HTTPS, however
 
 Sliver implants are compiled with a baked-in (but obfuscated of course) server domain that they will reach back out to. To generate a sliver implant that communicates to a server at `example.com` run the following:
 
+#### Basic Example
+
 ```
 sliver > generate --http example.com --os mac
 
@@ -17,6 +19,8 @@ sliver > generate --http example.com --os mac
 [*] Build completed in 00:00:05
 [*] Implant saved to /Users/moloch/Desktop/WORKING_HACIENDA
 ```
+
+#### Multiple Domains
 
 You can also specify multiple domains, in the event the implant cannot connect to the first it will subsequently attempt to connection to each domain you specified. Subsequent attempts are made based on the `--reconnect` argument (default is every 60 seconds):
 
