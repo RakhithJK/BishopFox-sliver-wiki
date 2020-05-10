@@ -1,7 +1,10 @@
 
 ⚠️ __This page is a work in progress__
 
-Sliver supports proxy-aware C2 over both HTTP and HTTPS, however since Sliver does not rely upon the SSL/TLS layer for security these protocols are considered somewhat synonymous.
+# Setup
+
+Sliver supports proxy-aware C2 over both HTTP and HTTPS, however since Sliver does not rely upon the SSL/TLS layer for security these protocols are considered somewhat synonymous. There are separate commands for the listeners but an implant generated with `--http` may attempt to connect over both HTTP and HTTPS.
+ 
 
 ## Generate the Sliver (implant)
 Sliver implants are compiled with a baked-in (but obfuscated of course) server domain that they will reach back out to. To generate a sliver implant that communicates to a server at example.com, run the following:
@@ -38,3 +41,8 @@ The `http` listener also supports automatic TLS certificates via Let's Encrypt, 
 sliver > https --domain example.com --lets-encrypt
 
 ```
+
+# Under the Hood
+
+
+
