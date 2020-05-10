@@ -44,7 +44,7 @@ The implant attempts to auto-detect proxy settings using a modified version of t
 
 #### Proxy Configuration
 
-The priority of retrieval is the following.
+The priority of retrieval is the following:
 -  **Windows**:
    - Configuration File
    - Environment Variable: `HTTPS_PROXY`, `HTTP_PROXY`, `FTP_PROXY`, or `ALL_PROXY`. `NO_PROXY` is respected.
