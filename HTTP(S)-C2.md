@@ -129,11 +129,10 @@ The high level process to generate and send a standard session request is (note:
 
 1. Randomly generate the request path using built-in path segments. The path will have one of the following extensions, which indicate the type of request. This is distinct from a _message type_, the message type (i.e., the type of command) is in the encrypted so it cannot be determined without the [session key](https://github.com/BishopFox/sliver/wiki/Transport-Encryption). Everything in the path except for the extension is ignored by the server:
 
-* `.txt` = RSA key exchange
-* `.jsp` = Start session
-* `.php` = Session messages
+* `.txt` = The server's public RSA key
+* `.jsp` = Initialize session
+* `.php` = Encrypted session messages
 * `.js` = Long poll endpoint
-* `.png` = Stop/kill session
 
 2. Randomly select an encoder from `sliver/encoders`, an encoder defines how the message we're trying to send to the server gets encoded. Note that we're always encoding the ciphertext of a message, these encoders are purely for obfuscation _not security_. The currently supported encoders are:
 * __Base64__ Base64 with a custom alphabet so that it's not interoperable with standard Base64
