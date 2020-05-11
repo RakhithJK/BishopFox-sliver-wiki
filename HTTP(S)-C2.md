@@ -123,7 +123,10 @@ The primary goals of the existing HTTP C2 design are to:
 
 This is basically something I just made up, but the idea is that instead of creating custom C2 profiles that define where to put data in an HTTP request we [procedurally generate](https://en.wikipedia.org/wiki/Procedural_generation) an HTTP request with the data in it. In practice this seems to work pretty well, though the number of variations built into Sliver is somewhat limited right now. If the technique proves to work well in the field we'll likely expand it (and at some point it may be a good idea to base the generation based on some type of seeded RNG so that a given request can be regenerated given a seed).
 
-The high level process to generate and send a request is:
+#### Implant-side
+
+The high level process to generate and send a standard session request is (note: this is all after the key exchange, which I'm skipping for now):
+
 1. Randomly generate the request path using built-in path segments. The path will have on of the following extensions, which indicate the type of message. Everything in the path except for the extension is ignored by the server:
 
 * `.txt` = RSA key exchange
@@ -152,8 +155,13 @@ encoderId := nonce % EncoderModulus
 
 The nonce is included in the request as the query parameter `_`, the idea is that this a standard pattern for "cache busting" and at a glance looks legitimate. The server also ignores any request that does not contain a valid nonce, just in case any pesky blue teamers come sniffing around the web server. A "NOP" nonce is also supported, which is an encoder ID of zero (i.e. the modulo of the nonce equals zero).
 
+4. Send the request to the server, this could be any valid transport such as HTTP, HTTPS, or over a proxy -the same request format is always used for any HTTP-like protocol.
 
+#### Server-side
 
+5. When the server receives the request it will route the request to a given handler based on the requested path's extension as detailed above (in this case we're talking about paths that end in `.php`).
+
+6. Check that the request contains a valid nonce, if the request does not contain a valid nonce it is ignored from a C2 standpoint but the server may still respond with `website` content.
 
 
 
