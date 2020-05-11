@@ -136,7 +136,7 @@ The high level process to generate and send a standard session request is (note:
 * `.png` = Stop/kill session
 
 2. Randomly select an encoder from `sliver/encoders`, an encoder defines how the message we're trying to send to the server gets encoded. The currently supported encoders are:
-* Base64 (with a custom alphabet)
+* Base64 - Base64 with a custom alphabet so that it's not interoperable with standard Base64
 * Hex - Standard hexadecimal encoding with ASCII characters
 * Gzip - Standard gzip
 * English - Encodes arbitrary data as English ASCII text
@@ -163,5 +163,12 @@ The nonce is included in the request as the query parameter `_`, the idea is tha
 
 6. Check that the request contains a valid nonce, if the request does not contain a valid nonce it is ignored from a C2 standpoint but the server may still respond with `website` content.
 
+7. Determine the encoder based on the nonce, decode and decrypt the request. 
+
+8. Execute any server-side processing.
+
+9. Should the request merit a response, encode the encrypted response using the same encoder as the request. By using the same encoder as the request we ensure the implant supports a given encoder (in case of a version mismatch between implant and server) and allows the implant to limit the encoders used if it so chooses.
+
+10. Send the response back to the implant.
 
 
