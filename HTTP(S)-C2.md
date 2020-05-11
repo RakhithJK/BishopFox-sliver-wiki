@@ -121,10 +121,10 @@ The primary goals of the existing HTTP C2 design are to:
 
 ### Procedural C2
 
-This is basically something I just made up, but the idea is that instead of creating custom C2 profiles that define where to put data in an HTTP request we [procedurally generate](https://en.wikipedia.org/wiki/Procedural_generation) an HTTP request with the data in it. In practice this seems to work pretty well, though the number of variations built into Sliver is somewhat limited right now if the technique works we'll expand it. At some point it may be a good idea to base the generation based on some type of seeded RNG so that a given request can be regenerated given a seed, but the current implementation doesn't support this, it just randomly selects everything. 
+This is basically something I just made up, but the idea is that instead of creating custom C2 profiles that define where to put data in an HTTP request we [procedurally generate](https://en.wikipedia.org/wiki/Procedural_generation) an HTTP request with the data in it. In practice this seems to work pretty well, though the number of variations built into Sliver is somewhat limited right now. If the technique proves to work well in the field we'll likely expand it (and at some point it may be a good idea to base the generation based on some type of seeded RNG so that a given request can be regenerated given a seed).
 
-The high level process to send a request is:
-1. Randomly generate the request path. The path will have on of the following extensions, which indicate the type of message:
+The high level process to generate and send a request is:
+1. Randomly generate the request path using built-in path segments. The path will have on of the following extensions, which indicate the type of message. Everything in the path except for the extension is ignored by the server:
 
 * `.txt` = RSA key exchange
 * `.jsp` = Start session
