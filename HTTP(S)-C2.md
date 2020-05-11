@@ -117,7 +117,7 @@ The primary goals of the existing HTTP C2 design are to:
 
 * __Reliable Connections__ The implants foremost goal is to get a connection out of the network, regardless of the environment's configuration. 
 * __Data Security__ I won't cover this here, but [click here](https://github.com/BishopFox/sliver/wiki/Transport-Encryption) for details.
-* __Network Layer Evasion__ C2 messages should be hard to detect from the network layer alone, without the user having to build custom profiles. This is done via "Procedural C2" as detailed below. 
+* __Network Layer Evasion__ C2 messages should be hard to detect from the network layer, this is done via "Procedural C2" as detailed below. 
 
 ### Procedural C2
 
@@ -127,7 +127,7 @@ This is basically something I just made up, but the idea is that instead of crea
 
 The high level process to generate and send a standard session request is (note: this is all after the key exchange, which I'm skipping for now):
 
-1. Randomly generate the request path using built-in path segments. The path will have on of the following extensions, which indicate the type of message. Everything in the path except for the extension is ignored by the server:
+1. Randomly generate the request path using built-in path segments. The path will have one of the following extensions, which indicate the type of message. Everything in the path except for the extension is ignored by the server:
 
 * `.txt` = RSA key exchange
 * `.jsp` = Start session
