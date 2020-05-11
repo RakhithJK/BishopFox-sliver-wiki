@@ -143,14 +143,14 @@ The high level process to generate and send a request is:
 
 Each of these encoders has a unique "Encoder ID," which is currently hardcoded but we'll probably randomly generate these per-server in the future.
 
-3. Generate a `nonce`, the nonce is equal to a random number times the `EncoderModulus` plus the encoder ID; the `EncoderModulus` is a constant value. The server does the opposite (nonce modulo `EncoderModulus`) to determine the original Encoder ID.
+3. Generate a `nonce`, the nonce is equal to a random number times the `EncoderModulus` plus the encoder ID; the `EncoderModulus` is currently a hardcoded constant value, but we may generate this per-server in the future. The server does the opposite (nonce modulo `EncoderModulus`) to determine the original Encoder ID.
 
 ```
 nonce := (insecureRand.Intn(maxN) * EncoderModulus) + encoderID
 encoderId := nonce % EncoderModulus
 ```
 
-The nonce is included in the request as the query parameter `_`, the idea is that this a standard pattern for "cache busting" and at a glance looks legitimate. The server also ignores any request that does not contain a valid nonce. A "NOP" nonce is also supported, which is an encoder ID of zero (i.e. the modulo of the nonce equals zero).
+The nonce is included in the request as the query parameter `_`, the idea is that this a standard pattern for "cache busting" and at a glance looks legitimate. The server also ignores any request that does not contain a valid nonce, just in case any pesky blue teamers come sniffing around the web server. A "NOP" nonce is also supported, which is an encoder ID of zero (i.e. the modulo of the nonce equals zero).
 
 
 
