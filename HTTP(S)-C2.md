@@ -127,7 +127,7 @@ This is basically something I just made up, but the idea is that instead of crea
 
 The high level process to generate and send a standard session request is (note: this is all after the key exchange, which I'm skipping for now):
 
-1. Randomly generate the request path using built-in path segments. The path will have one of the following extensions, which indicate the type of message. Everything in the path except for the extension is ignored by the server:
+1. Randomly generate the request path using built-in path segments. The path will have one of the following extensions, which indicate the type of request. This is distinct from a _message type_, the message type (i.e., the type of command) is in the encrypted so it cannot be determined without the [session key](https://github.com/BishopFox/sliver/wiki/Transport-Encryption). Everything in the path except for the extension is ignored by the server:
 
 * `.txt` = RSA key exchange
 * `.jsp` = Start session
