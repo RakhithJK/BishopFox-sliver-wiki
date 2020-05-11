@@ -135,14 +135,14 @@ The high level process to generate and send a standard session request is (note:
 * `.js` = Long poll endpoint
 * `.png` = Stop/kill session
 
-2. Randomly select an encoder from `sliver/encoders`, an encoder defines how the message we're trying to send to the server gets encoded. The currently supported encoders are:
-* Base64 - Base64 with a custom alphabet so that it's not interoperable with standard Base64
-* Hex - Standard hexadecimal encoding with ASCII characters
-* Gzip - Standard gzip
-* English - Encodes arbitrary data as English ASCII text
-* PNG - Encodes arbitrary data into valid PNG image files
-* Gzip+English - A combination of the Gzip and English encoders
-* Base64+Gzip - A combination of the Base64 and Gzip encoders
+2. Randomly select an encoder from `sliver/encoders`, an encoder defines how the message we're trying to send to the server gets encoded. Note that we're always encoding the ciphertext of a message, these encoders are purely for obfuscation _not security_. The currently supported encoders are:
+* __Base64__ Base64 with a custom alphabet so that it's not interoperable with standard Base64
+* __Hex__ Standard hexadecimal encoding with ASCII characters
+* __Gzip__ Standard gzip
+* __English__ Encodes arbitrary data as English ASCII text
+* __PNG__ Encodes arbitrary data into valid PNG image files
+* __Gzip+English__ A combination of the Gzip and English encoders
+* __Base64+Gzip__ A combination of the Base64 and Gzip encoders
 
 Each of these encoders has a unique "Encoder ID," which is currently hardcoded but we'll probably randomly generate these per-server in the future.
 
