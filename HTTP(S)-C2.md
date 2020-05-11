@@ -125,11 +125,13 @@ This is basically something I just made up, but the idea is that instead of crea
 
 The high level process to send a request is:
 1. Randomly generate the request path. The path will have on of the following extensions, which indicate the type of message:
-** .txt = RSA key exchange
-** .jsp = Start session
-** .php = Session messages
-**  .js = Long poll endpoint
-** .png = Stop/kill session
+
+* `.txt` = RSA key exchange
+* `.jsp` = Start session
+* `.php` = Session messages
+* `.js` = Long poll endpoint
+* `.png` = Stop/kill session
+
 2. Randomly select an encoder from `server/encoders`, each encoder has a unique "Encoder ID"
 3. Generate a `nonce`, the nonce is equal to a random number times the `EncoderModulus` plus the encoder ID; the `EncoderModulus` is a constant value. The server does the opposite (nonce modulo `EncoderModulus`) to determine the original Encoder ID.
 
