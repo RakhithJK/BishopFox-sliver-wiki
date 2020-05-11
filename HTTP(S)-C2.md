@@ -132,7 +132,15 @@ The high level process to generate and send a request is:
 * `.js` = Long poll endpoint
 * `.png` = Stop/kill session
 
-2. Randomly select an encoder from `server/encoders`, each encoder has a unique "Encoder ID"
+2. Randomly select an encoder from `sliver/encoders`, an encoder defines how the message we're trying to send to the server gets encoded. The currently supported encoders are:
+* Base64 (with a custom alphabet)
+* Hex - Standard hexadecimal encoding with ASCII characters
+* Gzip - Standard gzip
+* English - Encodes arbitrary data as English text)
+* PNG - Encodes arbitrary data into valid PNG image files
+* Gzip+English - A combination of the Gzip and English encoders
+* Base64+Gzip - A combination of the Base64 and Gzip encoders
+
 3. Generate a `nonce`, the nonce is equal to a random number times the `EncoderModulus` plus the encoder ID; the `EncoderModulus` is a constant value. The server does the opposite (nonce modulo `EncoderModulus`) to determine the original Encoder ID.
 
 ```
