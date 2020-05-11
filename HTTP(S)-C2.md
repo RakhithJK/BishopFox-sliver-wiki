@@ -136,10 +136,12 @@ The high level process to generate and send a request is:
 * Base64 (with a custom alphabet)
 * Hex - Standard hexadecimal encoding with ASCII characters
 * Gzip - Standard gzip
-* English - Encodes arbitrary data as English text)
+* English - Encodes arbitrary data as English ASCII text
 * PNG - Encodes arbitrary data into valid PNG image files
 * Gzip+English - A combination of the Gzip and English encoders
 * Base64+Gzip - A combination of the Base64 and Gzip encoders
+
+Each of these encoders has a unique "Encoder ID," which is currently hardcoded but we'll probably randomly generate these per-server in the future.
 
 3. Generate a `nonce`, the nonce is equal to a random number times the `EncoderModulus` plus the encoder ID; the `EncoderModulus` is a constant value. The server does the opposite (nonce modulo `EncoderModulus`) to determine the original Encoder ID.
 
