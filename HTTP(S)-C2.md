@@ -140,7 +140,8 @@ nonce := (insecureRand.Intn(maxN) * EncoderModulus) + encoderID
 encoderId := nonce % EncoderModulus
 ```
 
-The nonce is included in the request as the query parameter `_`, the idea is that this a standard pattern for "cache busting" and at a glance looks legitimate. The server also ignores any request that does not contain a valid nonce.
+The nonce is included in the request as the query parameter `_`, the idea is that this a standard pattern for "cache busting" and at a glance looks legitimate. The server also ignores any request that does not contain a valid nonce. A "NOP" nonce is also supported, which is an encoder ID of zero (i.e. the modulo of the nonce equals zero).
+
 
 
 
