@@ -109,5 +109,38 @@ sliver > https --domain example.com --cert ./cert.pem --key ./key.pem --website 
 
 # Under the Hood
 
+This section covers the "under the hood" implementation details of Sliver's HTTP C2, and may be useful for users want to understand, extend, or are simply curious about Sliver's design.
+
+### Design Goals
+
+The primary goals of the existing HTTP C2 design are to:
+
+* __Reliable Connections__ The implants foremost goal is to get a connection out of the network, regardless of the environment's configuration. 
+* __Data Security__ I won't cover this here, but [click here](https://github.com/BishopFox/sliver/wiki/Transport-Encryption) for details.
+* __Network Layer Evasion__ C2 messages should be hard to detect from the network layer alone, without the user having to build custom profiles. This is done via "Procedural C2" as detailed below. 
+
+### Procedural C2
+
+This is basically something I just made up, but the idea is that instead of creating custom C2 profiles that define where to put data in an HTTP request we [procedurally generate](https://en.wikipedia.org/wiki/Procedural_generation) an HTTP request with the data in it. In practice this seems to work pretty well, though the number of variations built into Sliver is somewhat limited right now if the technique works we'll expand it. At some point it may be a good idea to base the generation based on some type of seeded RNG so that a given request can be regenerated given a seed, but the current implementation doesn't support this, it just randomly selects everything. 
+
+The high level process to send a request is:
+1. Randomly generate the request path. The path will have on of the following extensions, which indicate the type of message:
+** .txt = RSA key exchange
+** .jsp = Start session
+** .php = Session messages
+**  .js = Long poll endpoint
+** .png = Stop/kill session
+2. Randomly select an encoder from `server/encoders`, each encoder has a unique "Encoder ID"
+3. Generate a `nonce`, the nonce is equal to a random number times the `EncoderModulus` plus the encoder ID; the `EncoderModulus` is a constant value. The server does the opposite (nonce modulo `EncoderModulus`) to determine the original Encoder ID.
+
+```
+nonce := (insecureRand.Intn(maxN) * EncoderModulus) + encoderID
+encoderId := nonce % EncoderModulus
+```
+
+The nonce is included in the request as the query parameter `_`, the idea is that this a standard pattern for "cache busting" and at a glance looks legitimate. The server also ignores any request that does not contain a valid nonce.
+
+
+
 
 
