@@ -126,8 +126,8 @@ The high level process to generate and send a standard session request is (note:
 
 1. Randomly generate the request path using built-in path segments. The path will have one of the following extensions, which indicate the type of request. This is distinct from a _message type_, the message type (i.e., the type of command) is in the encrypted so it cannot be determined without the [session key](https://github.com/BishopFox/sliver/wiki/Transport-Encryption). Everything in the path except for the extension is ignored by the server:
 
-* `.txt` = The server's public RSA key
-* `.jsp` = Initialize session
+* `.txt` = Request the server's public RSA key
+* `.jsp` = Initialize session endpoint
 * `.php` = Encrypted session messages
 * `.js` = Long poll endpoint
 
