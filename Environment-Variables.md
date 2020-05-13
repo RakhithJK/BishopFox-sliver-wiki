@@ -10,4 +10,4 @@
 
 ### Updates
 
-`SLIVER_NO_UPDATE_CHECK` - If set to any value non-blank, never check for updates
+`SLIVER_NO_UPDATE_CHECK` - If set to any non-blank value, never check for updates
