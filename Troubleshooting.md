@@ -2,9 +2,10 @@
 
 ### Server logs
 
-`~/.sliver/logs/sliver.log`
-
-JSON formatted log (includes timestamps): `~/.sliver/logs/sliver.json` 
+Server related logs are saved to: `~/.sliver/logs/`
+* `sliver.log` is the main log file for server related events
+* `console.log` is the log of the server's built-in "client"
+* `sliver.json` JSON formatted log (includes timestamps)
 
 ### Client logs
 
