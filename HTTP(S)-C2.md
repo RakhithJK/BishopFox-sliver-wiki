@@ -116,7 +116,7 @@ The primary goals of the existing HTTP C2 design are to:
 * __Data Security__ I won't cover this here, but [click here](https://github.com/BishopFox/sliver/wiki/Transport-Encryption) for details.
 * __Network Layer Evasion__ C2 messages should be hard to detect from the network layer, this is done via "Procedural C2" as detailed below. 
 
-### Procedural C2
+### Procedural HTTP C2
 
 This is basically something I just made up, but the idea is that instead of creating custom C2 profiles that define where to put data in an HTTP request we [procedurally generate](https://en.wikipedia.org/wiki/Procedural_generation) an HTTP request with the data in it. In practice this seems to work pretty well, though the number of variations built into Sliver is somewhat limited right now. If the technique proves to work well in the field we'll likely expand it (and at some point it may be a good idea to base the generation based on some type of seeded RNG so that a given request can be regenerated given a seed).
 
