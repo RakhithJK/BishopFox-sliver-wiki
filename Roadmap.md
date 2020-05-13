@@ -17,8 +17,7 @@
   * DNS record management 
   * Pivot generation (API Gateway, etc)
 * Better support for asynchronous commands
-* Staging (Eggs)
-  * Separate the listener / stager logic in two distinct RPC commands
+* ☑ Staging (Eggs)
 * Agent --> Server RPC requests (agent triggered sliver generation)
 * MacOS
   * Mach-O loader
@@ -33,3 +32,4 @@
 * Fix SMB named pipe pivots
 * Better scripting support (agent and server)
 * Seamless process migration on Windows
+* TOTP for stagers
