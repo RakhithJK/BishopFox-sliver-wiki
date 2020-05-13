@@ -1,4 +1,4 @@
-## Logs
+## Server/Client Troubleshooting 
 
 ### Server logs
 
@@ -11,6 +11,6 @@ Server related logs are saved to: `~/.sliver/logs/`
 
 `~/.sliver-client/sliver-client.log`
 
-## Implants
+## Implant Troubleshooting
 
 If you need to trouble shoot an issue (connectivity, etc) with an implant try generating it with the `--debug` flag.
