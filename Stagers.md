@@ -61,7 +61,7 @@ The generated shellcode can now be used on the target system to start a new Sliv
 
 ## Custom stagers
 
-One thing to consider while writing or using a custom stager, especially for the HTTP protocol, is that the Sliver server will only serve stage 2 payload on specifically defined URLs. Indeed, since the HTTP staging listener is reusing the regular HTTP listener, it follows the same [procedural HTTP protocol](https://github.com/BishopFox/sliver/wiki/HTTP(S)-C2#procedural-http-c2).
+One thing to consider while writing or using a custom stager, especially for the HTTP protocol, is that the Sliver server will only serve stage 2 payloads on specifically defined URLs. Indeed, since the HTTP staging listener is reusing the regular HTTP listener, it follows the same [procedural HTTP protocol](https://github.com/BishopFox/sliver/wiki/HTTP(S)-C2#procedural-http-c2).
 The extension used to retrieve a stage 2 payload is `.woff`.
 
 As a result, if you want to implement your own stager to fetch a stage 2 payload via HTTP, you need to query a URL that looks like this: `http://SLIVER-SERVER:STAGING-PORT/whatever.woff`.
