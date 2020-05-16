@@ -8,8 +8,8 @@
 * C2 Improvements (_in progress_)
   * DNS code cleanup/refactor
   * DNS case-sensitive encoder fingerprint/detection
-  * Improve HTTP(S) payload detection & randomization
-  * Additional HTTP(S) encoding methods
+  * ☑ Improve HTTP(S) payload detection & randomization
+  * ☑ Additional HTTP(S) encoding methods
   * Load balance domain support DNS, HTTP(S)
   * Cross-protocol C2 support (e.g. DNS+HTTPS)
 * GUI (_on hold_)
