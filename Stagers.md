@@ -4,7 +4,7 @@ As sliver payloads can be pretty big (around 7MB), you may sometime require the 
 
 Sliver supports the `meterpreter` staging protocol over TCP and HTTP(S). This protocol is pretty straight forward:
 
-- read the size of the stage 2 payload on the wire (either the first 4 bytes for the TCP stager, or the value of the `Content-Length` header for HTTP stagers)
+- read the size of the stage 2 payload on the wire (the first 4 bytes for the TCP stager)
 - download the stage 2
 - allocate the size read in the first step, and write the stage in memory
 
