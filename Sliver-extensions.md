@@ -122,6 +122,19 @@ sliver (CONCRETE_STEEL) > load-extension /home/lesnuages/tools/misc/sliver-exten
 [*] GhostPack extension has been loaded
 ```
 
+The `help` command will now list the commands added by this extension:
+
+```
+sliver (CONCRETE_STEEL) > help
+...
+Sliver - 3rd Party extensions:
+==============================
+  rubeus    [GhostPack] Rubeus is a C# toolset for raw Kerberos interaction and abuses.
+  seatbelt  [GhostPack] Seatbelt is a C# project that performs a number of security oriented host-survey "safety checks" relevant from both offensive and defensive security perspectives.
+  sharpwmi  [GhostPack] SharpWMI is a C# implementation of various WMI functionality.
+...
+```
+
 # Writing new extensions
 
 To write a new extension, one must either create a shared library or a .NET assembly, then write a manifest file compliant with the description above.
