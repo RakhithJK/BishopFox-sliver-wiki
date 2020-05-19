@@ -1,6 +1,6 @@
-# Welcome to the sliver wiki!
+# Welcome to the Sliver wiki!
 
-If you want to use sliver and you're not sure where to start, checkout [getting started](https://github.com/BishopFox/sliver/wiki/Getting-Started).
+If you want to use Sliver and you're not sure where to start, checkout [getting started](https://github.com/BishopFox/sliver/wiki/Getting-Started).
 
 ## What is sliver?
 
