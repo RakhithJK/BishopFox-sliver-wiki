@@ -1,6 +1,6 @@
 # Description
 
-Sliver allows an operator to extend its feature by adding new commands based on third party tools.
+Sliver allows an operator to extend its features by adding new commands based on third party tools.
 A Sliver extension is nothing more than a folder with the following structure:
 
 - a `manifest.json` file
