@@ -25,6 +25,8 @@ apt-get install mingw-w64 binutils-mingw-w64 g++-mingw-w64
 brew install mingw-w64
 ```
 
+__Note:__ On MacOS you'll likely have to configure [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables) for MinGW.
+
 ### Metasploit Setup (Optional)
 
 We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers), Sliver expects version 5 or later.
