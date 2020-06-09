@@ -1,6 +1,6 @@
 # Server Setup
 
-The server supports Linux, Windows, and MacOS however we recommend running the server on a Linux or MacOS server host, some features may be more difficult to get working on a Windows server, but all basic built-in functionality should work fine.
+The server supports Linux, Windows, and MacOS however we recommend running the server on a Linux or MacOS server host, some features may be more difficult to get working on a Windows server, but all basic built-in functionality should work fine. However, the Windows client should work just fine when accessing a Linux/MacOS server.
 
 Download the latest [release](https://github.com/BishopFox/sliver/releases) for your platform, and just run the binary. The first time you run the server it'll need to unpack some assets, which may take a minute or two, subsequent start ups should be faster.
 
