@@ -57,7 +57,7 @@ $ ./go-assets.sh
 
 #### Sliver
 
-Build thin server (for development):
+Build thin server (for development only):
 
 ```
 $ make
