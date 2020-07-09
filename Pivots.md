@@ -23,7 +23,7 @@ sliver (DELIGHTFUL_TELLER) > named-pipe --name lol
 Then, generate a new sliver using the `named-pipe` transport:
 
 ```
-sliver > generate --named-pipe desk01/.pipe/lol --skip-symbols --save /tmp
+sliver > generate --named-pipe desk01//./pipe/lol --skip-symbols --save /tmp
 ```
 
 The format for the `--named-pipe` parameter is `HOSTNAME//./pipe/PIPE_NAME` where:
