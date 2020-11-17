@@ -75,4 +75,8 @@ __NOTE:__ Static builds do not include the optional runtime dependencies: mingw 
 
 ### Windows Builds
 
+__NOTE:__ To cross-compile Windows builds you'll need `mingw` on your system:
+* Ubuntu `sudo apt install mingw-w64`
+* MacOS `brew install mingw-w64`
+
 If all you have is a Windows machine, the easiest way to build Sliver is using [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and following the Linux instructions above. However, the `sliver-server` cannot be run directly under WSL (database limitations), so you'll want to use WSL to cross-compile a native Windows binary `make static-windows` and copy it to your Windows file system (i.e. `/mnt/c/Users/foo/Desktop`) and run it using a terminal that supports ANSI sequences such as the [Windows Terminal](https://github.com/microsoft/terminal).
