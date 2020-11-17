@@ -75,7 +75,7 @@ __NOTE:__ Static builds do not include the optional runtime dependencies: mingw 
 
 ### Windows Builds
 
-__NOTE:__ To cross-compile Windows builds you'll need `mingw` on your system:
+__NOTE:__ Starting with v1.1.0 in order to cross-compile Windows builds you'll need `mingw` on your system:
 * Ubuntu `sudo apt install mingw-w64`
 * MacOS `brew install mingw-w64`
 
