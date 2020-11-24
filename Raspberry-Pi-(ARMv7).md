@@ -15,7 +15,7 @@ GOARCH=arm GOARM=7 GOOS=linux ./bootstrap.bash
 ### Compile Protobuf Compiler
 
 * Download the latest [protoc source code](https://github.com/protocolbuffers/protobuf/releases) release.
-* Compile:
+* Compile and go grab a coffee, this takes a while:
 
 ```
 ./configure
