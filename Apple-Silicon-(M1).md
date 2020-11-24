@@ -10,8 +10,8 @@ Modified [instructions from this thread](https://github.com/golang/go/issues/384
  * Build the binaries for ARM Darwin arch: `GOARCH=arm64 GOOS=darwin ./bootstrap.bash`.
  * Copy the `go-darwin-arm64-bootstrap.tbz` to your Apple Silicon Mac, and unwrap it into `/opt/go/` folder (or anywhere you want really)
  * Add `/opt/go/bin` to your `$PATH`.
- * Sign every binary in paths `/opt/go/bin/` and `/opt/go/pkg/tool/` with `codesign -s - <binary_path>` and remove the quarantine attribute with `xattr -r -d com.apple.quarantine <binary_path>`. 
- * Add `~/go/bin` to your `$PATH`, you may need to create a `.zshrc`
+ * Sign every binary in paths `/opt/go/bin/` and `/opt/go/pkg/tool/` with `codesign -s - <binary_path>` and remove the quarantine attribute with `xattr -r -d com.apple.quarantine <binary_path>`.
+ * Add `~/go/bin` to your `$PATH`, create this directory if it doesn't already exists. You may want to create a `.zshrc` too.
 
 
 ### Compile Protobuf Compiler
