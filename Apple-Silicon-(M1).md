@@ -56,5 +56,6 @@ make install
 
 * Git clone the `master` branch
 * Double check that `~/go/bin` and `protoc` are your `$PATH`
-* Manually put a copy of the cross-compiled `go` tool chain into `assets` (skip `go-assets.sh`)
+* Manually put a copy of the cross-compiled `go` tool chain into `assets` (skip `go-assets.sh`), make sure it's the signed/un-quarantied version
 * Run `make static-macos`
+* Sign server `code-sign -s - sliver-server` and client `code-sign -s - sliver-client`
