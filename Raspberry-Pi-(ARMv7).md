@@ -1,4 +1,4 @@
-Sliver can be compiled on Raspberry Pi/Linux:
+__NOTE:__ This page is a work-in-progress.
 
 
 ### Cross-compile Go
