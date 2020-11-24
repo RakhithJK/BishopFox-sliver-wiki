@@ -5,7 +5,7 @@ Apple Silicon support is still in its infancy, so expect some things to be broke
 Modified [instructions from this thread](https://github.com/golang/go/issues/38485#issuecomment-730247329):
 
  * You should have access to a different architecture, preferably Apple's Intel Mac.
- * On that Mac you should have already a go installed, I had version 1.15.5 installed via homebrew.
+ * On that Mac you should already have Go installed, I had version 1.15.5 installed via homebrew.
  * Download the source of golang and `cd` into the `src` folder. You should be in the master branch.
  * Run this to build the binaries for ARM Darwin arch: `GOARCH=arm64 GOOS=darwin ./bootstrap.bash`.
  * Copy the `go-darwin-arm64-bootstrap.tbz` to your Apple Silicon Mac, and unwrap it into `/opt/go/` folder (or anywhere you want really), so that the bin folder can be in `/opt/go/bin` path.
