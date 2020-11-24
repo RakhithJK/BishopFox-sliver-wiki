@@ -24,7 +24,7 @@ make check
 sudo make install
 ```
 
-* Make sure `protoc` to your $PATH (you may have to create a `.zshrc`)
+* Make sure `protoc` is on your `$PATH`
 
 ### Compile `protoc-gen-go`
 
@@ -35,6 +35,8 @@ tar xvf protoc-gen-go.tar.gz
 cd protobuf-1.3.5
 make install
 ```
+
+* Make sure `protoc-gen-go` is on your `$PATH` (should be in `~/go/bin`).
 
 ### Compile `packr`
 
