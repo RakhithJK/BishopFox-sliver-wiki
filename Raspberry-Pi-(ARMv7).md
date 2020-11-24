@@ -1,7 +1,7 @@
 Sliver can be compiled on Raspberry Pi/Linux:
 
 
-#### Cross-compile Go
+### Cross-compile Go
 
 * First you'll need to cross-compile Go from another system (likely Intel):
 
