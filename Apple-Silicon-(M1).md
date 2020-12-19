@@ -1,6 +1,6 @@
-Apple Silicon support is still in its infancy, so expect some things to be broken. We'll have much better support once Go officially supports the Apple Silicon/M1 in Go 1.16, until then here are some notes on how I was able to get Sliver to build on Apple Silicon: 
-
 Checkout the `go/v1.16beta1` branch for an early preview: https://github.com/BishopFox/sliver/tree/go/v1.16beta1
+
+Apple Silicon support is still in its infancy, so expect some things to be broken. We'll have much better support once Go officially supports the Apple Silicon/M1 in Go 1.16, until then here are some notes on how I was able to get Sliver to build on Apple Silicon: 
 
 ### Cross-compile Go
 
