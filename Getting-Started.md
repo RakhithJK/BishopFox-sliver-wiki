@@ -44,7 +44,7 @@ sliver > generate --mtls example.com --save /Users/moloch/Desktop
 [*] Sliver binary saved to: /Users/moloch/Desktop/NEW_GRAPE.exe
 ```
 
-__⚠️ IMPORTANT:__ The symbol obfuscation process can take 15+ mintues to complete depending on your server's CPU resources, the faster your CPU the faster this process will take. You can skip this step with `--skip-symbols` but a lot of sketchy information will end up in the binaries that get generated. You should  use the `--skip-symbols` flag if you're just playing around or do not care about evasion.
+__⚠️ IMPORTANT:__ The symbol obfuscation process can take 15+ mintues to complete depending on your server's CPU resources, the faster your CPU the faster this process will go. You can skip this step with `--skip-symbols` but a lot of sketchy information will end up in the binaries that get generated. You should  use the `--skip-symbols` flag if you're just playing around or do not care about evasion.
 
 Sliver implants are cross-platform, you can change the compiler target with the `--os` flag:
 
