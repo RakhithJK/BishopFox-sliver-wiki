@@ -7,6 +7,8 @@ Use the following steps to configure a domain for DNS C2 (and DNS Canaries), you
 3. Create an NS record with an arbitrary subdomain, for example `1` (i.e. `1.example.com`) which is managed by `ns1.example.com`.
 4. You can now use `1.example.com` as your DNS C2 domain e.g. `generate --dns 1.example.com.` (always use the FQDN when issuing DNS commands).
 
+__IMPORTANT:__ Always use the FQDN when issuing DNS commands (e.g., "1.example.com." note the tailing '.')
+
 The final configuration should look like for the domain `lil-peep.rip`:
 ![DNS Configuration](https://i.imgur.com/hpOnGJp.png)
 
