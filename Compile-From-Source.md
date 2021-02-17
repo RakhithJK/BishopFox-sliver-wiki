@@ -15,12 +15,11 @@ The Docker build includes mingw and Metasploit, so it can take a while to build 
 
 From scratch without Docker, requirements for compiling:
 
-* Go v1.14 or later
-* `make`, `sed`, `tar`, `wget`, `zip` commands
+* Go v1.16 or later
+* `make`, `sed`, `tar`, `curl`, `zip` commands
 * Protobuf compiler (i.e., `protoc`) 3.11 or later
   * [protoc](https://github.com/protocolbuffers/protobuf/releases)
 * `protoc-gen-go` (v1.3.5, see below)
-* `packr` (v1.30.1, see below)
 * Clone `github.com/bishopfox/sliver`
 
 __NOTE:__ Make sure you have `packr`, `protoc-gen-go`, and `protoc` on your `$PATH`
@@ -36,16 +35,6 @@ cd protobuf-1.3.5
 make install
 ```
 
-#### `packr`
-
-To install v1.30.1 you'll need to run the following commands:
-
-```
-wget -O packr.tar.gz https://github.com/gobuffalo/packr/archive/v1.30.1.tar.gz
-tar xvf packr.tar.gz
-cd packr-1.30.1
-make install
-```
 
 #### Go Assets
 
@@ -57,21 +46,16 @@ $ ./go-assets.sh
 
 #### Sliver
 
-Build thin server (for development only):
+Compile and bundle server with all dependencies and assets, by default `make` will build whatever platform you're currently running on:
 
 ```
-$ make
+$ make macos
+$ make macos-arm64
+$ make linux
+$ make windows
 ```
 
-Statically compile and bundle server with all dependencies and assets:
-
-```
-$ make static-macos
-$ make static-linux
-$ make static-windows
-```
-
-__NOTE:__ Static builds do not include the optional runtime dependencies: mingw and Metasploit.
+__NOTE:__ Builds do not include the optional runtime dependencies: mingw and Metasploit.
 
 ### Windows Builds
 
