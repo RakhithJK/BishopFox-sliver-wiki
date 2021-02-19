@@ -1,4 +1,4 @@
-Sliver supports two types of pivot listeners: SMB and TCP pivots.
+Pivots in Sliver are used for specifically pivoting C2 traffic, Sliver supports two types of pivot listeners: SMB and TCP pivots.
 
 # SMB named pipe pivot
 
