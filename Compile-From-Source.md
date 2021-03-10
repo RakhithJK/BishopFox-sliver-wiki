@@ -46,6 +46,8 @@ $ ./go-assets.sh
 
 #### Sliver
 
+You may need to run a one-time `go mod vendor` before any of the `make` commands to grab platform specific vendor code (alternatively you can use `rm -rf ./vendor` if you don't care about doing vendor builds).
+
 Compile and bundle server with all dependencies and assets, by default `make` will build whatever platform you're currently running on:
 
 ```
