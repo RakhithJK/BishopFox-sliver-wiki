@@ -14,7 +14,7 @@ Debugging the Sliver needs to be done via delve [remote debugging](https://githu
 
 ```shell
 dlv debug \
---build-flags="-ldflags='-X github.com/bishopfox/sliver/client/version.Version=1.1.2 -X github.com/bishopfox/sliver/client/version.CompiledAt=Never -X github.com/bishopfox/sliver/client/version.GithubReleasesURL=github.com -X github.com/bishopfox/sliver/client/version.GitCommit=aabbcc -X github.com/bishopfox/sliver/client/version.GitDirty=Dirty'" \
+--build-flags="-tags osusergo,netgo,sqlite_omit_load_extension,server -ldflags='-X github.com/bishopfox/sliver/client/version.Version=1.1.2 -X github.com/bishopfox/sliver/client/version.CompiledAt=Never -X github.com/bishopfox/sliver/client/version.GithubReleasesURL=github.com -X github.com/bishopfox/sliver/client/version.GitCommit=aabbcc -X github.com/bishopfox/sliver/client/version.GitDirty=Dirty'" \
 --headless \
 --listen=:2345 \
 --api-version=2 \
@@ -33,7 +33,7 @@ To simplify things, you can add this command as a VSCode task, by adding the fol
             ],
             "args": [
                 "debug",
-                "--build-flags=\"-ldflags='-X github.com/bishopfox/sliver/client/version.Version=1.1.2 -X github.com/bishopfox/sliver/client/version.CompiledAt=Never -X github.com/bishopfox/sliver/client/version.GithubReleasesURL=github.com -X github.com/bishopfox/sliver/client/version.GitCommit=aabbcc -X github.com/bishopfox/sliver/client/version.GitDirty=Dirty'\"",
+                "--build-flags=\"-tags osusergo,netgo,sqlite_omit_load_extension,server -ldflags='-X github.com/bishopfox/sliver/client/version.Version=1.1.2 -X github.com/bishopfox/sliver/client/version.CompiledAt=Never -X github.com/bishopfox/sliver/client/version.GithubReleasesURL=github.com -X github.com/bishopfox/sliver/client/version.GitCommit=aabbcc -X github.com/bishopfox/sliver/client/version.GitDirty=Dirty'\"",
                 "--headless",
                 "--listen=:2345",
                 "--api-version=2",
