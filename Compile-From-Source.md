@@ -26,11 +26,17 @@ Sliver embeds its own version of the Go compiler and related tools. Run the foll
 $ ./go-assets.sh
 ```
 
-#### Sliver
+Then compile and bundle server with all dependencies and assets, by default `make` will build whatever platform you're currently running on:
 
-You may need to run a one-time `go mod vendor` before any of the `make` commands to grab platform specific vendor code (alternatively you can use `rm -rf ./vendor` if you don't care about doing vendor builds).
+```
+$ make
+```
 
-Compile and bundle server with all dependencies and assets, by default `make` will build whatever platform you're currently running on:
+__NOTE:__ You may need to run a one-time `go mod vendor` before `make` to grab platform specific vendor code (alternatively you can use `rm -rf ./vendor`).
+
+#### Cross-compile to Specific Platforms
+
+You can also specify a target platform for the `make` file, though you may need cross-compilers (see below):
 
 ```
 $ make macos
@@ -38,8 +44,6 @@ $ make macos-arm64
 $ make linux
 $ make windows
 ```
-
-__NOTE:__ Builds do not include the optional runtime dependencies: mingw and Metasploit.
 
 ### Windows Builds
 
