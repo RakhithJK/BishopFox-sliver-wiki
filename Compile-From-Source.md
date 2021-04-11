@@ -77,4 +77,8 @@ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26.0
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1.0
 ```
 
-Ensure that these are both on your `$PATH` after running the commands, if not you probably need to add `$GOPATH/bin` to your `$PATH`.
+Ensure that these are both on your `$PATH` after running the commands, if not you probably need to add `$GOPATH/bin` to your `$PATH`. To regenerate the Protobuf and gRPC files run:
+
+```
+$ make pb
+```
