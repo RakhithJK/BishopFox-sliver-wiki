@@ -53,13 +53,16 @@ __NOTE:__ Starting with v1.1.0 in order to cross-compile Windows builds you'll n
 
 If all you have is a Windows machine, the easiest way to build Sliver is using [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and following the Linux/cross-compile instructions above. To cross-compile a native Windows binary use `make windows` and copy it to your Windows file system (i.e. `/mnt/c/Users/foo/Desktop`) and run it using a terminal that supports ANSI sequences such as the [Windows Terminal](https://github.com/microsoft/terminal).
 
-### Developers
+## Developers
 
 If you want to modify any of the `.proto` files you'll need to setup a few additional tools to regenerate the `.pb.go` files.
+* Protoc v3.15.8
+* Protoc-gen-go v1.26.0
+* Protoc-gen-go-grpc v1.1.0
 
 #### `protoc`
 
-First install your platform's version of `protoc` v3.15.8 or compile from source:
+First install your platform's version of `protoc` v3.15.8 or compile this version from source:
 
 https://github.com/protocolbuffers/protobuf/releases/tag/v3.15.8
 
