@@ -17,24 +17,6 @@ From scratch without Docker, requirements for compiling:
 
 * Go v1.16 or later
 * `make`, `sed`, `tar`, `curl`, `zip` commands
-* Protobuf compiler (i.e., `protoc`) 3.11 or later
-  * [protoc](https://github.com/protocolbuffers/protobuf/releases)
-* `protoc-gen-go` (v1.3.5, see below)
-* Clone `github.com/bishopfox/sliver`
-
-__NOTE:__ Make sure you have `protoc-gen-go`, and `protoc` on your `$PATH`
-
-#### `protoc-gen-go`
-
-To install v1.3.5 you'll need to run the following commands:
-
-```
-wget -O protoc-gen-go.tar.gz https://github.com/golang/protobuf/archive/v1.3.5.tar.gz
-tar xvf protoc-gen-go.tar.gz
-cd protobuf-1.3.5
-make install
-```
-
 
 #### Go Assets
 
@@ -66,3 +48,26 @@ __NOTE:__ Starting with v1.1.0 in order to cross-compile Windows builds you'll n
 * MacOS `brew install mingw-w64`
 
 If all you have is a Windows machine, the easiest way to build Sliver is using [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and following the Linux/cross-compile instructions above. To cross-compile a native Windows binary use `make windows` and copy it to your Windows file system (i.e. `/mnt/c/Users/foo/Desktop`) and run it using a terminal that supports ANSI sequences such as the [Windows Terminal](https://github.com/microsoft/terminal).
+
+### Developers
+
+If you want to modify any of the `.proto` files you'll need to setup a few additional tools to regenerate the `.pb.go` files.
+
+#### `protoc`
+
+First install your platform's version of `protoc` v3.15.8 or compile from source:
+
+https://github.com/protocolbuffers/protobuf/releases/tag/v3.15.8
+
+Ensure that `protoc` v3.15.8 is on your `$PATH` you can check with a simply `protoc --version`
+
+#### `protoc-gen-go` `protoc-gen-go-gprc`
+
+Assuming `$GOPATH/bin` is on your `$PATH` simply run the following commands to install the appropriate versions of `protoc-gen-go` and `protoc-gen-go-gprc`:
+
+```
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26.0
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1.0
+```
+
+Ensure that these are both on your `$PATH` after running the commands, if not you probably need to add `$GOPATH/bin` to your `$PATH`.
