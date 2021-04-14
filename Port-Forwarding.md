@@ -8,13 +8,15 @@ __NOTE:__ Generally speaking `wg-portfwd` is faster and more reliable, we recomm
 
 ## Tunneled Port Forwarding
 
-Tunneled port forwarding can be done over any C2 transport, and should work out of the box:
+Tunneled port forwarding can be done over any C2 transport, and should work out of the box. Interact with the session you'd like to port forward through and use the `portfwd add` command:
 
 ```
 sliver (STUCK_ARTICLE) > portfwd add --remote 10.10.10.10:22
 
 [*] Port forwarding 127.0.0.1:8080 -> 10.10.10.10:22
 ```
+
+By default all port forwards will be bound to the `127.0.0.1` interface, but you can override this using the `--local` flag. Port forwarding also works in `multiplayer` mode and will forward ports to your local system.
 
 
 ## WireGuard Port Forwarding
