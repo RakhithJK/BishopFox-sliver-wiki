@@ -21,12 +21,11 @@ By default all port forwards will be bound to the `127.0.0.1` interface, but you
 
 ## WireGuard Port Forwarding
 
-In order to use `wg-portfwd` you'll need a WireGuard client, any client should work. However, we recommend using `wg-quick`, which is included in the `wireguard-tools` package available on most platforms:
+In order to use `wg-portfwd` you'll need a WireGuard client, any client should work. However, we recommend using `wg-quick`, which is included in the `wireguard-tools` package available on most platforms (see [WireGuard](https://www.wireguard.com/install/) for more platforms):
 
 * MacOS `brew install wireguard-tools`
 * Ubuntu/Kali `sudo apt install wireguard-tools`
 
-See [WireGuard](https://www.wireguard.com/install/) for more platforms.
 
 
 
