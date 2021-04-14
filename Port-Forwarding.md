@@ -8,6 +8,16 @@ __NOTE:__ Generally speaking `wg-portfwd` is faster and more reliable, we recomm
 
 ## Tunneled Port Forwarding
 
+Tunneled port forwarding can be done over any C2 transport, and should work out of the box:
+
+```
+sliver > use 1 
+
+[*] Active session STUCK_ARTICLE (1)
+
+sliver (STUCK_ARTICLE) > portfwd add --remote 10.10.10.10:3389
+```
+
 
 ## WireGuard Port Forwarding
 
