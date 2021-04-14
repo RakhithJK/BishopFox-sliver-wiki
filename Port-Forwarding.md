@@ -21,6 +21,9 @@ By default all port forwards will be bound to the `127.0.0.1` interface, but you
 
 ## WireGuard Port Forwarding
 
+* MacOS `brew install wireguard-tools`
+* Ubuntu/Kali `sudo apt install wireguard-tools`
 
+See [WireGuard](https://www.wireguard.com/install/) for more platforms.
 
 
