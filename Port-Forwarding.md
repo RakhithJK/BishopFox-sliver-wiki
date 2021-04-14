@@ -3,7 +3,7 @@ Sliver provides two mechanisms for port forwarding to tunnel additional connecti
 * `wg-portfwd` - This command uses WireGuard port forwarding, and is only available when using WireGuard C2.
 
 
-__NOTE:__ Generally speaking `wg-portfwd` is faster and more reliable, we recommend using it whenever possible. Some protocols may be unstable, or may not work when tunneled via `portfwd`. However, `wg-portfwd` requires a little extra setup (see below).
+__NOTE:__ Generally speaking `wg-portfwd` is faster and more reliable, we recommend using it whenever possible. Some protocols may be unstable, or may not work when tunneled via `portfwd`. However, `wg-portfwd` does requires a little extra setup (see below).
 
 
 ## Tunneled Port Forwarding
