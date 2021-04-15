@@ -27,9 +27,9 @@ In order to use `wg-portfwd` you'll need a WireGuard client, any client should w
 * Ubuntu/Kali `sudo apt install wireguard-tools`
 
 ```
-sliver > wg-config --save /Users/moloch/wg.conf
+sliver > wg-config --save wireguard.conf
 
-[*] Wrote conf: /Users/moloch/wg.conf
+[*] Wrote conf: wireguard.conf
 ```
 
 
