@@ -59,7 +59,7 @@ AllowedIPs = 100.64.0.0/16
 Endpoint = <configure yourself>
 ```
 
-The only thing in the configuration you'll need to change is the `Endpoint` setting, configure this to point to the Sliver server's WireGuard listener, and ensure to include the port number (by default UDP 53). Generally this will be the same value you specified as `--lhost` when generating the binary.
+The only thing in the configuration file you'll need to change is the `Endpoint` setting, configure this to point to the Sliver server's WireGuard listener, and ensure to include the port number (by default UDP 53). Generally this will be the same value you specified as `--lhost` when generating the binary.
 
 Make sure your WireGuard listener is running and connect using the client configuration:
 
