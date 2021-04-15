@@ -26,11 +26,44 @@ In order to use `wg-portfwd` you'll need a WireGuard client, any client should w
 * MacOS `brew install wireguard-tools`
 * Ubuntu/Kali `sudo apt install wireguard-tools`
 
+First generate a WireGuard C2 implant (using `generate --wg`), and then start a WireGuard listener:
+
 ```
-sliver > wg-config --save wireguard.conf
+sliver > wg
 
-[*] Wrote conf: wireguard.conf
+[*] Starting Wireguard listener ...
+[*] Successfully started job #1
+
+sliver > jobs
+
+ID  Name  Protocol  Port
+==  ====  ========  ====
+1   wg    udp       53
+```
+
+
+Using Sliver you can create WireGuard client configuration using the `wg-config` command.
+
+```
+sliver > wg-config
+
+[*] New client config:
+[Interface]
+Address = 100.64.0.16/16
+ListenPort = 51902
+PrivateKey = eMdqQ5zEF9Oflj+7wfyFQZjES02rfSBfZEN701FzmmQ=
+MTU = 1420
+
+[Peer]
+PublicKey = HNFS0FydHkuCtEFPPFb3b2IW7iSmFajRJ2qSjifidiM=
+AllowedIPs = 100.64.0.0/16
+Endpoint = <configure yourself>
 ```
 
 
 
+Then in another shell, create an interface using the configuration.
+
+```
+$ wg-quick up wireguard.conf
+```
