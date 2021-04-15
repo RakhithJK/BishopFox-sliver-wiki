@@ -1,4 +1,5 @@
-Currently reverse SOCKS is only supported over WireGuard C2.
+
+⚠️ __NOTE:__ Currently reverse SOCKS is only supported over WireGuard C2.
 
 ## WireGuard SOCKS
 
