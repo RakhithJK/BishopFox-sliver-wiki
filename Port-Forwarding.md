@@ -26,7 +26,11 @@ In order to use `wg-portfwd` you'll need a WireGuard client, any client should w
 * MacOS `brew install wireguard-tools`
 * Ubuntu/Kali `sudo apt install wireguard-tools`
 
+```
+sliver > wg-config --save /Users/moloch/wg.conf
 
+[*] Wrote conf: /Users/moloch/wg.conf
+```
 
 
 
