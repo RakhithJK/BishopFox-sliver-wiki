@@ -41,8 +41,7 @@ ID  Name  Protocol  Port
 1   wg    udp       53
 ```
 
-
-Using Sliver you can create WireGuard client configuration using the `wg-config` command.
+Next, using Sliver you can create WireGuard client configuration using the `wg-config` command (you can use `--save` to write the configuration directly to a file):
 
 ```
 sliver > wg-config
@@ -60,10 +59,32 @@ AllowedIPs = 100.64.0.0/16
 Endpoint = <configure yourself>
 ```
 
+The only thing in the configuration you'll need to change is the `Endpoint` setting, configure this to point to the Sliver server's WireGuard listener, and ensure to include the port number (by default UDP 53). Generally this will be the same value you specified as `--lhost` when generating the binary.
 
-
-Then in another shell, create an interface using the configuration.
+Make sure your WireGuard listener is running and connect using the client configuration:
 
 ```
 $ wg-quick up wireguard.conf
 ```
+
+Now that your machine is connected to the Sliver WireGuard listener, just wait for an implant to connect:
+
+```
+sliver > sessions
+
+ID  Name           Transport  Remote Address     Hostname     Username  Operating System  Last Check-in                  Health
+==  ====           =========  ==============     ========     ========  ================  =============                  ======
+1   STUCK_ARTICLE  wg         100.64.0.17:53565  MacBook-Pro  jdoe      darwin/amd64      Wed, 12 Apr 2021 19:21:00 CDT  [ALIVE]
+```
+
+Interact with the session, and use `wg-portfwd add` to create port forwards:
+
+```
+sliver (STUCK_ARTICLE) > wg-portfwd add --remote 10.10.10.10:3389
+
+[*] Port forwarding 100.64.0.17:1080 -> 10.10.10.10:3389
+```
+
+You can now connect to `100.64.0.17:1080` via your WireGuard interface and the connection will come out at `10.10.10.10:3389`!
+
+
