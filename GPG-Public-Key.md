@@ -1,0 +1,1 @@
+https://raw.githubusercontent.com/BishopFox/sliver/master/server/assets/fs/sliver.asc
