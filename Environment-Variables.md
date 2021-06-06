@@ -31,5 +31,5 @@
 * `SLIVER_WINDOWS_CXX_64` - Override path to Windows 64 bit cross compiler
 * `SLIVER_LINUX_CXX_64` - Override path to Linux 64 bit cross compiler
 * `SLIVER_DARWIN_CXX_64` - Override path to MacOS 64 bit cross compiler
-* `SLIVER_WINDOWS_CXX_32` - Override path to Windows 64 bit cross compiler
-* `SLIVER_LINUX_CXX_32` - Override path to Linux 64 bit cross compiler
+* `SLIVER_WINDOWS_CXX_32` - Override path to Windows 32 bit cross compiler
+* `SLIVER_LINUX_CXX_32` - Override path to Linux 32 bit cross compiler
