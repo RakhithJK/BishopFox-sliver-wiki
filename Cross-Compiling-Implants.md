@@ -10,7 +10,7 @@ Sliver automatically looks in the default paths for these cross compilers, once 
 
 ## From MacOS to Linux/Windows
 
-On MacOS `musl-cross` can be used to target 64-bit Windows, and mingw to target Windows:
+On MacOS `musl-cross` can be used to target 64-bit Linux, and mingw to target Windows:
 
 ```
 brew install FiloSottile/musl-cross/musl-cross
