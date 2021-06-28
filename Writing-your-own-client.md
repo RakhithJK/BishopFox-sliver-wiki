@@ -1,6 +1,6 @@
 Although the `sliver-client` is the default way to interact with a `sliver-server` and with implant sessions, there might be a time where you would want to automate some tasks upon reception of certain events.
 
-To do so, one case use [sliver-script](https://github.com/moloch--/sliver-script) or write a custom client in another language. As all the communications between the client and the server are based on gRPC, any language with gRPC support should in theory be used to create a custom client.
+To do so, one case use [sliver-script](https://github.com/moloch--/sliver-script), [sliver-py](https://github.com/moloch--/sliver-py) or write a custom client in another language. As all the communications between the client and the server are based on gRPC, any language with gRPC support should in theory be used to create a custom client.
 
 ## Writing a Go client
 
