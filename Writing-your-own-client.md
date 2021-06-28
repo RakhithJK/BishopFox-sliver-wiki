@@ -26,20 +26,6 @@ go get github.com/bishopfox/sliver
 
 The module path (`github.com/<your-username>/<your-project-name>`) can be anything, as long as it respects the [requirements](https://golang.org/ref/mod#go-mod-init).
 
-This will create a `go.mod` file, which we'll then edit:
-
-```go
-module github.com/<your-username>/<your-project-name>
-
-replace github.com/bishopfox/sliver => path/to/sliver/on/your/filesystem
-
-go 1.16
-
-require github.com/bishopfox/sliver v1.4.3
-```
-
-The `replace` instruction will tell Go to use your local copy of the code.
-
 The next step is to write our client code (`main.go`):
 
 ```go
