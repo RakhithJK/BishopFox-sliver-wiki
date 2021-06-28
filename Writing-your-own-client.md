@@ -6,15 +6,7 @@ To do so, one case use [sliver-script](https://github.com/moloch--/sliver-script
 
 In this example, we will focus on writing a custom Go client that executes a new system command on every new implant that connects to the sliver server.
 
-The first step is to follow the [Compile From Source](https://github.com/BishopFox/sliver/wiki/Compile-From-Source#from-scratch-no-docker) instructions to setup a local copy of the Sliver repository. Inside this repository, run:
-
-```command
-make pb
-```
-
-This will generate the Go source code from the protobuf definition files that are required for our custom client.
-
-Then, create a new Go project somewhere on your file system:
+Create a new Go project somewhere on your file system:
 
 ```command
 mkdir sliver-custom-client
