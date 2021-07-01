@@ -39,7 +39,6 @@ Generating implants is done using the `generate` command, you must specify at le
 sliver > generate --mtls example.com --save /Users/moloch/Desktop
 
 [*] Generating new windows/amd64 Sliver binary
-[*] Symbol obfuscation is enabled, this process takes about 15 minutes
 [*] Build completed in 00:10:16
 [*] Sliver binary saved to: /Users/moloch/Desktop/NEW_GRAPE.exe
 ```
