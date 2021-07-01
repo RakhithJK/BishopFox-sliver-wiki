@@ -1,4 +1,4 @@
-Pivots in Sliver are used for specifically pivoting C2 traffic, Sliver supports two types of pivot listeners: SMB and TCP pivots.
+Pivots in Sliver are used for specifically pivoting C2 traffic, not to be confused with port forwarding i.e. `portfwd` for tunneling generic TCP connections in/out of a target env. Sliver supports two types of pivot listeners: SMB and TCP pivots.
 
 # SMB named pipe pivot
 
