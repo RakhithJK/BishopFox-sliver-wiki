@@ -33,7 +33,7 @@ We strongly recommend using the [nightly framework installers](https://github.co
 
 ## Generating Implants
 
-Generating implants is done using the `generate` command, you must specify at least one C2 endpoint using `--mtls`, `--http`, or `--dns`. Note that when an implant attempts to connect to an endpoint specified using `--http` it will try both HTTPS and then HTTP (if HTTPS fails). We recommend using mutual TLS (`--mtls`) whenever possible. You can also specify an output directory with `--save`, by default the implant will be saved to the current working directory.
+Generating implants is done using the `generate` command, you must specify at least one C2 endpoint using `--mtls`, `--wg`, `--http`, or `--dns`. Note that when an implant attempts to connect to an endpoint specified using `--http` it will try both HTTPS and then HTTP (if HTTPS fails). We recommend using mTLS (`--mtls`) or WireGaurd (`--wg`) whenever possible. You can also specify an output directory with `--save`, by default the implant will be saved to the current working directory.
 
 ```
 sliver > generate --mtls example.com --save /Users/moloch/Desktop
@@ -43,7 +43,7 @@ sliver > generate --mtls example.com --save /Users/moloch/Desktop
 [*] Sliver binary saved to: /Users/moloch/Desktop/NEW_GRAPE.exe
 ```
 
-Sliver implants are cross-platform, you can change the compiler target with the `--os` flag:
+Sliver implants are cross-platform, you can change the compiler target with the `--os` flag. Sliver accepts any Golang GOOS and GOARCH as arguments `--os` and `--arch`, we officially only support Windows, MacOS, and Linux, but you can at least attempt to compile for any other [valid Golang GOOS/GOARCH](https://gist.github.com/asukakenji/f15ba7e588ac42795f421b48b8aede63) combination. WARNING: Some commands/features may not work on "unsupported" platforms.
 
 ```
 sliver > generate --mtls example.com --save /Users/moloch/Desktop --skip-symbols --os mac
