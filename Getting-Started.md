@@ -33,7 +33,7 @@ We strongly recommend using the [nightly framework installers](https://github.co
 
 ## Generating Implants
 
-Generating implants is done using the `generate` command, you must specify at least one C2 endpoint using `--mtls`, `--wg`, `--http`, or `--dns`. Note that when an implant attempts to connect to an endpoint specified using `--http` it will try both HTTPS and then HTTP (if HTTPS fails). We recommend using mTLS (`--mtls`) or WireGaurd (`--wg`) whenever possible. You can also specify an output directory with `--save`, by default the implant will be saved to the current working directory.
+Generating implants is done using the `generate` command, you must specify at least one C2 endpoint using `--mtls`, `--wg`, `--http`, or `--dns`. Note that when an implant attempts to connect to an endpoint specified using `--http` it will try both HTTPS and then HTTP (if HTTPS fails). We recommend using mTLS (`--mtls`) or WireGuard (`--wg`) whenever possible. You can also specify an output directory with `--save`, by default the implant will be saved to the current working directory.
 
 ```
 sliver > generate --mtls example.com --save /Users/moloch/Desktop
