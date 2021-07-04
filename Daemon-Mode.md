@@ -14,12 +14,12 @@ $ cat ~/.sliver/configs/server.json
     },
     "logs": {
         "level": 5,
-        "grpc_unary_payloads": true,
-        "grpc_stream_payloads": true
+        "grpc_unary_payloads": false,
+        "grpc_stream_payloads": false
     }
 }
 ``` 
 
 #### systemd
 
-With this config you can easily setup a [systemd service](https://www.linode.com/docs/quick-answers/linux/start-service-at-boot/) or init script.
+With this config you can easily setup a [systemd service](https://www.linode.com/docs/quick-answers/linux/start-service-at-boot/) or init script. See the [Linux install script](https://github.com/BishopFox/sliver/wiki/Linux-Install-Script) for an example.
