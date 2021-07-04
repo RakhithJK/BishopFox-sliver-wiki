@@ -2,6 +2,8 @@ This script will install the latest version of Sliver as a systemd service, inst
 
 https://gist.github.com/moloch--/43fd12a704f47deaebbedab2f5be15ba
 
+This script should work on Kali, Ubuntu, and RHEL (CentOS, etc) distributions of Linux.
+
 ### One Liner
 
 ```bash
