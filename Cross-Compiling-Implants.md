@@ -3,8 +3,13 @@ __NOTE:__ Any platform can cross-compile a standalone executable to any other pl
 
 ## From Linux to MacOS/Windows
 
-1. For MacOS, we recommend using https://github.com/tpoechtrager/osxcross by default Sliver will look in `/opt/osxcross` but you can override this via [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables).
-2. For Windows, install mingw from your local package manager: `apt install mingw-w64`
+For Windows, install mingw from your local package manager: 
+
+```
+sudo apt install mingw-w64
+```
+
+For MacOS, we recommend using https://github.com/tpoechtrager/osxcross by default Sliver will look in `/opt/osxcross` but you can override this via [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables).
 
 Sliver automatically looks in the default paths for these cross compilers, once installed simply use the `generate` command with the desired `--os` and `--arch`, check `~/.sliver/logs/sliver.log` for build errors. You can override any cross compiler location via the appropriate [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables).
 
