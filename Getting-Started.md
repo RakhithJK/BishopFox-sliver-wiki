@@ -1,4 +1,6 @@
-# Server Setup
+# 1. Server Setup
+
+The first thing you'll need to do is setup a Sliver server.
 
 The server supports Linux, Windows, and MacOS however we recommend running the server on a Linux or MacOS host, as some features may be more difficult to get working on a Windows server. However, the Windows client should work just fine when accessing a Linux/MacOS server.
 
