@@ -16,7 +16,7 @@ sliver (STUCK_ARTICLE) > portfwd add --remote 10.10.10.10:22
 [*] Port forwarding 127.0.0.1:8080 -> 10.10.10.10:22
 ```
 
-By default all port forwards will be bound to the `127.0.0.1` interface, but you can override this using the `--local` flag. Port forwarding also works in `multiplayer` mode and will forward ports to your local system.
+By default all port forwards will be bound to the `127.0.0.1` interface, but you can override this using the `--bind` flag. Port forwarding also works in `multiplayer` mode and will forward ports to your local system.
 
 
 ## WireGuard Port Forwarding
