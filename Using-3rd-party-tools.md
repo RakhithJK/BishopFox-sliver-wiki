@@ -55,20 +55,6 @@ sliver (CONCRETE_STEEL) > execute-assembly -t 80 /tmp/Seatbelt.exe All
 ...
 ```
 
-The `execute-assembly` command uses the [Hosting_CLR inject](https://github.com/b4rtik/metasploit-execute-assembly/tree/master/HostingCLR_inject) DLL from [metasploit-execute-assembly](https://github.com/b4rtik/metasploit-execute-assembly) under the hood. This means that Sliver has the same limitations related to arguments passing:
-
->ARGUMENTS
-Command line arguments. The signature of the Main method must match with the parameters that have been set in the module, for example:
-If the property ARGUMENTS is set to "antani sblinda destra" the main method should be "static void main (string [] args)"
-If the property ARGUMENTS is set to "" the main method should be "static void main ()"
-
-If you try to execute an assembly whose entrypoint is `main(string[] args)`, you must pass a dummy argument on the Sliver command line (even if none is expected to be consumed by the assembly itself), like in this example:
-
-```
-sliver (INDIRECT_POSSIBLE) > execute-assembly -t 100 tools/bin/watson.exe blah
-```
-
-Since [Watson](https://github.com/rasta-mouse/Watson) entrypoint [expects a string array as first argument](https://github.com/rasta-mouse/Watson/blob/master/Watson/Program.cs#L10), we need to pass something here, even if the assembly won't make use of it.
 
 ## Shared libraries side loading
 
