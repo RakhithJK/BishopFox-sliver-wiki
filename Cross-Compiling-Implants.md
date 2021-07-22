@@ -9,7 +9,7 @@ For Windows, install mingw from your local package manager:
 sudo apt install mingw-w64
 ```
 
-For MacOS, we recommend using https://github.com/tpoechtrager/osxcross by default Sliver will look in `/opt/osxcross` but you can override this via [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables).
+For MacOS, we recommend using https://github.com/tpoechtrager/osxcross by default Sliver will look in `/opt/osxcross` but you can override this via [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables). If you do not have a MacOS based machine you can use GitHub Actions' MacOS instances to build OSXCross.
 
 Sliver automatically looks in the default paths for these cross compilers, once installed simply use the `generate` command with the desired `--os` and `--arch`, check `~/.sliver/logs/sliver.log` for build errors. You can override any cross compiler location via the appropriate [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables).
 
