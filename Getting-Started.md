@@ -1,4 +1,4 @@
-# 1. Server Setup
+# Server Setup
 
 The first thing you'll need to do is setup a Sliver server.
 
@@ -56,10 +56,10 @@ sliver > generate --mtls example.com --save /Users/moloch/Desktop --skip-symbols
 [*] Sliver binary saved to: /Users/moloch/Desktop/PROPER_ANTHONY
 ```
 
-The server will also assign codenames to each generated binary i.e. `NEW_GRAPE.exe` you can rename the file to anything you need to, but these codenames will still uniquely identify the generated binary (they're inserted at compile-time). You can also view all previously generated implant binaries with the `slivers` command:
+The server will also assign codenames to each generated binary i.e. `NEW_GRAPE.exe` you can rename the file to anything you need to, but these codenames will still uniquely identify the generated binary (they're inserted at compile-time). You can also view all previously generated implant binaries with the `implants` command:
 
 ```
-sliver > slivers
+sliver > implants
 
 Name                    OS/Arch        Debug  Format
 ====                    =======        =====  ======
