@@ -1,0 +1,3 @@
+Sliver keeps an audit log of every command with arguments executed by the server (including commands executed by operators in multiplayer mode). This will include any commands executed by any operator on any session, but note some console commands only perform actions on the "client-side" and may not appear in the audit log.
+
+By default the file is located on the server at: `~/.sliver/logs/audit.json`. However, this can be changed by modifying the [`SLIVER_ROOT_DIR`](https://github.com/BishopFox/sliver/wiki/Environment-Variables#assets) environment variable.
