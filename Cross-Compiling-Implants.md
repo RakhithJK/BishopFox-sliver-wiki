@@ -3,7 +3,7 @@ __NOTE:__ Any platform can cross-compile a standalone executable to any other pl
 
 ## From Linux to MacOS/Windows
 
-For Windows, install mingw from your local package manager: 
+To compile Windows shared and shellcode implants from Linux, install mingw from your local package manager: 
 
 ```
 sudo apt install mingw-w64
