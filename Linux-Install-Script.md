@@ -1,13 +1,13 @@
 This script will install the latest version of Sliver as a systemd service, installs Windows cross-compiler dependencies (mingw), and setup multiplayer for the current user. After running the script connect locally by running `sliver`
 
-https://gist.github.com/moloch--/43fd12a704f47deaebbedab2f5be15ba
+https://github.com/BishopFox/sliver/blob/master/docs/install
 
 This script should work on Kali, Ubuntu, and RHEL (CentOS, etc) distributions of Linux.
 
 ### One Liner
 
 ```bash
-curl https://gist.githubusercontent.com/moloch--/43fd12a704f47deaebbedab2f5be15ba/raw/8a3749e003a8b364c7454a9c059bacc0b2173b98/install-sliver.sh | /bin/bash
+curl https://sliver.sh/install|sudo bash
 ```
 
 * Installs server binary to `/root/sliver-server`
