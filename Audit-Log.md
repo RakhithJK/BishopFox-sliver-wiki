@@ -15,5 +15,5 @@ __NOTE:__ Due to limitations in the logging APIs the audit log contains nested J
 The top level JSON should always contain:
 
 * `level` - The level indicates the type of action performed. Currently, `info` indicates commands and `warn` indicates events.
-* `msg` - A JSON object encoded as a string. This object should always contain a `request` and a `method`. The contents of `method` indicate which command was executed, `request` will contain parameters to that command. The contents of `request` will vary depending on the command, but it will be based on the corresponding gRPC/Protobuf object.
+* `msg` - A JSON object encoded as a string. This object should always contain a `request` and a `method`. The contents of `method` indicate which command was executed, `request` will contain parameters to that command. The contents of `request` will vary depending on the command, but it will be based on the corresponding gRPC/Protobuf message.
 * `time` - The server's timestamp of the log entry
