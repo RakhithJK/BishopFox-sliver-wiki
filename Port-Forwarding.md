@@ -6,7 +6,7 @@ Sliver provides two mechanisms for port forwarding to tunnel additional connecti
 __NOTE:__ Generally speaking `wg-portfwd` is faster and more reliable, we recommend using it whenever possible. Some protocols may be unstable, or may not work when tunneled via `portfwd`. However, `wg-portfwd` does requires a little extra setup (see below).
 
 
-## Tunneled Port Forwarding
+## In-Band Tunneled Port Forwarding
 
 Tunneled port forwarding can be done over any C2 transport, and should work out of the box. Interact with the session you'd like to port forward through and use the `portfwd add` command:
 
