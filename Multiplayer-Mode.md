@@ -2,7 +2,7 @@ Multiplayer-mode allows multiple operators (players) to connect to the same Sliv
 
 ## New Players (Operators)
 
-Operators will need to download their preferred platform's client software from the releases page. (Or build from source if they like) Clients can connect to servers of differing platforms (e.g. a Windows client can connect to a Linux server). Operators and servers authenticate using Mutual TLS. The client certificates are automatically generated and managed for you using the `new-player` command. If you did not install the server as a systemd service, be sure to leave the server running in screen or [tmux](https://github.com/tmux/tmux).
+Operators will need to download their preferred platform's client software from the releases page. (Or build from source if they like) Clients can connect to servers of differing platforms (e.g. a Windows client can connect to a Linux server). Operators and servers authenticate using Mutual TLS. The client certificates are automatically generated and managed for you using the `new-player` command. If you did not install the server as a systemd service, be sure to leave the server console running in screen or [tmux](https://github.com/tmux/tmux).
 
 
 __NOTE__: The `new-player` and `multiplayer` commands are only accessible from the server's console.
