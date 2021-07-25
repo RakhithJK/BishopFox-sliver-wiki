@@ -77,7 +77,7 @@ To start an HTTP listener use the `http` command, with no parameters this will s
 sliver > http
 ```
 
-You can optionally restrict the listener to only respond to specific domain using the `--domain` flag, currently each listener can only accept a single domain (but you can start any number of listeners you want):
+You can optionally restrict the listener to only respond to a specific domain using the `--domain` flag, currently each listener can only accept a single domain (but you can start any number of listeners you want):
 
 ```
 sliver > http --domain example.com
