@@ -1,7 +1,7 @@
 # Description
 
-Sliver allows an operator to extend its features by adding new commands based on third party tools.
-A Sliver extension is nothing more than a folder with the following structure:
+Sliver allows an operator to extend the local client console and its features by adding new commands based on third party tools.
+A Sliver macro is nothing more than a folder with the following structure:
 
 - a `manifest.json` file
 - extension binaries in one of the following formats:
