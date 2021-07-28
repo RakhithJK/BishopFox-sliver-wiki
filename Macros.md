@@ -1,5 +1,3 @@
-# Description
-
 Sliver allows an operator to extend the local client console and its features by adding new commands based on third party tools.
 A Sliver macro is nothing more than a folder with the following structure:
 
