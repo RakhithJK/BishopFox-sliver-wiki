@@ -14,7 +14,7 @@ Starting in version 1.0.0 the Sliver server has a configuration file located the
         "port": 31337
     },
     "logs": {
-        "level": 5,
+        "level": 4,
         "grpc_unary_payloads": false,
         "grpc_stream_payloads": false
     }
@@ -27,7 +27,7 @@ Starting in version 1.0.0 the Sliver server has a configuration file located the
   * `host` - What network interface to bind the `daemon_mode` client listener to. By default this is an empty string, which indicates binding to all interfaces.
   * `port` - TCP port to bind the `deamon_mode` client listener to.
 * `logs` - An object containing configure options for server logs
-  * `level` - The `logrus` logging level (1 - 5), default this is set to `5`, which is the`DEBUG` level.
+  * `level` - The `logrus` logging level (1 - 5), default this is set to `4`, which is the`INFO` level.
   * `grpc_unary_payloads` - Log gRPC unary payloads
   * `grpc_stream_payloads` - Log gRPC streaming payloads
 
