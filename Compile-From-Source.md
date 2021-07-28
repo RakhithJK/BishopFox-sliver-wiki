@@ -32,8 +32,6 @@ Then compile and bundle server with all dependencies and assets, by default `mak
 $ make
 ```
 
-__NOTE:__ You may need to run a one-time `go mod vendor` before `make` to grab platform specific vendor code (alternatively you can use `rm -rf ./vendor`).
-
 #### Cross-compile to Specific Platforms
 
 You can also specify a target platform for the `make` file, though you may need cross-compilers (see below):
