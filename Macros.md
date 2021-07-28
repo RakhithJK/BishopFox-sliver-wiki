@@ -135,7 +135,8 @@ Sliver - 3rd Party extensions:
 ...
 ```
 
-# Writing new extensions
+# Writing Macros
 
-To write a new extension, one must either create a shared library or a .NET assembly, then write a manifest file compliant with the description above.
-As the extension support relies on Sliver side loading capabilities, please make sure to read the [Using 3rd party tools](https://github.com/BishopFox/sliver/wiki/Using-3rd-party-tools) section, to understand how shared libraries are loaded on all platforms.
+To write a new macro, one must either create a shared library or a .NET assembly, then write a manifest file compliant with the description above.
+
+As the macro support relies on Sliver side loading capabilities, please make sure to read the [Using 3rd party tools](https://github.com/BishopFox/sliver/wiki/Using-3rd-party-tools) section, to understand how shared libraries are loaded on all platforms.
