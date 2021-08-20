@@ -1,4 +1,4 @@
-You'll want to compile from a MacOS or Linux machine, compiling from native Windows in theory should work but none of the scripts are designed to run on Windows (you can compile the Windows binaries from MacOS or Linux). If you only have a Windows machine see "Windows Builds" below.
+You'll want to compile from a MacOS or Linux machine, compiling from native Windows in theory should be possible, but none of the scripts are designed to run on Windows (you can cross compile the Windows server/client binaries from MacOS or Linux). If you only have a Windows machine see "Windows Builds" below (TL;DR use WSL).
 
 
 ### Docker Build
@@ -15,7 +15,7 @@ The Docker build includes mingw and Metasploit, so it can take a while to build 
 
 From scratch without Docker, requirements for compiling:
 
-* Go v1.16 or later
+* Go v1.17 or later
 * `make`, `sed`, `tar`, `curl`, `zip` commands
 
 #### Go Assets
