@@ -5,7 +5,7 @@ Multiplayer-mode allows multiple operators (players) to connect to the same Sliv
 Operators will need to download their preferred platform's client software from the releases page. (Or build from source if they like) Clients can connect to servers of differing platforms (e.g. a Windows client can connect to a Linux server). Operators and servers authenticate using Mutual TLS. The client certificates are automatically generated and managed for you using the `new-player` command. If you did not install the server as a systemd service, be sure to leave the server console running in screen or [tmux](https://github.com/tmux/tmux).
 
 
-__NOTE__: The `new-player` and `multiplayer` commands are only accessible from the server's console.
+__NOTE__: The `new-player` and `multiplayer` commands are only accessible from the server's console (see below if you're running in daemon mode).
 
 ```
 sliver > new-player --operator moloch --lhost example.com
@@ -23,4 +23,12 @@ $ ./sliver-client
 ? Select a server:  [Use arrows to move, type to filter]
 > example.com
   localhost
+```
+
+### CLI
+
+If the server is running in daemon mode (as is the default with the Linux install script), you can use the server binaries' CLI to generate operator configuration files:
+
+```
+./sliver-server operator --name zer0cool --lhost localhost --save zer0cool.cfg
 ```
