@@ -8,7 +8,7 @@ Operators will need to download their preferred platform's client software from 
 __NOTE__: The `new-player` and `multiplayer` commands are only accessible from the server's console (see below if you're running in daemon mode).
 
 ```
-sliver > new-player --operator moloch --lhost example.com
+[server] sliver > new-player --operator moloch --lhost example.com
 
 [*] Generating new client certificate, please wait ...
 [*] Saved new client config to: /Users/moloch/Desktop/moloch_example.com.cfg
