@@ -1,5 +1,34 @@
 This document describes the way Sliver implants secure communication back to the C2 server. __NOTE:__ This does not apply when mTLS or WireGuard are used.
 
+# Versions 1.5.0+
+
+The following keys are embedded in each implant at compile time, the server also stores these values in its database in addition to the SHA256 hash of the implant's public key:
+
+1. ECC Public Key of Server CA 
+2. ECC Client Public Key
+3. ECC Client Private Key
+4. TOTP Shared Secret (server-wide shared secret)
+
+### Key Exchange
+
+1. Implant generates 256-bit symmetric "session key"
+2. Implant generates:
+ * Current TOTP code using SHA256, Unix UTC, 8 numeric code
+ * SHA256 hash of its own ECC public key
+ * Uses Nacl Box (Curve25519, XSalsa20 and Poly1305) to encrypt session key with server's public ECC key
+3. Implant sends `[ TOTP Code | Hash of Public Key | Nacl Box Ciphertext ]` to server
+4. Server verifies TOTP Code
+5. Server looks up sender public key using hash of public key in database
+6. Decrypts Nacl with sender public key + server private key
+7. Server generates a session ID, encrypts it with the session key using chacha20poly1305, and sends it back
+8. All messages are encrypted with the session key using chacha20poly1305 and associated with via the session ID
+9. Each side stores a SHA2-256 hash of each message's ciphertext to detect replayed messages.
+
+
+
+
+# Versions <= 1.4.21
+
 ## Transport Encryption for HTTP(S) / DNS
 
 When the implant cannot directly route TCP traffic back to the C2 server or redirector the implant may, when configured to do so, connect back to the C2 server over HTTP, HTTPS, or DNS. In an operational environment it may not be posssible to establish a trusted HTTPS connect back to the server and HTTP/DNS do not implement any tranport encryption so Sliver "brings it's own crypto" to all of these protocols including HTTPS. This allows us to establish secure connections even if the only way out of the network is over a HTTPS interception proxy.
