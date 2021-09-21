@@ -20,8 +20,8 @@ The following keys are embedded in each implant at compile time, the server also
 4. Server verifies TOTP Code
 5. Server looks up sender public key using hash of public key in database
 6. Decrypts Nacl with sender public key + server private key
-7. Server generates a session ID, encrypts it with the session key using chacha20poly1305, and sends it back
-8. All messages are encrypted with the session key using chacha20poly1305 and associated with via the session ID
+7. Server generates a session ID, encrypts it with the session key using ChaCha20Poly1305, and sends it back
+8. All messages are encrypted with the session key using ChaCha20Poly1305 and associated with via the session ID
 9. Each side stores a SHA2-256 hash of each message's ciphertext to detect replayed messages.
 
 
