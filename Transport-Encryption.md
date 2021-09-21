@@ -31,6 +31,7 @@ There are some known limitations, if you spot any or have ideas on improvements 
 
 1. __Perfect Forward Secrecy__: We do get some forward secrecy, since only the public key encrypted version of the session key is sent over the wire; therefore recovery of the hard coded implant keys from the binary should not result in recovery of the session key. Only when the server's private key is compromised can the session key be recovered, which we currently don't consider to be a problem.
 2. Implants can potentially be tracked via the hash of their public key. However, this value is implant specific, so in order to track the implant this way you'd have to already have a copy of the specific implant you want to track. At which point more effective tracking mechanisms like YARA rules could be employed.
+3. Session initialization messages can be replayed within the validity period of the TOTP value. TOTP values are valid for 30 seconds + 30 margin of error, so the session initialization message can be replayed within about ~60 second period without obtaining a new TOTP code, however the implant must use the session key to register itself post-key exchange so replayed session initialization does not appear to be a security risk even outside of the restrictive window.
 
 # Versions <= 1.4.21
 
