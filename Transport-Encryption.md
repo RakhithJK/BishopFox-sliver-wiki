@@ -11,7 +11,7 @@ The following keys are embedded in each implant at compile time, the server also
 
 ### Key Exchange
 
-1. Implant generates 256-bit symmetric "session key"
+1. Implant generates random 256-bit symmetric "session key"
 2. Implant generates:
  * Current TOTP code using SHA256, Unix UTC, 8 numeric code
  * SHA256 hash of its own ECC public key
