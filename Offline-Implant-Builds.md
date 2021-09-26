@@ -2,7 +2,7 @@ By default when you build an implant for the first time Sliver will attempt to p
 
 ### GOPROXY
 
-As of v1.5.0 Sliver also supports the Golang `GOPROXY` environment variable, which can be configured to point to a local Go Module Proxy that contains the implant's dependencies.
+As of v1.5.0 Sliver also supports the Golang `GOPROXY` environment variable, which can be configured to point to a local Go Module Proxy that contains the implant's dependencies. A `GOPROXY` can also be configured in the server's configuration file, which will take precedence over any environment variable. 
 
 For example, you can use the [Athens](https://docs.gomods.io/) proxy to cache modules locally:
 
