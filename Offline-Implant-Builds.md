@@ -27,5 +27,5 @@ docker run -d -v $ATHENS_STORAGE:/var/lib/athens \
    --name athens-proxy \
    --restart always \
    -p 3000:3000 \
-   gomods/athens:lates
+   gomods/athens:latest
 ```
