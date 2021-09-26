@@ -13,3 +13,19 @@ $ ./sliver-server
 
 [server] sliver > generate --http localhost
 ```
+
+### Athens Proxy Script
+
+Script to start Athens:
+
+```
+export ATHENS_STORAGE=$HOME/.athens-storage
+mkdir -p $ATHENS_STORAGE
+docker run -d -v $ATHENS_STORAGE:/var/lib/athens \
+   -e ATHENS_DISK_STORAGE_ROOT=/var/lib/athens \
+   -e ATHENS_STORAGE_TYPE=disk \
+   --name athens-proxy \
+   --restart always \
+   -p 3000:3000 \
+   gomods/athens:lates
+```
