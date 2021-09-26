@@ -7,7 +7,7 @@ As of v1.5.0 Sliver also supports the Golang `GOPROXY` environment variable, whi
 For example, you can use the [Athens](https://docs.gomods.io/) proxy to cache modules locally:
 
 ```
-$ docker run -p '3000:3000' gomods/athens:latest
+$ docker run -d -p '3000:3000' gomods/athens:latest
 $ export GOPROXY=http://localhost:3000
 $ ./sliver-server
 
