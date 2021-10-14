@@ -45,7 +45,9 @@ sliver > generate --mtls example.com --save /Users/moloch/Desktop
 [*] Sliver binary saved to: /Users/moloch/Desktop/NEW_GRAPE.exe
 ```
 
-Sliver implants are cross-platform, you can change the compiler target with the `--os` flag. Sliver accepts any Golang GOOS and GOARCH as arguments `--os` and `--arch`, we officially only support Windows, MacOS, and Linux, but you can at least attempt to compile for any other [valid Golang GOOS/GOARCH](https://gist.github.com/asukakenji/f15ba7e588ac42795f421b48b8aede63) combination. WARNING: Some commands/features may not work on "unsupported" platforms.
+Sliver implants are cross-platform, you can change the compiler target with the `--os` flag. Sliver accepts any Golang GOOS and GOARCH as arguments `--os` and `--arch`, we officially only support Windows, MacOS, and Linux, but you can at least attempt to compile for any other [valid Golang GOOS/GOARCH](https://gist.github.com/asukakenji/f15ba7e588ac42795f421b48b8aede63) combination. The `generate info` command will also estimate what compiler targets can be used based on the server's host operating system and available cross-compilers.
+
+WARNING: Some commands/features may not work on "unsupported" platforms.
 
 ```
 sliver > generate --mtls example.com --save /Users/moloch/Desktop --skip-symbols --os mac
