@@ -12,6 +12,11 @@ __NOTE__: The `new-player` and `multiplayer` commands are only accessible from t
 
 [*] Generating new client certificate, please wait ...
 [*] Saved new client config to: /Users/moloch/Desktop/moloch_example.com.cfg
+
+[server] sliver > multiplayer
+
+[*] Multiplayer mode enabled!
+
 ```
 
 __Important:__ Before clients can connect to a server you must start an RPC listener with the `multiplayer` command. The default port is TCP/31337.
