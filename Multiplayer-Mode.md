@@ -39,3 +39,5 @@ If the server is running in daemon mode (as is the default with the Linux instal
 ```
 ./sliver-server operator --name zer0cool --lhost 1.2.3.4 --save zer0cool.cfg
 ```
+
+The installation scripts by default will place the `sliver-server` binary in `/root`.
