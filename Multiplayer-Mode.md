@@ -2,13 +2,12 @@ Multiplayer-mode allows multiple operators (players) to connect to the same Sliv
 
 ## New Players (Operators)
 
-Operators will need to download their preferred platform's client software from the releases page. (Or build from source if they like) Clients can connect to servers of differing platforms (e.g. a Windows client can connect to a Linux server). Operators and servers authenticate using Mutual TLS. The client certificates are automatically generated and managed for you using the `new-player` command. If you did not install the server as a systemd service, be sure to leave the server console running in screen or [tmux](https://github.com/tmux/tmux).
-
+Operators will need to download their preferred platform's client software from the releases page. (Or build from source if they like) Clients can connect to servers of differing platforms (e.g. a Windows client can connect to a Linux server). Operators and servers authenticate using Mutual TLS. The client certificates are automatically generated and managed for you using the `new-player` command. If you did not install the server as a systemd service, be sure to leave the server console running in screen or [tmux](https://github.com/tmux/tmux) after starting the multiplayer listener. If you did install the server as systemd service see the CLI section below for an alternative to the console commands.
 
 __NOTE__: The `new-player` and `multiplayer` commands are only accessible from the server's console (see below if you're running in daemon mode).
 
 ```
-[server] sliver > new-player --operator moloch --lhost example.com
+[server] sliver > new-player --operator moloch --lhost 1.2.3.4
 
 [*] Generating new client certificate, please wait ...
 [*] Saved new client config to: /Users/moloch/Desktop/moloch_example.com.cfg
@@ -32,8 +31,8 @@ $ ./sliver-client
 
 ### CLI
 
-If the server is running in daemon mode (as is the default with the Linux install script), you can use the server binaries' CLI to generate operator configuration files:
+If the server is running in daemon mode (as is the default with the Linux install script), that means the multiplayer listener is started for you without an interactive console. You can use the server binaries' CLI to generate operator configuration files to connect:
 
 ```
-./sliver-server operator --name zer0cool --lhost localhost --save zer0cool.cfg
+./sliver-server operator --name zer0cool --lhost 1.2.3.4 --save zer0cool.cfg
 ```
