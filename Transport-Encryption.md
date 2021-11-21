@@ -17,7 +17,7 @@ The following keys are embedded in each implant at compile time, the server also
 2. Implant generates:
  * Current TOTP code using SHA256, Unix UTC, 8-digit numeric code
  * SHA256 hash of its own ECC public key
- * Uses Nacl Box (Curve25519, XSalsa20 and Poly1305) to encrypt session key with server's public ECC key
+ * Uses Nacl Box (Curve25519, XSalsa20, and Poly1305) to encrypt session key with server's public ECC key
 3. Implant sends `[ TOTP Code | SHA256 Hash of Public Key | Nacl Box Ciphertext ]` to server, note: in this scheme no ECC keys (even public keys) are ever sent over the wire, instead we only send the hash of the public key.
 4. Server verifies TOTP Code
 5. Server uses the SHA256 hash of public key to look up the implant's full ECC public key in its database
