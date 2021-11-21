@@ -4,12 +4,14 @@ This document describes the way Sliver implants secure communication back to the
 
 The following keys are embedded in each implant at compile time, the server also stores these values in its database in addition to the SHA256 hash of the implant's public key:
 
-1. ECC Public Key of Server 
-2. ECC Client Public Key
-3. ECC Client Private Key
-4. TOTP Shared Secret (server-wide shared secret)
+1. ECC public key of server 
+2. ECC implant public Key
+3. ECC implant private Key
+4. A minisign signature of the implant ECC public key (signed by server's private key)
+5. The server's minisign public key 
+6. TOTP shared secret (server-wide shared secret)
 
-### Key Exchange
+### Server to Implant Key Exchange
 
 1. Implant generates random 256-bit symmetric "session key"
 2. Implant generates:
@@ -24,6 +26,18 @@ The following keys are embedded in each implant at compile time, the server also
 8. All messages are encrypted with the session key using ChaCha20Poly1305 and associated with via the session ID
 9. Each side stores a SHA2-256 hash of each message's ciphertext to detect replayed messages.
 
+### Implant to Implant Key Exchange (Pivots)
+
+1. An implant starts a pivot listener (the listener)
+2. Another implant connects to the listener (the initiator) 
+3. The initiator sends its ECC public key and the minisign signature of its public key
+4. The listener verifies the initiator's public key is signed by the listener's server's minisign public key
+5. The listener generates a random session key and encrypts it with the initiator's verified public key
+6. The listener sends its ECC public key, the minisign signature of its public key, and the encrypted session key back to the initiator
+7. The initiator verifies the listener's public key is signed by the initiator's server's minisign public key
+8. The initiator decrypts the session key
+9. All messages are encrypted with the session key using ChaCha20Poly1305
+10. Each side stores a SHA2-256 hash of each message's ciphertext to detect replayed messages
 
 ### Known Limitations
 
