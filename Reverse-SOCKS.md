@@ -1,7 +1,17 @@
+## In-band SOCKS5
 
-⚠️ __NOTE:__ Currently reverse SOCKS is only supported over WireGuard C2.
+An in-band reverse SOCKS5 proxy is supported in Sliver versions 1.5 and later. Note that the SOCKS proxy feature can only be used on sessions (i.e., interactive sessions) and not beacons.
 
-## WireGuard SOCKS
+```
+sliver (UGLY_SCARIFICATION) > socks5 add
+
+[*] Started SOCKS5 127.0.0.1 1081  
+⚠️  In-band SOCKS proxies can be a little unstable depending on protocol
+```
+
+Simply upstream to `127.0.0.1:1081` from here, see `socks5 add --help` for more options.
+
+## WireGuard SOCKS5
 
 In order to use `wg-socks` you'll need a WireGuard client, any client should work. However, we recommend using `wg-quick`, which is included in the `wireguard-tools` package available on most platforms (see [WireGuard](https://www.wireguard.com/install/) for more platforms):
 
