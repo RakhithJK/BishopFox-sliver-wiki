@@ -11,14 +11,14 @@ __NOTE:__ Sliver has two external dependancies for _optional_ features: MinGW an
 The `Dockerfile` build of Sliver is mostly designed to run the unit tests but includes both MinGW and Metasploit. If you plan to run the server using Docker you'll need to forward the appropriate TCP ports (e.g. 80, 443, 31337) yourself.
 
 
-### MinGW Setup (Optional)
+### MinGW Setup (Optional, Recommended)
 
 In order to enable shellcode/staged/DLL payloads you'll need to install MinGW on the server (clients connecting to the server do not need it installed). By default Sliver will look in the usual places for MinGW binaries but you can override this using the [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables).
 
-#### Linux
+#### Linux (Debian-based)
 
 ```
-apt-get install mingw-w64 binutils-mingw-w64 g++-mingw-w64
+apt install mingw-w64
 ```
 
 #### MacOS
