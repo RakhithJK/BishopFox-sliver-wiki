@@ -1,4 +1,4 @@
-__NOTE:__ Any platform can cross-compile a standalone executable to any other platform out of the box, you only need cross-compilers when using `--format shared` or `--format shellcode`.
+__NOTE:__ Any platform can cross-compile a standalone executable to any other platform out of the box, you only need cross-compilers when using `--format shared`.
 
 Sliver can tell you which platforms it can likely target based on the server's platform and available cross-compilers by running the `generate info` command in the console.
 
