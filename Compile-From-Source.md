@@ -1,16 +1,5 @@
 You'll want to compile from a MacOS or Linux machine, compiling from native Windows in theory should be possible, but none of the scripts are designed to run on Windows (you can cross compile the Windows server/client binaries from MacOS or Linux). If you only have a Windows machine see "Windows Builds" below (TL;DR use WSL).
 
-
-### Docker Build
-
-The Docker builds are mostly designed for running unit tests, but can be useful if you want a "just do everything" build, you just need to have Docker installed on the machine. First `git clone` the Sliver repo, then run the `build.py` script (the script isn't required but has a few short cuts see `./build.py --help`). Alternatively, execute the following command: 
-
-```
-docker build -t sliver .
-```
-
-The Docker build includes mingw and Metasploit, so it can take a while to build from scratch but Docker should cache the layers effectively. Sliver will also run it's unit tests as part of the build, and that takes a few minutes too.
-
 ### From Scratch (No Docker)
 
 From scratch without Docker, requirements for compiling:
@@ -42,6 +31,16 @@ $ make macos-arm64
 $ make linux
 $ make windows
 ```
+
+### Docker Build
+
+The Docker builds are mostly designed for running unit tests, but can be useful if you want a "just do everything" build, you just need to have Docker installed on the machine. First `git clone` the Sliver repo, then run the `build.py` script (the script isn't required but has a few short cuts see `./build.py --help`). Alternatively, execute the following command: 
+
+```
+docker build -t sliver .
+```
+
+The Docker build includes mingw and Metasploit, so it can take a while to build from scratch but Docker should cache the layers effectively. Sliver will also run it's unit tests as part of the build, and that takes a few minutes too.
 
 ### Windows Builds
 
