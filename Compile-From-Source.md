@@ -9,7 +9,7 @@ From scratch without Docker, requirements for compiling:
 
 #### Go Assets
 
-Sliver embeds its own version of the Go compiler and related tools. Run the following script to download these static assets. You need to do this at least once before running `make`:
+Sliver embeds its own version of the Go compiler and related tools. Run the following script to download these static assets. You only need to do this once before running `make`:
 
 ```
 $ ./go-assets.sh
