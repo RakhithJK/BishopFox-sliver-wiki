@@ -15,7 +15,7 @@ Sliver embeds its own version of the Go compiler and related tools. Run the foll
 $ ./go-assets.sh
 ```
 
-Then compile and bundle server with all dependencies and assets, by default `make` will build whatever platform you're currently running on:
+Then compile the code, by default `make` will build whatever platform you're currently running on:
 
 ```
 $ make
