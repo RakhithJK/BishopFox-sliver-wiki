@@ -5,7 +5,7 @@ You'll want to compile from a MacOS or Linux machine, compiling from native Wind
 From scratch without Docker, requirements for compiling:
 
 * Go v1.17 or later
-* `make`, `sed`, `tar`, `curl`, `zip` commands
+* `make`, `sed`, `tar`, `curl`, `zip`, `cut` commands
 
 #### Go Assets
 
