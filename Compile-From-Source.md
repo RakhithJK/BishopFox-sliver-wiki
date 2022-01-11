@@ -7,6 +7,8 @@ From scratch without Docker, requirements for compiling:
 * Go v1.17 or later
 * `make`, `sed`, `tar`, `curl`, `zip`, `cut` commands
 
+`NOTE:` The Sliver make file uses version information from the git repository, so you must `git clone` the repository. Using GitHub's "download zip" feature may omit the `.git` directory and result in broken builds.
+
 #### Go Assets
 
 Sliver embeds its own version of the Go compiler and related tools. Run the following script to download these static assets. You only need to do this once before running `make`:
