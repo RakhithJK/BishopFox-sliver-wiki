@@ -30,6 +30,8 @@ Then compile the code, by default `make` will build whatever platform you're cur
 $ make
 ```
 
+This will create `sliver-server` and `sliver-client` binaries.
+
 #### Cross-compile to Specific Platforms
 
 You can also specify a target platform for the `make` file, though you may need cross-compilers (see below):
