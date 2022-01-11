@@ -1,15 +1,22 @@
 You'll want to compile from a MacOS or Linux machine, compiling from native Windows in theory should be possible, but none of the scripts are designed to run on Windows (you can cross compile the Windows server/client binaries from MacOS or Linux). If you only have a Windows machine see "Windows Builds" below (TL;DR use WSL).
 
-### From Scratch (No Docker)
+### Compile From Source (No Docker)
 
 From scratch without Docker, requirements for compiling:
 
-* Go v1.17 or later
+* Go v1.17 or later (check with `go version`)
 * `make`, `sed`, `tar`, `curl`, `zip`, `cut` commands
 
 **IMPORTANT:** The Sliver makefile requires version information from the git repository, so you must `git clone` the repository. Using GitHub's "download zip" feature may omit the `.git` directory and result in broken builds.
 
-#### Go Assets
+#### Compiling
+
+First git clone the repository:
+
+```
+$ git clone https://github.com/BishopFox/sliver.git
+$ cd sliver
+```
 
 Sliver embeds its own copy of the Go compiler and related tools. Run the following script to download these static assets. You only need to do this once before running `make`:
 
