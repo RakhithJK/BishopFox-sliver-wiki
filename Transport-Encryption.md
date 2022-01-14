@@ -5,8 +5,8 @@ This document describes the way Sliver implants secure communication back to the
 The following keys are embedded in each implant at compile time, the server also stores these values in its database in addition to the SHA256 hash of the implant's public key:
 
 1. ECC public key of server 
-2. ECC implant public Key
-3. ECC implant private Key
+2. ECC implant public key
+3. ECC implant private key
 4. A minisign signature of the implant ECC public key (signed by server's private key)
 5. The server's minisign public key 
 6. TOTP shared secret (server-wide shared secret)
