@@ -2,7 +2,7 @@ This document describes the way Sliver implants secure communication back to the
 
 # Versions 1.5.0+
 
-The following keys are embedded in each implant at compile time, the server also stores these values in its database in addition to the SHA256 hash of the implant's public key:
+The following keys are embedded in each implant at compile time, the server also stores these values in its database in addition to the SHA2-256 hash of the implant's public key:
 
 1. ECC public key of server 
 2. ECC implant public key
@@ -15,12 +15,12 @@ The following keys are embedded in each implant at compile time, the server also
 
 1. Implant generates random 256-bit symmetric "session key"
 2. Implant generates:
- * Current TOTP code using SHA256, Unix UTC, 8-digit numeric code
+ * Current TOTP code using SHA2-256, Unix UTC, 8-digit numeric code
  * SHA256 hash of its own ECC public key
  * Uses Nacl Box (Curve25519, XSalsa20, and Poly1305) to encrypt session key with server's public ECC key
-3. Implant sends `[ TOTP Code | SHA256 Hash of Public Key | Nacl Box Ciphertext ]` to server, note: in this scheme no ECC keys (even public keys) are ever sent over the wire, instead we only send the hash of the public key.
+3. Implant sends `[ TOTP Code | SHA2-256 Hash of Public Key | Nacl Box Ciphertext ]` to server, note: in this scheme no ECC keys (even public keys) are ever sent over the wire, instead we only send the hash of the public key.
 4. Server verifies TOTP Code
-5. Server uses the SHA256 hash of public key to look up the implant's full ECC public key in its database
+5. Server uses the SHA2-256 hash of public key to look up the implant's full ECC public key in its database
 6. Decrypts Nacl with sender public key + server private key
 7. Server generates a session ID, encrypts it with the session key using ChaCha20Poly1305, and sends it back
 8. All messages are encrypted with the session key using ChaCha20Poly1305 and associated with via the session ID
