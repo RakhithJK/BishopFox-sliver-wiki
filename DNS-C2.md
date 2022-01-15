@@ -57,4 +57,10 @@ nameserver 8.8.8.8
 
 # Under the Hood
 
-TODO :)
+__NOTE:__ This describes the v1.5+ implementation of DNS C2.
+
+### Design Goals
+
+The current implementation of DNS C2 is primarily designed for "speed" (as far as DNS tunnels go) NOT stealth; it does not intend to be subtle in its use of DNS to tunnel data. While DNS can be a very useful protocol for stealthy signaling, Sliver here is creating a full duplex tunnels, doing so covertly would be generally be far too slow to be practical. The general rule of thumb though is that DNS C2 is easy to detect _if you look_. That's not to say DNS C2 isn't useful or will be immediately detected. As DNS does not require direct "line of sight" networking, it is often useful for tunneling out of highly restricted networks, and if the environment has not been instrumented to specifically detect DNS C2 it will likely go undetected.
+
+
