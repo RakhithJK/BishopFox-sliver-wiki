@@ -61,6 +61,12 @@ __NOTE:__ This describes the v1.5+ implementation of DNS C2.
 
 ### Design Goals
 
-The current implementation of DNS C2 is primarily designed for "speed" (as far as DNS tunnels go) NOT stealth; it does not intend to be subtle in its use of DNS to tunnel data. While DNS can be a very useful protocol for stealthy signaling, Sliver here is creating a full duplex tunnels, doing so covertly would be generally be far too slow to be practical. The general rule of thumb though is that DNS C2 is easy to detect _if you look_. That's not to say DNS C2 isn't useful or will be immediately detected. As DNS does not require direct "line of sight" networking, it is often useful for tunneling out of highly restricted networks, and if the environment has not been instrumented to specifically detect DNS C2 it will likely go undetected.
+The current implementation of DNS C2 is primarily designed for "speed" (as far as DNS tunnels go) NOT stealth; it does not intend to be subtle in its use of DNS to tunnel data. While DNS can be a very useful protocol for stealthy signaling, Sliver here is creating a full duplex tunnels, doing so covertly would be generally be far too slow to be practical. The general rule of thumb is that DNS C2 is easy to detect _if you look_. That's not to say DNS C2 isn't useful or will be immediately detected. As DNS does not require direct "line of sight" networking, it is often useful for tunneling out of highly restricted networks, and if the environment has not been instrumented to specifically detect DNS C2 it will likely go undetected.
+
+### Rude DNS Resolvers
+
+The novice hacker often may think that something like DNS, being a fundamental building block of the internet, would be strictly defined and implemented. This of course could not be further from reality; the DNS protocol specification is really more what you call "guidelines" than actual rules. It is common for DNS resolvers to ignore TTL values, modify query contents, drop packets, and lie in responses. Since we cannot control what resolvers we may need use in an operational environment, and we want to build reliable C2 connections, we must expect this type of behavior and design around it.
 
 
+
+### Sliver DNS C2
