@@ -106,7 +106,7 @@ To workaround this problem many DNS C2 implementations instead use hexadecimal e
 
 Sliver's solution to this problem is to first try to detect if Base58 can be used to reliably encode data, and if a problem is detected then fallback to Base32. I call this process "fingerprinting" the resolver.
 
-### Detecting Rude Resolvers
+### Fingerprinting Rude Resolvers
 
 The most common DNS query is an `A` record asking for the IPv4 address associated with some domain name. An IPv4 address is a 4-byte value typically displayed as four octets in Base10 e.g. `192.168.1.1`, but to DNS this is just an arbitrary 4-byte (32-bit) value.
 
