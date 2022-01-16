@@ -78,7 +78,7 @@ This allows an implant to establish a connection to an attacker controlled host 
 
 The novice hacker often may think that something like DNS, being a fundamental building block of the internet, would be strictly defined and implemented. This of course could not be further from reality; the DNS protocol specification is really more what you call "guidelines" than actual rules. It is common for DNS resolvers to ignore TTL values, modify query contents, drop packets, and lie in responses. Since we cannot control what resolvers we may need use in an operational environment, and we want to build reliable C2 connections, we must expect this type of behavior and design around it.
 
-### Bytes Per Query
+### Encoder Selection
 
 So if we want to build a "fast" DNS tunnel, we need to be able to pack as much data into each request as possible, more data per query the fewer queries we need to send for a given message.
 
@@ -100,36 +100,15 @@ So how much data can we stuff into a DNS query? Well let's take a look at what g
 
 Thus we'll focus on encoding data into the `QNAME` (the domain), domains can be up to 254 characters in length and may only contain ASCII `a-z`, `A-Z`, `0-9`, `-`, but `-` may not appear at the beginning of a name, and of course `.` separators. Each subdomain is separated by a `.` and may be up to 63 characters in length. However, DNS is a case-insensitive protocol thus `a` and `A` are considered equal from DNS' standpoint. Now as I said before the spec is really more guidelines than rules, so both `a` and `A` are technically allowed they're just considered equal in DNS' semantics.
 
-Now we want to send arbitrary binary data but DNS does not allow binary data in the `QNAME` so we need to encode binary data into the allowed character set. Typically of course to encode arbitrary binary data into ASCII we'd use Base64 encoding, but DNS only allows 62 distinct characters (`a-z`, `A-Z`, `0-9`) so Base64 cannot be used. Additionally, we must consider that to Base64 `a` and `A` are distinct values whereas to DNS they are not. So it may not always be a case-sensitive encoding like Base64 if some rude resolver were to convert all the characters in one of our `QNAME`s to lower case. As far as DNS is concerned this is just fine, but it would corrupt the bytes decoded by the server.
+Now we want to send arbitrary binary data but DNS does not allow binary data in the `QNAME` so we need to encode binary data into the allowed character set. Typically of course to encode arbitrary binary data into ASCII we'd use [Base64](https://en.wikipedia.org/wiki/Base64) encoding, but DNS only allows 62 distinct characters (`a-z`, `A-Z`, `0-9`) so Base64 cannot be used. Additionally, we must consider that to Base64 `a` and `A` are distinct values whereas to DNS they are not. So it may not always be a case-sensitive encoding like Base64 if some rude resolver were to convert all the characters in one of our `QNAME`s to lower case. As far as DNS is concerned this is just fine, but it would corrupt the bytes decoded by the server.
 
-To workaround this problem many DNS C2 implementations instead use hexadecimal encoding, which is not case-sensitive and uses only characters (`0-9`, `A-F`), which are allowed in a `QNAME`, to transfer data back and forth from the server. The issue with this is that hexadecimal is a very inefficient encoding, resulting in a x2 size (takes two bytes to encode one byte), and since we want to minimize the number of queries we need to send this isn't a great option. Instead we could use Base32, which is also case-insensitive but uses more characters to display bytes and thus is more efficient at around x1.6 size. Even better yet would be Base58, which is case sensitive like Base64 but only uses chars allowed in a `QNAME`, at a little over x1.33 message size, but we cannot always rely on being able to use Base58 if we encounter a rude resolver.
+To workaround this problem many DNS C2 implementations instead use hexadecimal encoding, which is not case-sensitive and uses only characters (`0-9`, `A-F`), which are allowed in a `QNAME`, to transfer data back and forth from the server. The issue with this is that hexadecimal is a very inefficient encoding, resulting in a x2 size (takes two bytes to encode one byte), and since we want to minimize the number of queries we need to send this isn't a great option. Instead we could use [Base32](https://en.wikipedia.org/wiki/Base32), which is also case-insensitive but uses more characters to display bytes and thus is more efficient at around x1.6 size. Even better yet would be [Base58](https://en.wikipedia.org/wiki/Binary-to-text_encoding#Base58), which is case sensitive like Base64 but only uses chars allowed in a `QNAME`, at a little over x1.33 message size, but we cannot always rely on being able to use Base58 if we encounter a rude resolver.
 
-Sliver's solution to this is to first try to detect if Base58 can be used to reliably encode data, and if a problem is detected then fallback to Base32.
+Sliver's solution to this problem is to first try to detect if Base58 can be used to reliably encode data, and if a problem is detected then fallback to Base32. 
+
+### Detecting Rude Resolvers
 
 
 
-Resource record format:
 
-```
-                                    1  1  1  1  1  1
-      0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5
-    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-    |                                               |
-    /                                               /
-    /                      NAME                     /
-    |                                               |
-    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-    |                      TYPE                     |
-    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-    |                     CLASS                     |
-    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-    |                      TTL                      |
-    |                                               |
-    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-    |                   RDLENGTH                    |
-    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--|
-    /                     RDATA                     /
-    /                                               /
-    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-```
 
