@@ -141,3 +141,5 @@ message DNSMessage {
 }
 ```
 
+This does result in some overhead, and we must account for this as part of the bytes-per-query math.
+
