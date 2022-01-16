@@ -82,7 +82,7 @@ The novice hacker often may think that something like DNS, being a fundamental b
 
 So if we want to build a "fast" DNS tunnel, we need to be able to pack as much data into each request as possible, more data per query the fewer queries we need to send for a given message.
 
-So how much data can we stuff into a DNS query? Well let's take a look at what goes into a DNS query, a DNS query contains some header fields and then a "questions" section, a single query may contain multiple questions. For example, we can ask "is there an A record for example.com" (an A records contain IPv4 addresses), we can encode a handful of bytes into some of the header fields and a couple other sections like the Type/Class, but by far the `QNAME` which contains the domain we're asking a question about: 
+So how much data can we stuff into a DNS query? Well let's take a look at what goes into a DNS query, a DNS query contains some header fields and then a "questions" section, a single query may contain multiple questions. For example, we can ask "is there an A record for example.com" (an A records contain IPv4 addresses). Now, we can encode a handful of bits into some of the header fields and a couple other sections like the Type/Class, but by far the largest field is `QNAME`, which contains the domain we're asking a question about: 
 
 ```
                                     1  1  1  1  1  1
@@ -102,7 +102,11 @@ Thus we'll focus on encoding data into the `QNAME` (the domain), domains can be 
 
 Now we want to send arbitrary binary data but DNS does not allow binary data in the `QNAME` so we need to encode binary data into the allowed character set. Typically of course to encode arbitrary binary data into ASCII we'd use Base64 encoding, but DNS only allows 62 distinct characters (`a-z`, `A-Z`, `0-9`) so Base64 cannot be used. Additionally, we must consider that to Base64 `a` and `A` are distinct values whereas to DNS they are not. So it may not always be a case-sensitive encoding like Base64 if some rude resolver were to convert all the characters in one of our `QNAME`s to lower case. As far as DNS is concerned this is just fine, but it would corrupt the bytes decoded by the server.
 
-To workaround this problem many DNS C2 implementations instead use hexadecimal encoding, which is not case-sensitive and uses only characters (`0-9`, `A-F`), which are allowed in a `QNAME`, to transfer data back and forth from the server.
+To workaround this problem many DNS C2 implementations instead use hexadecimal encoding, which is not case-sensitive and uses only characters (`0-9`, `A-F`), which are allowed in a `QNAME`, to transfer data back and forth from the server. The issue with this is that hexadecimal is a very inefficient encoding, resulting in a x2 size (takes two bytes to encode one byte), and since we want to minimize the number of queries we need to send this isn't a great option. Instead we could use Base32, which is also case-insensitive but uses more characters to display bytes and thus is more efficient at around x1.6 size. Even better yet would be Base58, which is case sensitive like Base64 but only uses chars allowed in a `QNAME`, at a little over x1.33 message size, but we cannot always rely on being able to use Base58 if we encounter a rude resolver.
+
+Sliver's solution to this is to first try to detect if Base58 can be used to reliably encode data, and if a problem is detected then fallback to Base32.
+
+
 
 Resource record format:
 
