@@ -1,0 +1,1 @@
+The armory is a Sliver Alias and Extension package manager introduced in Sliver v1.5.
