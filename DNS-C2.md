@@ -128,4 +128,16 @@ This "subdata space" is the maximum number of characters our encoder (Base32 or 
 
 In addition to optimizing our use of encoders, we can also increase performance if we can send queries with encoded data out of order, or that is to say in parallel, since sending in parallel will most assuredly result in messages arriving at the server out of order.
 
+To account for his, Sliver wraps the message of `n` bytes in a protobuf message that contains some metadata:
+
+```protobuf
+message DNSMessage {
+    DNSMessageType Type = 1; // An enum type
+    uint32 ID = 2; // 8 bit message id + 24 bit dns session ID
+    uint32 Start = 3; // Bytes start at
+    uint32 Stop = 4; // Bytes stop at
+    uint32 Size = 5; // Total size
+    bytes Data = 6; // Actual data
+}
+```
 
