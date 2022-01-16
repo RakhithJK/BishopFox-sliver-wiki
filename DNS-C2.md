@@ -104,7 +104,7 @@ Now we want to send arbitrary binary data but DNS does not allow binary data in 
 
 To workaround this problem many DNS C2 implementations instead use hexadecimal encoding, which is not case-sensitive and uses only characters (`0-9`, `A-F`), which are allowed in a `QNAME`, to transfer data back and forth from the server. The issue with this is that hexadecimal is a very inefficient encoding, resulting in a x2 size (takes two bytes to encode one byte), and since we want to minimize the number of queries we need to send this isn't a great option. Instead we could use [Base32](https://en.wikipedia.org/wiki/Base32), which is also case-insensitive but uses more characters to display bytes and thus is more efficient at around x1.6 size. Even better yet would be [Base58](https://en.wikipedia.org/wiki/Binary-to-text_encoding#Base58), which is case sensitive like Base64 but only uses chars allowed in a `QNAME`, at a little over x1.33 message size, but we cannot always rely on being able to use Base58 if we encounter a rude resolver.
 
-Sliver's solution to this problem is to first try to detect if Base58 can be used to reliably encode data, and if a problem is detected then fallback to Base32. 
+Sliver's solution to this problem is to first try to detect if Base58 can be used to reliably encode data, and if a problem is detected then fallback to Base32. I call this process "fingerprinting" the resolver.
 
 ### Detecting Rude Resolvers
 
