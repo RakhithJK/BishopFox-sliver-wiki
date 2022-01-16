@@ -126,6 +126,6 @@ This "subdata space" is the maximum number of characters our encoder (Base32 or 
 
 ### Parallel Send/Recv
 
-
+In addition to optimizing our use of encoders, we can also increase performance if we can send queries with encoded data out of order, or that is to say in parallel, since sending in parallel will most assuredly result in messages arriving at the server out of order.
 
 
