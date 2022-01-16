@@ -63,7 +63,7 @@ __NOTE:__ This describes the v1.5+ implementation of DNS C2.
 
 The current implementation of DNS C2 is primarily designed for "speed" (as far as DNS tunnels go) NOT stealth; it does not intend to be subtle in its use of DNS to tunnel data. While DNS can be a very useful protocol for stealthy signaling, Sliver here is creating a full duplex tunnels, doing so covertly would generally be far too slow to be practical. The general rule of thumb is that DNS C2 is easy to detect _if you look_. That's not to say DNS C2 isn't useful or will be immediately detected. As DNS does not require direct "line of sight" networking, it is often useful for tunneling out of highly restricted networks, and if the environment has not been instrumented to specifically detect DNS C2 it will likely go undetected.
 
-For example, if a DNS client attempts to `foo.1.example.com` it will query it's resolver for an answer. If the resolver does not know the answer it will start "recursively" resolving the domain eventually finding its way to the "authoritative name server" for the domain, which is controlled by the owner of `example.com`. DNS C2 works by stuff data in a subdomain, and then sending a query for that subdomain to the authoritative name server.
+For example glossing over some details, if a DNS client attempts to `foo.1.example.com` it will query it's local resolver for an answer. If the resolver does not know the answer it will start "recursively" resolving the domain eventually finding its way to the "authoritative name server" for the domain, which is controlled by the owner of `example.com`. DNS C2 works by stuff data in a subdomain, and then sending a query for that subdomain to the authoritative name server.
 
 ```
 [implant] <--> [resolver]
@@ -112,5 +112,6 @@ The most common DNS query is an `A` record asking for the IPv4 address associate
 
 In order to detect if a resolver corrupted any bytes in our message the authoritative name server encodes the [CRC32](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) of the data it received in the IP address of any `A` record that it receives. The implant first generates random bytes and then for each resolver on a host we try to resolve these random bytes and check to see if the CRC32 calculated by the server matches the CRC32 of the data we sent. If any mismatches occur Base32 is used instead of Base58.
 
+### Bytes Per Query
 
-
+Since the encoder used to send data is selected at runtime, as described above, the number of bytes that can be encoded into a query depends on both the length of the parent domain and the encoder used and must be calculated dynamically.
