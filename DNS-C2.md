@@ -57,7 +57,7 @@ nameserver 8.8.8.8
 
 # Under the Hood
 
-__NOTE:__ This describes the v1.5+ implementation of DNS C2.
+__NOTE:__ This describes the v1.5+ implementation of DNS C2. Also, I'm not going to cover the cryptographic key exchange, which you can read about [here](https://github.com/BishopFox/sliver/wiki/Transport-Encryption), this is just about how do we move bytes back and forth.
 
 ### Design Goals
 
@@ -122,4 +122,10 @@ First we calculate how many characters of the total domain can be used to encode
 254 - len(parent) - (1 + (254-len(parent))/64)
 ```
 
-This "subdata space" is the maximum number of characters our encoder (Base32 or Base58) can output per message.
+This "subdata space" is the maximum number of characters our encoder (Base32 or Base58) can output per message. So the bytes per message are essentially `n` bytes encoded length must be equal to or less than the subdata space. Its important to note that adding a single byte input to either Base32 or Base58 may result in +2 output characters due to the inefficiencies in the encoders.
+
+### Parallel Send/Recv
+
+
+
+
