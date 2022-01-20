@@ -51,7 +51,7 @@ Generating implants is done using the `generate` command, you must specify at le
 #### Session Mode
 
 ```
-sliver > generate --mtls example.com --save /Users/moloch/Desktop
+[server] sliver > generate --mtls example.com --save /Users/moloch/Desktop
 
 [*] Generating new windows/amd64 Sliver binary
 [*] Build completed in 00:00:16
