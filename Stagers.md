@@ -18,7 +18,7 @@ For this to work, we need the following pieces:
 
 ## Example
 
-Sliver implements staging by reusing the profiles feature. Profiles are sorts of implant blueprints that define a configuration to be reused by the `generate-profile` command.
+Sliver implements staging by reusing the profiles feature. Profiles are sorts of implant blueprints that define a configuration to be reused by the `profile generate` command.
 The following command creates a new profile that we will use for our staging listener:
 
 ```
