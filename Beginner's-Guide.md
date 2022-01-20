@@ -1,1 +1,1 @@
-WIP: A tutorial for absolute beginners.
+⚠️ NOTE: This guide is intended for absolute beginners to the red team space, please see the [Getting Started](https://github.com/BishopFox/sliver/wiki/Getting-Started) for a more straight forward tutorial. 
