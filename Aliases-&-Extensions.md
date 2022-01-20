@@ -1,4 +1,8 @@
 Sliver allows an operator to extend the local client console and its features by adding new commands based on third party tools.
+
+
+## Aliases
+
 A Sliver alias is nothing more than a folder with the following structure:
 
 - an `alias.json` file
