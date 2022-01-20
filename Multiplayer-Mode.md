@@ -1,16 +1,16 @@
 Multiplayer-mode allows multiple operators (players) to connect to the same Sliver server and collaborate on engagements. The easiest way to setup a server for multiplayer is to use the [Linux install script](https://github.com/BishopFox/sliver/wiki/Linux-Install-Script) which will configure the server as a systemd service. However, any Sliver server binary supports multiplayer mode.
 
-## New Players (Operators)
+## New Operators
 
-Operators will need to download their preferred platform's client software from the releases page. (Or build from source if they like) Clients can connect to servers of differing platforms (e.g. a Windows client can connect to a Linux server). Operators and servers authenticate using Mutual TLS. The client certificates are automatically generated and managed for you using the `new-player` command. 
+Operators will need to download their preferred platform's client software from the releases page. (Or build from source if they like) Clients can connect to servers of differing platforms (e.g. a Windows client can connect to a Linux server). Operators and servers authenticate using Mutual TLS. The client certificates are automatically generated and managed for you using the `new-operator` command. 
 
 * If you did not install the server as a systemd service, be sure to leave the server console running in screen or [tmux](https://github.com/tmux/tmux) after starting the multiplayer listener. 
 * If you did install the server as systemd service see the CLI section below for an alternative to the console commands.
 
-__NOTE__: The `new-player` and `multiplayer` commands are only accessible from the server's console (see below if you're running in daemon mode).
+__NOTE__: The `new-operator` and `multiplayer` commands are only accessible from the server's console (see below if you're running in daemon mode).
 
 ```
-[server] sliver > new-player --operator moloch --lhost 1.2.3.4
+[server] sliver > new-operator --name moloch --lhost 1.2.3.4
 
 [*] Generating new client certificate, please wait ...
 [*] Saved new client config to: /Users/moloch/Desktop/moloch_example.com.cfg
