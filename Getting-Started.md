@@ -157,3 +157,12 @@ sliver > generate --mtls example.com --http foobar.com --dns 1.lil-peep.rip
 ```
 
 Eventually we'll add a feature to manually specify the fallback protocols, or you can add this feature and send up a PR :).
+
+## What Next?
+
+Most commands have a `--help` and support tab complete, you may also find the following wiki articles of interest:
+
+* [Stagers](https://github.com/BishopFox/sliver/wiki/Stagers)
+* [Port Forwarding](https://github.com/BishopFox/sliver/wiki/Port-Forwarding)
+* [Reverse SOCKS](https://github.com/BishopFox/sliver/wiki/Reverse-SOCKS)
+* [BOF/COFF Support](https://github.com/BishopFox/sliver/wiki/BOF-&-COFF-Support)
