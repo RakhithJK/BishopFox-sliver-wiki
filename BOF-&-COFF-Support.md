@@ -39,7 +39,7 @@ Flags:
 
 Converting existing BOFs to work with Sliver is usually pretty easy, and shouldn't require any code changes. You'll need to define an `extension.json` though based on what arguments/etc. the BOF accepts. 
 
-To determine the arguments a BOF accepts and their types, you'll need to read `.cna` script that accompanies a given BOF. For example, the [CredMan](https://github.com/sliverarmory/CredManBOF/blob/main/CredMan.cna) `.cna` script is how below:
+To determine the arguments a BOF accepts and their types, you'll need to read `.cna` script that accompanies a given BOF. For example, the [CredMan](https://github.com/sliverarmory/CredManBOF/blob/main/CredMan.cna) `.cna` script is show below:
 
 ```
 alias CredMan {
