@@ -1,0 +1,1 @@
+Sliver v1.5 and later support the loading and execution of BOFs and COFFs, generally no code changes are needed to use BOFs with a Sliver implant. However, you may need to define a manifest file so that Sliver is aware of BOF arguments and their types.
