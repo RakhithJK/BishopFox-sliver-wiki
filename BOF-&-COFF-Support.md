@@ -67,7 +67,7 @@ beacon_command_register(
 "Enables SeTrustedCredManAccess Privilege in a token stolen from winlogon.exe to dump Windows Credential Manager");
 ```
 
-Looking at the script we can see the BOF accepts a single integer argument. The corresponding Sliver `extension.json` file is shown below. Note that BOFs will always rely on the `coff-loader` extension, but other kinds of extensions may not:
+Looking at the script we can see the BOF accepts a single integer argument. The corresponding Sliver `extension.json` file is shown below. Note that BOFs will always rely on the `coff-loader` extension, but other kinds of extensions may not.
 
 ```json
 {
@@ -102,3 +102,5 @@ Looking at the script we can see the BOF accepts a single integer argument. The 
     ]
 }
 ```
+
+The `coff-loader` extension can be installed using `armory install coff-loader`
