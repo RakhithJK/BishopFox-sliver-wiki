@@ -37,3 +37,68 @@ Flags:
 
 ### Converting Existing BOFs 
 
+Converting existing BOFs to work with Sliver is usually pretty easy, and shouldn't require any code changes. You'll need to define an `extension.json` though based on what arguments/etc. the BOF accepts. 
+
+To determine the arguments a BOF accepts and their types, you'll need to read `.cna` script that accompanies a given BOF. For example, the [CredMan](https://github.com/sliverarmory/CredManBOF/blob/main/CredMan.cna) `.cna` script is how below:
+
+```
+alias CredMan {
+	local('$handle $data $args $2');
+
+    if(size(@_) != 3){
+        berror($1, "CredMan: not enough arguments,Usage: CredMan [user process id] ");
+        return;
+    }
+
+    $handle = openf(script_resource("CredMan.o"));
+    $data   = readb($handle, -1);
+    closef($handle)
+
+    $args = bof_pack($1,"i",$2);
+
+    btask($1, "Running CredMan");
+
+
+    beacon_inline_execute($1,$data,"go",$args);
+}
+
+beacon_command_register(
+"CredMan",
+"Enables SeTrustedCredManAccess Privilege in a token stolen from winlogon.exe to dump Windows Credential Manager");
+```
+
+The corresponding Sliver `extension.json` file is shown below:
+
+```json
+{
+    "name": "credman",
+    "version": "1.0.0",
+    "command_name": "credman",
+    "extension_author": "lesnuages",
+    "original_author": "jsecu",
+    "repo_url": "https://github.com/sliverarmory/CredManBOF",
+    "help": "Dump credentials using the CredsBackupCredentials API",
+    "depends_on": "coff-loader",
+    "entrypoint": "go",
+    "files": [
+        {
+            "os": "windows",
+            "arch": "amd64",
+            "path": "credman.x64.o"
+        },
+        {
+            "os": "windows",
+            "arch": "386",
+            "path": "credman.x86.o"
+        }
+    ],
+    "arguments": [
+        {
+            "name": "pid",
+            "desc": "PID of a process started by the target user",
+            "type": "int",
+            "optional": false
+        }
+    ]
+}
+```
