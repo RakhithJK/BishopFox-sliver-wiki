@@ -1,6 +1,8 @@
-# Server Setup
+
 
 __⚠️ NOTE:__ This guide is intended for experienced red teamers, please see the [Beginner's Guide](https://github.com/BishopFox/sliver/wiki/Beginner's-Guide) for a tutorial more geared towards newcomers to the space.
+
+## Server Setup
 
 The first thing you'll need to do is setup a Sliver server, Sliver is designed for a one server deployment per-operation.
 
