@@ -52,7 +52,7 @@ The `alias.json` file has the following structure:
 
 It contains a single JSON object, which has the following fields:
 
-## Alias
+### Alias Fields
 
 | Field Name | Description |
 | ---------- | ----------- |
@@ -66,7 +66,7 @@ It contains a single JSON object, which has the following fields:
 | `is_reflective` | Indicates whether the extension is a reflective DLL or not |
 | `is_assembly` | Indicates whether the extension is a .NET assembly or not |
 
-## Files
+### Files
 
 | Field Name | Description |
 | ---------- | ----------- |
@@ -98,7 +98,7 @@ Sliver - 3rd Party extensions:
 ...
 ```
 
-# Writing Aliases
+### Writing Aliases
 
 To write a new alias, one must either create a shared library or a .NET assembly, then write a manifest file compliant with the description above.
 
