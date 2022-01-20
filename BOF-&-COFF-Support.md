@@ -4,11 +4,32 @@ BOF support is provided via the [COFF Loader](https://github.com/sliverarmory/CO
 
 The easiest way to install a BOF extension, for example [`nanodump`](https://github.com/sliverarmory/nanodump), is using the [armory](https://github.com/BishopFox/sliver/wiki/Armory) package manager:
 
+__IMPORTANT:__ Extensions (and aliases) are installed per-sliver client, they are not stored on the server. Thus extensions are not shared across operators, each operator must install the extension to use it.
+
 ```
 sliver > armory install nanodump
 
 [*] Installing extension 'nanodump' (v0.0.5) ... done!
-```
 
-__IMPORTANT:__ Extensions (and aliases) are installed per-sliver client, they are not stored on the server. Thus extensions are not shared across operators, each operator must install the extension to use it.
+sliver > nanodump -h
+
+A Beacon Object File that creates a minidump of the LSASS process.
+
+Usage:
+======
+  nanodump [flags] pid dump-name write-file signature
+
+Args:
+=====
+  pid         int       The PID of the process you want to dump.
+  dump-name   string    The name of the dump file.
+  write-file  int       1 = write file, 0 = fileless
+  signature   string    Signature used for evasion, PMDM = default
+
+Flags:
+======
+  -h, --help           display help
+  -s, --save           Save output to disk
+  -t, --timeout int    command timeout in seconds (default: 60)
+```
 
