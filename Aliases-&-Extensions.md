@@ -66,7 +66,7 @@ It contains a single JSON object, which has the following fields:
 | `is_reflective` | Indicates whether the extension is a reflective DLL or not |
 | `is_assembly` | Indicates whether the extension is a .NET assembly or not |
 
-### Files
+#### Files
 
 | Field Name | Description |
 | ---------- | ----------- |
