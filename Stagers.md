@@ -1,6 +1,6 @@
-## Overview
-
 __Important:__ You must have MinGW installed on your Sliver server to get some staged (e.g., Windows DLLs) payloads to work.
+
+## Overview
 
 As payloads can be pretty big (around 7MB), you may sometime require the use of stagers to execute your implant on a target system.
 
