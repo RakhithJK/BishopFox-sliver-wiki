@@ -67,7 +67,7 @@ beacon_command_register(
 "Enables SeTrustedCredManAccess Privilege in a token stolen from winlogon.exe to dump Windows Credential Manager");
 ```
 
-The corresponding Sliver `extension.json` file is shown below:
+Looking at the script we can see the BOF accepts a single integer argument. The corresponding Sliver `extension.json` file is shown below:
 
 ```json
 {
