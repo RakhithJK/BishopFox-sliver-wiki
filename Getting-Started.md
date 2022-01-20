@@ -141,13 +141,13 @@ sliver > use 8ff2ce4c
 
 [*] Active session LONG_DRAMATURGE (8ff2ce4c-9c66-4cbc-b33c-2a56196536e6)
 
-sliver (PROPER_ANTHONY) > ls
+sliver (LONG_DRAMATURGE) > ls
 
 /Users/moloch/Desktop
 =====================
 .DS_Store                 6.0 KiB
 .localized                0 B
-PROPER_ANTHONY            6.3 MiB
+LONG_DRAMATURGE           6.3 MiB
 ```
 
 If you're having problems getting callbacks please see our [troubleshooting guide](https://github.com/BishopFox/sliver/wiki/Troubleshooting#implant-troubleshooting), (TL;DR add the `--debug` flag when generating an implant).
