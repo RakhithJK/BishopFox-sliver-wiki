@@ -115,7 +115,7 @@ For addition details about each C2 please see:
 
 ## Getting Shells
 
-Before you can catch the shell, you'll first need to start a listener. You use the commands `mtls`, `http`, `https`, and `dns` to start listeners for each protocol (remember endpoints specified with `--http` can connect to a listener started with `https`). You can use the `jobs` command to view and manage listeners running in the background. Listeners support both sessions and beacons callbacks:
+Before you can catch the shell, you'll first need to start a listener. You use the commands `mtls`, `http`, `https`, and `dns` to start listeners for each protocol (remember endpoints specified with `--http` can connect to a `https` listener). You can use the `jobs` command to view and manage listeners running in the background. Listeners support both sessions and beacons callbacks:
 
 ```
 sliver > mtls
@@ -131,6 +131,8 @@ ID  Name  Protocol  Port
 ```
 
 In this example we're using Mutual TLS, the required certificates for setting up and securing this connection have already been generated in the background and the client certificate pair was embedded into the implant at compile-time. So to get a shell you just have to run the binary on the target.
+
+### Interacting with Sessions
 
 The `use` command will tab-complete session and beacon identifiers, but you can also type them out if you really want to (identifier prefixes are accepted). Additionally, running the `use` command with no arguments will enter an interactive menu to select from.
 
@@ -151,6 +153,11 @@ LONG_DRAMATURGE           6.3 MiB
 ```
 
 If you're having problems getting callbacks please see our [troubleshooting guide](https://github.com/BishopFox/sliver/wiki/Troubleshooting#implant-troubleshooting), (TL;DR add the `--debug` flag when generating an implant).
+
+### Interacting with Beacons
+
+TODO
+
 
 ## Multiple Domains/Protocols
 
