@@ -36,8 +36,6 @@ We strongly recommend using the [nightly framework installers](https://github.co
 
 ## Implants Beacon vs. Session
 
-__IMPORTANT:__ The first time you generate an implant the server needs to download some Go module code, so the server must have internet access. See [offline implant builds](https://github.com/BishopFox/sliver/wiki/Offline-Implant-Builds) if this is a problem for you. The modules are cached.
-
 Sliver is generally designed as a stage 2 payload, and as such we've not yet endeavored to minimize the implant's file size. Depending on how many protocols you enable in your implant the file can get large, we strongly advise the use of [stagers](https://github.com/BishopFox/sliver/wiki/Stagers) for actual operations. Such is the tradeoff for getting easy static compilation in Golang.
 
 Sliver implants in v1.5 and later support two modes of operation: "beacon mode" and "session mode." Beacon mode implements an asynchronous communication style where the implant periodically checks in with the server retrieves tasks, executes them, and returns the results. In "session mode" the implant will create an interactive real time session using either a persistent connection or using long polling depending on the underlying C2 protocol. 
@@ -47,6 +45,8 @@ Beacons may be tasked to open interactive sessions over _any C2 protocol they we
 Some commands such as `shell` and `portfwd` only work over interactive sessions.
 
 ## Generating Implants
+
+__IMPORTANT:__ The first time you generate an implant the server needs to download some Go module code, so the server must have internet access. See [offline implant builds](https://github.com/BishopFox/sliver/wiki/Offline-Implant-Builds) if this is a problem for you. The modules are cached.
 
 Generating implants is done using the `generate` command, you must specify at least one C2 endpoint using `--mtls`, `--wg`, `--http`, or `--dns`. Note that when an implant attempts to connect to an endpoint specified using `--http` it will try both HTTPS and then HTTP (if HTTPS fails). We recommend using mTLS (`--mtls`) or WireGuard (`--wg`) whenever possible. You can also specify an output directory with `--save`, by default the implant will be saved to the current working directory.
 
