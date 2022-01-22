@@ -6,6 +6,8 @@ The official armory ships with Sliver binaries and is included by default in the
 
 #### Installing Packages
 
+List available packages by running the `armory` command without arguments, packages are installed using the command name: 
+
 ```
 sliver > armory install rubeus
 
