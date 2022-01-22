@@ -191,6 +191,8 @@ drwxrwxrwx  a                           <dir>     Wed Dec 22 15:34:56 -0600 2021
 You can view previous tasks execute by the active beacon using the `tasks` command:
 
 ```
+[server] sliver (RELATIVE_ADVERTISEMENT) > tasks 
+
  ID         State       Message Type   Created                         Sent                            Completed                     
 ========== =========== ============== =============================== =============================== ===============================
  90294ad2   completed   Ls             Sat, 22 Jan 2022 14:45:00 CST   Sat, 22 Jan 2022 14:45:11 CST   Sat, 22 Jan 2022 14:45:11 CST 
