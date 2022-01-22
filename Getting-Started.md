@@ -216,7 +216,7 @@ You can use the `interactive` command to task a beacon to open an interactive se
 
 __⚠️ IMPORTANT:__ You can only open interactive sessions over C2 protocols that were compiled into the binary. For example, if you did not initially compile an implant with `--http` you won't be able to open an interactive session over HTTP. However, you can specify alternative _endpoints_ (such as a redirector on another domain) using the `interactive` command's flags.
 
-When you're done using the interactive session use the `close` command to close the interactive session without killing the implant. Note that the beacon will still perform check-ins while an interactive session is open.
+When you're done using the interactive session use the `close` command to close the interactive session without killing the implant; the beacon will still perform check-ins while an interactive session is open.
 
 
 ## Multiple Domains/Protocols
