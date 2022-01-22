@@ -8,7 +8,7 @@ Pivots perform an [authenticated peer-to-peer cryptographic key exchange](https:
 
 ## TCP Pivots
 
-TCP pivots are implemented in pure Go and supported on all platforms. 
+TCP pivots are implemented in pure Go and are supported on all platforms. 
 
 ## Named Pipe Pivots (SMB)
 
