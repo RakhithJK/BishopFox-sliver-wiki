@@ -1,4 +1,4 @@
-This document describes the way Sliver implants secure communication back to the C2 server. __NOTE:__ This does not apply when mTLS or WireGuard are used.
+ __⚠️ NOTE:__ This document does not apply when mTLS or WireGuard are used.
 
 # Versions 1.5.0+
 
