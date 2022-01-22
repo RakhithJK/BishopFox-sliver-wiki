@@ -84,12 +84,10 @@ It contains a single JSON object, which has the following fields:
 To load an alias in Sliver, use the `alias load` command:
 
 ```
-sliver (CONCRETE_STEEL) > alias load /home/lesnuages/tools/misc/sliver-extensions/GhostPack
+sliver (CONCRETE_STEEL) > alias load /home/lesnuages/tools/misc/sliver-extensions/GhostPack/Rubeus
 
 [*] Adding rubeus command: Rubeus is a C# toolset for raw Kerberos interaction and abuses.
-[*] Adding seatbelt command: Seatbelt is a C# project that performs a number of security oriented host-survey "safety checks" relevant from both offensive and defensive security perspectives.
-[*] Adding sharpwmi command: SharpWMI is a C# implementation of various WMI functionality.
-[*] GhostPack extension has been loaded
+[*] Rubeus extension has been loaded
 ```
 
 The `help` command will now list the commands added by this extension:
@@ -100,8 +98,6 @@ sliver (CONCRETE_STEEL) > help
 Sliver - 3rd Party extensions:
 ==============================
   rubeus    [GhostPack] Rubeus is a C# toolset for raw Kerberos interaction and abuses.
-  seatbelt  [GhostPack] Seatbelt is a C# project that performs a number of security oriented host-survey "safety checks" relevant from both offensive and defensive security perspectives.
-  sharpwmi  [GhostPack] SharpWMI is a C# implementation of various WMI functionality.
 ...
 ```
 
