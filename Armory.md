@@ -34,4 +34,4 @@ You remove packages installed from the `armory` using the `aliases rm` and `exte
 
 ## Private Armories
 
-Sliver also supports self-hosted private armories, but I've not gotten around to writing the details about this so you'll have to read thru the code for now.
+Sliver also supports self-hosted private armories, but I've not gotten around to writing the details about this so you'll have to read thru the source code to figure out how they work for now.
