@@ -21,18 +21,20 @@ __NOTE__: The `new-operator` and `multiplayer` commands are only accessible from
 
 ```
 
-__Important:__ Before clients can connect to a server you must start an RPC listener with the `multiplayer` command. The default port is TCP/31337.
+__IMPORTANT:__ Before clients can connect to a server you must start an RPC listener with the `multiplayer` command. The default port is TCP/31337.
 
-You can now give this configuration file `moloch_example.com.cfg` to the operator and they can connect to the server using the `sliver-client` binary. The sliver client will look for configuration files in `~/.sliver-client/configs/` or you can specify an exact config file with the `-config` flag. The configs directory can contain multiple configs for different servers.
+You can now give this configuration file `moloch_example.com.cfg` to the operator and they can connect to the server using the `sliver-client` binary. The sliver client will look for configuration files in `~/.sliver-client/configs/` or you can import configs using the `import` cli. The configs directory can contain multiple configs for different servers.
 
 ```
+$ ./sliver-client import ./moloch_example.com.cfg
+
 $ ./sliver-client
 ? Select a server:  [Use arrows to move, type to filter]
 > example.com
   localhost
 ```
 
-### CLI
+### Server CLI / Daemon Mode Multiplayer
 
 If the server is running in daemon mode (as is the default with the Linux install script), that means the multiplayer listener is started for you without an interactive console. You can use the server binaries' CLI to generate operator configuration files to connect:
 
