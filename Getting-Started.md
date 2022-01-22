@@ -32,7 +32,7 @@ __Note:__ On MacOS may have to configure [environment variables](https://github.
 
 ### Metasploit Setup (Optional)
 
-We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers), Sliver expects version 5 or later.
+We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers), Sliver expects MSF version 5+.
 
 ## Implants Beacon vs. Session
 
@@ -156,8 +156,48 @@ If you're having problems getting callbacks please see our [troubleshooting guid
 
 ### Interacting with Beacons
 
-TODO
+Upon initial execution the beacon will register itself with the C2 server and will show up under `beacons`, each instance of a beacon process will get its own id and this id is used for the lifetime of that process (i.e., across key renegotiation, etc).  Remember to use tab complete for the uuid:
 
+```
+[*] Beacon 8c465643 RELATIVE_ADVERTISEMENT - 192.168.1.178:54701 (WIN-1TT1Q345B37) - windows/amd64 - Sat, 22 Jan 2022 14:40:55 CST
+
+[server] sliver > beacons
+
+ ID         Name                     Tasks   Transport   Remote Address        Hostname          Username                        Operating System   Last Check-In    Next Check-In 
+========== ======================== ======= =========== ===================== ================= =============================== ================== ================ ===============
+ 8c465643   RELATIVE_ADVERTISEMENT   0/0     mtls        192.168.1.178:54701   WIN-1TT1Q345B37   WIN-1TT1Q345B37\Administrator   windows/amd64      49.385459s ago   37.614549s 
+
+[server] sliver > use 8c465643-0e65-45f2-bb7e-acb3480de3cb
+
+[*] Active beacon RELATIVE_ADVERTISEMENT (8c465643-0e65-45f2-bb7e-acb3480de3cb)
+
+[server] sliver (RELATIVE_ADVERTISEMENT) >
+```
+
+You should see a blue prompt indicating that we're interacting with a beacon as apposed to a session (red). Commands are executed the same way as a session, though not all commands are supported in beacon mode.
+
+```
+[server] sliver (RELATIVE_ADVERTISEMENT) > ls
+
+[*] Tasked beacon RELATIVE_ADVERTISEMENT (90294ad2)
+
+[+] RELATIVE_ADVERTISEMENT completed task 962978a6
+
+C:\git
+======
+drwxrwxrwx  a                           <dir>     Wed Dec 22 15:34:56 -0600 2021
+```
+
+You can view previous tasks execute by the active beacon using the `tasks` command:
+
+```
+ ID         State       Message Type   Created                         Sent                            Completed                     
+========== =========== ============== =============================== =============================== ===============================
+ 90294ad2   completed   Ls             Sat, 22 Jan 2022 14:45:00 CST   Sat, 22 Jan 2022 14:45:11 CST   Sat, 22 Jan 2022 14:45:11 CST 
+ 962978a6   completed   Ls             Sat, 22 Jan 2022 14:42:43 CST   Sat, 22 Jan 2022 14:43:53 CST   Sat, 22 Jan 2022 14:43:53 CST 
+```
+
+You can get the old output from the task using `tasks fetch` and selecting the task you want to see the output from. Note that in this case these task output is stored on the server, so operators in multiplayer mode can fetch output from tasks issued by other operators. However, operators will only see the automatic results from tasks that they executed. You can disable the automatic display of task results using the `settings` command.
 
 ## Multiple Domains/Protocols
 
