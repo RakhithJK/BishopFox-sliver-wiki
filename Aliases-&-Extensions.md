@@ -1,5 +1,13 @@
 Sliver allows an operator to extend the local client console and its features by adding new commands based on third party tools. The easiest way to install an alias or extension is using the [armory](https://github.com/BishopFox/sliver/wiki/Armory).
 
+#### What's the difference between an alias and an extension? 
+
+From an end-user perspective there's not much of a difference between the two, except that extensions' arguments will show up in `--help` and may be required.
+
+An alias is essentially just a thin wrapper around the existing `sideload` and `execute-assembly` commands, and aliases cannot have dependencies. 
+
+An extension is a shared library that is loaded by the Sliver implant, and the extension is passed several callbacks to return data to the implant. Extensions may also have dependencies, which are other extensions. For example, the COFF Loader is a DLL extension that loads an executes BOFs, BOF are extensions that simply rely on the COFF Loader as a dependency.
+
 
 ## Aliases
 
@@ -103,3 +111,9 @@ Sliver - 3rd Party extensions:
 To write a new alias, one must either create a shared library or a .NET assembly, then write a manifest file compliant with the description above.
 
 As the alias support relies on Sliver side loading capabilities, please make sure to read the [Using 3rd party tools](https://github.com/BishopFox/sliver/wiki/Using-3rd-party-tools) section, to understand how shared libraries are loaded on all platforms.
+
+
+
+## Extensions
+
+Extensions are similar in structure to an alias, but work a little differently.
