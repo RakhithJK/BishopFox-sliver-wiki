@@ -2,7 +2,7 @@ The armory is the Sliver Alias and Extension package manager, which was introduc
 
 ## The Official Armory
 
-The official armory ships with Sliver binaries and is included by default in the `Makefile` when compiling from source. You can interact with the Armory using the `armory` command.
+The official armory ships with Sliver binaries and is included by default in the `Makefile` when compiling from source. You can interact with the Armory using the `armory` command. Packages installed from the official armory are compiled and cryptographically signed by the Sliver authors. While we make a best effort to review 3rd party code, you are responsible for reviewing and understanding any 3rd party code before using it.
 
 ## Private Armories
 
