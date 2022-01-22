@@ -156,7 +156,7 @@ If you're having problems getting callbacks please see our [troubleshooting guid
 
 ### Interacting with Beacons
 
-Upon initial execution the beacon will register itself with the C2 server and will show up under `beacons`, each instance of a beacon process will get its own id and this id is used for the lifetime of that process (i.e., across key renegotiation, etc). The "Next Check-in" value does include any jitter, you can also watch your beacons in real time using the `beacons watch` command. Remember to leverage tab complete for the uuid when using `use`:
+Upon initial execution the beacon will register itself with the C2 server and will show up under `beacons`, each instance of a beacon process will get its own id and this id is used for the lifetime of that process (i.e., across key renegotiation, etc). The "Next Check-in" value includes any random jitter (by default up to 30s), and you can also watch your beacons in real time using the `beacons watch` command. Remember to leverage tab complete for the uuid when using `use`:
 
 ```
 [*] Beacon 8c465643 RELATIVE_ADVERTISEMENT - 192.168.1.178:54701 (WIN-1TT1Q345B37) - windows/amd64 - Sat, 22 Jan 2022 14:40:55 CST
