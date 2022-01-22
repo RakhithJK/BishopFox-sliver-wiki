@@ -1,6 +1,6 @@
 
 
-__⚠️ NOTE:__ This guide is intended for experienced red teamers, please see the [Beginner's Guide](https://github.com/BishopFox/sliver/wiki/Beginner's-Guide) for a more beginner friendly tutorial.
+__⚠️ NOTE:__ This guide is intended for experienced red teamers, but we also have a [Beginner's Guide](https://github.com/BishopFox/sliver/wiki/Beginner's-Guide) for a more beginner friendly tutorial.
 
 ## Server Setup
 
