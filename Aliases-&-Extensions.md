@@ -6,8 +6,7 @@ From an end-user perspective there's not much of a difference between the two, e
 
 An alias is essentially just a thin wrapper around the existing `sideload` and `execute-assembly` commands, and aliases cannot have dependencies. 
 
-An extension is a shared library that is loaded by the Sliver implant, and the extension is passed several callbacks to return data to the implant. Extensions may also have dependencies, which are other extensions. For example, the COFF Loader is a DLL extension that loads and executes BOFs, in turn BOFs simply extensions that rely on the COFF Loader as a dependency.
-
+An extension is a shared library that is reflectively loaded into the Sliver implant process, and is passed several callbacks to return data to the implant. As such these extensions must implement the Sliver API. Extensions may also have dependencies, which are other extensions. For example, the COFF Loader is a DLL extension that loads and executes BOFs, in turn BOFs simply extensions that rely on the COFF Loader as a dependency. These types of extensions do not need to implement any Sliver-specific API, since the Sliver API is abstracted by their dependency.
 
 ## Aliases
 
