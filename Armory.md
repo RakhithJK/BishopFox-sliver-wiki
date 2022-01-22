@@ -1,1 +1,9 @@
-The armory is a Sliver Alias and Extension package manager introduced in Sliver v1.5.
+The armory is the Sliver Alias and Extension package manager, which was introduced in Sliver v1.5 it allows you to automatically install various 3rd party tools such as BOFs and more.
+
+## The Official Armory
+
+The official armory ships with Sliver binaries and is included by default in the `Makefile` when compiling from source. You can interact with the Armory using the `armory` command.
+
+## Private Armories
+
+Sliver also supports self-hosted private armories, but I've not gotten around to writing the details about this so you'll have to read thru the code for now.
