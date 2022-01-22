@@ -14,7 +14,7 @@ sliver > armory install rubeus
 
 #### Removing Packages
 
-You remove packages installed by the `armory` using the `aliases rm` and `extensions rm` commands depending on if the package is an alias or an extension. You can list installed aliases and extensions by running `aliases` and `extensions` respectfully.
+You remove packages installed from the `armory` using the `aliases rm` and `extensions rm` commands depending on if the package is an alias or an extension. You can list installed aliases and extensions by running `aliases` and `extensions` respectfully.
 
 ## Private Armories
 
