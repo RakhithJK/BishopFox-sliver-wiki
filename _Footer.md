@@ -1,1 +1,1 @@
- _"This is the source, the line unbroken since the calamity that brought such monsters to our shores."_
+ _"Bred as living shields, these slivers have proven unruly—they know they cannot be caught."_
