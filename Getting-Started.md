@@ -179,7 +179,7 @@ You should see a blue prompt indicating that we're interacting with a beacon as 
 ```
 [server] sliver (RELATIVE_ADVERTISEMENT) > ls
 
-[*] Tasked beacon RELATIVE_ADVERTISEMENT (90294ad2)
+[*] Tasked beacon RELATIVE_ADVERTISEMENT (962978a6)
 
 [+] RELATIVE_ADVERTISEMENT completed task 962978a6
 
