@@ -19,7 +19,11 @@ sliver > armory install rubeus
 You can update all installed aliases and extensions by running `armory update` command.
 
 ```
-sliver > armory update
+sliver > armory update 
+
+[*] All aliases up to date!
+[*] 1 extension(s) out of date: coff-loader
+[*] Installing extension 'coff-loader' (v1.0.10) ... done!
 ```
 
 #### Removing Packages
