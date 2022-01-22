@@ -8,7 +8,7 @@ The first thing you'll need to do is setup a Sliver server, Sliver is designed f
 
 The server supports Linux, Windows, and MacOS however we strongly recommend running the server on a Linux (or MacOS, well really anything that isn't Windows), as some features may be more difficult to get working on a Windows server. The Windows client should work just fine when accessing a Linux/MacOS server from Windows, if for some odd reason your operators want to actually use Windows you'll just need to setup [multiplayer mode](https://github.com/BishopFox/sliver/wiki/Multiplayer-Mode).
 
-Download the latest sever [release](https://github.com/BishopFox/sliver/releases) for your platform, and just run the binary.
+Download the latest sever [release](https://github.com/BishopFox/sliver/releases) for your platform, and just run the binary. That's it, you're pretty much done.
 
 __IMPORTANT:__ Sliver has two external dependancies for _optional_ features: MinGW and Metasploit. To enable DLL payloads you need to install MinGW. To enable some MSF integrations you'll need Metasploit installed on the server.
 
