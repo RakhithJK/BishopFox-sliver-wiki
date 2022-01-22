@@ -14,6 +14,14 @@ sliver > armory install rubeus
 [*] Installing alias 'Rubeus' (v0.0.21) ... done!
 ```
 
+#### Updating Packages
+
+You can update all installed aliases and extensions by running `armory update` command.
+
+```
+sliver > armory update
+```
+
 #### Removing Packages
 
 You remove packages installed from the `armory` using the `aliases rm` and `extensions rm` commands depending on if the package is an alias or an extension. You can list installed aliases and extensions by running `aliases` and `extensions` respectfully.
