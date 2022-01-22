@@ -16,6 +16,12 @@ List available packages by running the `armory` command without arguments, packa
 sliver > armory install rubeus
 
 [*] Installing alias 'Rubeus' (v0.0.21) ... done!
+
+sliver > rubeus -h
+
+[Rubeus] Rubeus is a C# tool set for raw Kerberos interaction and abuses.
+
+...
 ```
 
 #### Updating Packages
