@@ -40,7 +40,7 @@ sliver > armory update
 
 You remove packages installed from the `armory` using the `aliases rm` and `extensions rm` commands depending on if the package is an alias or an extension. You can list installed aliases and extensions by running `aliases` and `extensions` respectfully.
 
-Alias and extension files are stored in `~/.sliver-client/` by default if you want to manually remove a file simply delete its corresponding directory and restart the client.
+Installed alias and extension files are stored in `~/.sliver-client/` by default if you want to manually remove a file simply delete its corresponding directory and restart the client.
 
 ## Private Armories
 
