@@ -1,4 +1,4 @@
-Sliver allows an operator to extend the local client console and its features by adding new commands based on third party tools.
+Sliver allows an operator to extend the local client console and its features by adding new commands based on third party tools. The easiest way to install an alias or extension is using the [armory](https://github.com/BishopFox/sliver/wiki/Armory).
 
 
 ## Aliases
