@@ -2,7 +2,7 @@ The armory is the Sliver Alias and Extension package manager, which was introduc
 
 The armory downloads packages from `github.com` and `api.github.com` so you'll need an internet connection in order for the command to work. The command does support proxies (see `--help`) and after an alias or extension is installed an internet connection is not required to execute the alias/extension.
 
-Aliases and extensions are installed on the "sliver client"-side, and thus are not shared among operators in multiplayer mode.
+Aliases and extensions are installed on the "sliver client"-side, and thus are not shared among operators in [multiplayer mode](https://github.com/BishopFox/sliver/wiki/Multiplayer-Mode).
 
 ## The Official Armory
 
