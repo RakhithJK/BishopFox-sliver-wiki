@@ -189,7 +189,7 @@ drwxrwxrwx  a                           <dir>     Wed Dec 22 15:34:56 -0600 2021
 ...
 ```
 
-You can view previous tasks execute by the active beacon using the `tasks` command:
+Tasks will execute in the order they were created (FIFO). You can view previous tasks execute by the active beacon using the `tasks` command:
 
 ```
 [server] sliver (RELATIVE_ADVERTISEMENT) > tasks 
