@@ -191,7 +191,7 @@ drwxrwxrwx  a                           <dir>     Wed Dec 22 15:34:56 -0600 2021
 
 Tasks will execute in the order they were created (FIFO). 
 
-__⚠️ IMPORTANT:__ Tasks results will block until all tasks that were part of the same "check-in" have completed. If you have one short running and one long running tasks that are executed as part of the same check-in the short task results will wait for the results of the long running task. Consider executing long running tasks on their own interval.
+__⚠️ IMPORTANT:__ Tasks results will block until all tasks that were part of the same "check-in" have completed. If you have one short running and one long running tasks that are executed as part of the same check-in the short task results will wait for the results of the long running task. Consider executing long running tasks on their own interval; this includes tasks assigned by multiple operators.
 
 You can view previous tasks executed by the active beacon using the `tasks` command:
 
