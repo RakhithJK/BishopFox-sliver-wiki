@@ -186,6 +186,7 @@ You should see a blue prompt indicating that we're interacting with a beacon as 
 C:\git
 ======
 drwxrwxrwx  a                           <dir>     Wed Dec 22 15:34:56 -0600 2021
+...
 ```
 
 You can view previous tasks execute by the active beacon using the `tasks` command:
