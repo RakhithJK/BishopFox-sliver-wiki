@@ -103,4 +103,4 @@ Looking at the script we can see the BOF requires a single integer argument. The
 }
 ```
 
-Once the manifest is defined load it into your client using `extensions load`, locally loaded extensions do not need to be cryptographically signed.
+Once the manifest is defined load it into your client using `extensions load`, locally loaded extensions do not need to be cryptographically signed. The paths in the manifest should be relative to the manifest file, parent directories are not allowed.
