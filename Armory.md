@@ -1,4 +1,4 @@
-The armory is the Sliver Alias and Extension package manager, which was introduced in Sliver v1.5, allows you to automatically install various 3rd party tools such as BOFs and more.
+The armory is the Sliver Alias and Extension package manager, which was introduced in Sliver v1.5, allows you to automatically install various 3rd party tools such as BOFs and .NET tooling.
 
 The armory downloads packages from `github.com` and `api.github.com` so you'll need an internet connection in order for the command to work. The command does support proxies (see `--help`) and after an alias or extension is installed an internet connection is not required to execute the alias/extension.
 
