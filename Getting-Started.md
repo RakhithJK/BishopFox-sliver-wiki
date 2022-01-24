@@ -30,6 +30,8 @@ brew install mingw-w64
 
 __Note:__ On MacOS may have to configure [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables) for MinGW.
 
+See [cross-compiling implants](https://github.com/BishopFox/sliver/wiki/Cross-Compiling-Implants) for more details.
+
 ### Metasploit Setup (Optional)
 
 We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers), Sliver expects MSF version 5+.
