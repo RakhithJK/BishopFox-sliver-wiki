@@ -2,7 +2,7 @@ __Important:__ You must have MinGW installed on your Sliver server to get some s
 
 ## Overview
 
-As payloads can be pretty big (around 7MB), you may sometime require the use of stagers to execute your implant on a target system.
+As payloads can be pretty big (around 10MB), you may sometime require the use of stagers to execute your implant on a target system.
 
 Sliver supports the `meterpreter` staging protocol over TCP and HTTP(S). This protocol is pretty straight forward:
 
