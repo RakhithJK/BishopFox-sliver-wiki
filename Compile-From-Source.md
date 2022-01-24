@@ -64,17 +64,17 @@ If all you have is a Windows machine, the easiest way to build Sliver is using [
 ## Developers
 
 If you want to modify any of the `.proto` files you'll need to setup a few additional tools to regenerate the `.pb.go` files.
-* Protoc v3.15.8
+* Protoc v3.15.8 or later
 * Protoc-gen-go v1.26.0
 * Protoc-gen-go-grpc v1.1.0
 
 #### `protoc`
 
-First install your platform's version of `protoc` v3.15.8 or compile this version from source:
+First install your platform's version of `protoc` v3.15.8 or later:
 
 https://github.com/protocolbuffers/protobuf/releases/tag/v3.15.8
 
-Ensure that `protoc` v3.15.8 is on your `$PATH`, you can check with a simple `protoc --version`
+Ensure that `protoc` v3.15.8 or later is on your `$PATH`, you can check with a simple `protoc --version`
 
 #### `protoc-gen-go` `protoc-gen-go-gprc`
 
