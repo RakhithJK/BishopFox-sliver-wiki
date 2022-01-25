@@ -10,7 +10,7 @@ The server supports Linux, Windows, and MacOS however we strongly recommend runn
 
 Download the latest sever [release](https://github.com/BishopFox/sliver/releases) for your platform, and just run the binary. That's it, you're pretty much done.
 
-__IMPORTANT:__ Sliver has two external dependancies for _optional_ features: MinGW and Metasploit. To enable DLL payloads you need to install MinGW. To enable some MSF integrations you'll need Metasploit installed on the server.
+Sliver has two external dependencies for _optional_ features: MinGW and Metasploit. To enable DLL payloads you need to install MinGW. To enable some MSF integrations you'll need Metasploit installed on the server.
 
 ### MinGW Setup (Optional, Recommended)
 
