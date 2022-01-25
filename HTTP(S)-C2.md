@@ -128,7 +128,7 @@ Starting in v1.5 you can make extensive customizations to the HTTP C2 traffic ge
 | Field Name | Description |
 | ---------- | ----------- |
 |`user_agent`|The implant's user agent, a blank string will randomly generate a platform appropriate user-agent and version (default: blank) |
-|`user_parameters`| A list of objects that contain a `name` and `value` that should be included as URL query parameters in addition to the ones used by encoders (default: `null`)|
+|`url_parameters`| A list of objects that contain a `name` and `value` that should be included as URL query parameters in addition to the ones used by encoders (default: `null`)|
 |`headers`|A list of objects that contain a `name` and `value` to add as request headers (default: `null`)|
 |`max_files`| Max number of random file names to use (default: `8`) |
 |`min_files`| Min number of random file names to use (default: `2`) |
@@ -138,11 +138,20 @@ Starting in v1.5 you can make extensive customizations to the HTTP C2 traffic ge
 |`poll_file_ext` | The file extension to associate with poll requests (default: `.js`)|
 |`poll_files`| A list of strings that should be used as "file name" segments in the URL, appended with `poll_file_ext` |
 |`poll_paths`| A list of strings that should be used as path segments in the generated URL |
+|`start_session_file_ext`| The file extension to associate with key exchange messages (default: `.html`) |
+|`session_file_ext`| The file extension to associate with session messages (default: `.php`)
+|`session_files`| A list of strings that should be used as "file name" segments in the URL, appended with `session_file_ext` and `start_session_file_ext` |
+| `session_paths` | A list of strings that should be used as path segments in the generated URLs |
+| `close_file_ext` | The file extension to associate with close session messages (default: `.png`)|
+| `close_files` | A list of strings that should be used as "file name" segments in the URL, appended with `close_file_ext` |
+| `close_paths` | A list of strings that should be used as path segments in generated URLs |
 
 ### `server_config`
 | Field Name | Description |
 | ---------- | ----------- |
-
+| `random_version_headers` | Boolean value, if enabled the server will return random Apache/Nginx and PHP version numbers (default: `false`) |
+| `headers` | A list of objects containing a `name` and `value` that should be included as response headers |
+| `cookies` | A list of strings to use as cookie names |
 
 # Under the Hood
 
