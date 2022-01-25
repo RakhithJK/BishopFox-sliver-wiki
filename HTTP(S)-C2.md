@@ -167,7 +167,7 @@ The primary goals of the existing HTTP C2 design are to:
 
 ### Procedural HTTP C2
 
-Sliver [procedurally generate](https://en.wikipedia.org/wiki/Procedural_generation) generates each HTTP request with the C2 data in it based on the configuration file described above. Each request will have randomized URLs and query arguments, and different types of messages also use different file extensions/paths.
+Sliver [procedurally generates](https://en.wikipedia.org/wiki/Procedural_generation) each HTTP request with the C2 data in it based on the configuration file described above. Each request will have randomized URLs and query arguments, and different types of messages also use different file extensions/paths.
 
 Each implant is also only embedded with a randomly generated subset of the server's C2 profile, so two or more implants generated from the same server may not generate similar URLs depending on how you tweak the configuration.
 
