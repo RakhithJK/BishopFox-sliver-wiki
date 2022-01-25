@@ -167,18 +167,23 @@ The primary goals of the existing HTTP C2 design are to:
 
 ### Procedural HTTP C2
 
-This is basically something I just made up, but the idea is that instead of creating custom C2 profiles that define where to put data in an HTTP request we [procedurally generate](https://en.wikipedia.org/wiki/Procedural_generation) an HTTP request with the data in it. In practice this seems to work pretty well, though the number of variations built into Sliver is somewhat limited right now. If the technique proves to work well in the field we'll likely expand it (and at some point it may be a good idea to base the generation based on some type of seeded RNG so that a given request can be regenerated given a seed).
+Sliver [procedurally generate](https://en.wikipedia.org/wiki/Procedural_generation) generates each HTTP request with the C2 data in it based on the configuration file described above. Each request will have randomized URLs and query arguments, and different types of messages also use different file extensions/paths.
+
+Each implant is also only embedded with a randomly generated subset of the server's C2 profile, so two or more implants generated from the same server may not generate similar URLs depending on how you tweak the configuration.
 
 #### Implant-side
 
 The high level process to generate and send a standard session request is (note: this is all after the key exchange, which I'm skipping for now):
 
-1. Randomly generate the request path using built-in path segments. The path will have one of the following extensions, which indicate the type of request. This is distinct from a _message type_, the message type (i.e., the type of command) is in the encrypted so it cannot be determined without the [session key](https://github.com/BishopFox/sliver/wiki/Transport-Encryption). Everything in the path except for the extension is ignored by the server:
+1. Randomly generate the request path using built-in path segments. The path will have one of the following extensions, which indicate the type of request. This is distinct from a _message type_, the message type (i.e., the type of command) is in the encrypted so it cannot be determined without the [session key](https://github.com/BishopFox/sliver/wiki/Transport-Encryption). Everything in the path except for the extension is ignored by the server.
 
-* `.txt` = Request the server's public RSA key
-* `.jsp` = Initialize session endpoint
-* `.php` = Encrypted session messages
-* `.js` = Long poll endpoint
+In the default configuration:
+
+* `.woff` = Stagers
+* `.js` = Long poll messages
+* `.html` = Key exchange messages
+* `.php` = Session messages
+* `.png` = Close session messages
 
 2. Randomly select an encoder from `sliver/encoders`, an encoder defines how the message we're trying to send to the server gets encoded. Note that we're always encoding the ciphertext of a message, these encoders are purely for obfuscation _not security_. The currently supported encoders are:
 * __Base64__ Base64 with a custom alphabet so that it's not interoperable with standard Base64
