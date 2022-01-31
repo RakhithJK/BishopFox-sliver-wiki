@@ -128,7 +128,7 @@ Starting in v1.5 you can make extensive customizations to the HTTP C2 traffic ge
 | Field Name | Description |
 | ---------- | ----------- |
 |`user_agent`|The implant's user agent, a blank string will randomly generate a platform appropriate user-agent and version (default: blank) |
-|`url_parameters`| A list of objects that contain a `name` and `value` that should be included as URL query parameters in addition to the ones used by encoders (default: `null`)|
+|`url_parameters`| A list of objects that contain a `name`, `value`, and a `probability` that should be included as URL query parameters in addition to the ones used by encoders (default: `null`). Probability may be 1-99, any other value will be treated as 100.|
 |`headers`|A list of objects that contain a `name` and `value` to add as request headers (default: `null`)|
 |`max_files`| Max number of random file names to use (default: `8`) |
 |`min_files`| Min number of random file names to use (default: `2`) |
@@ -150,7 +150,7 @@ Starting in v1.5 you can make extensive customizations to the HTTP C2 traffic ge
 | Field Name | Description |
 | ---------- | ----------- |
 | `random_version_headers` | Boolean value, if enabled the server will return random Apache/Nginx and PHP version numbers (default: `false`) |
-| `headers` | A list of objects containing a `name` and `value` that should be included as response headers |
+| `headers` | A list of objects containing a `name`, `value`, and a `probability` that should be included as response headers. Probability may be 1-99, any other value will be treated as 100. |
 | `cookies` | A list of strings to use as cookie names |
 
 # Under the Hood
