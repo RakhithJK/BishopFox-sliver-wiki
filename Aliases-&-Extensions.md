@@ -2,7 +2,7 @@ Sliver allows an operator to extend the local client console and its features by
 
 #### Aliases Command Parsing
 
-__⚠️ IMPORTANT:__ It's important to understand that all alias commands have certain Sliver shell flags (those that appear in `--help`). Your Sliver shell commands are lexically parsed by the Sliver shell before and only unnamed positional arguments are passed to the alias code. This means you may need to escape certain arguments in order for them to be correctly parsed.
+__⚠️ IMPORTANT:__ It's important to understand that all alias commands have certain Sliver shell flags (those that appear in `--help`). Your Sliver shell commands are lexically parsed by the Sliver shell first, and only unnamed positional arguments are passed to the alias code. This means you may need to escape certain arguments in order for them to be correctly parsed.
 
 For example with Seatbelt, `seatbelt -group=system` will fail because the Sliver shell will attempt to interpret the `-group` flag as a named flag (i.e., arguments that appear in `--help`). To ensure this argument is parsed as a positional argument we need to pass it as a string argument, so the correct syntax is `seatbelt \"-group=system\"`
 
