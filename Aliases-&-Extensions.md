@@ -42,7 +42,7 @@ Cannot enumerate antivirus. root\SecurityCenter2 WMI namespace is not available 
 ...
 ```
 
-#### What's the difference between an alias and an extension? 
+## What's the difference between an alias and an extension? 
 
 From an end-user perspective there's not much of a difference between the two, except that extensions' arguments will show up in `--help` and may be required.
 
