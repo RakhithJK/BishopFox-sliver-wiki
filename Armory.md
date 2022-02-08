@@ -44,4 +44,4 @@ Installed alias and extension files are stored in `~/.sliver-client/` by default
 
 ## Private Armories
 
-Sliver also supports self-hosted private armories, but I've not gotten around to testing & writing the documentation for these, so you'll have to read thru the source code to figure out how they work for now.
+Sliver also supports self-hosted private armories, but I've not gotten around to testing & writing the documentation for these, so you'll have to read thru the source code to figure out how they work for now. I'll eventually update this documentation and release a reference implementation.
