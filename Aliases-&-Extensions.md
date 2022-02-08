@@ -42,6 +42,8 @@ Cannot enumerate antivirus. root\SecurityCenter2 WMI namespace is not available 
 ...
 ```
 
+Another trick is to provide a single empty string argument, after which all arguments will be parsed as positional e.g., `seatbelt '' -group=system`
+
 ## What's the difference between an alias and an extension? 
 
 From an end-user perspective there's not much of a difference between the two, except that extensions' arguments will show up in `--help` and may be required.
