@@ -1,3 +1,5 @@
+Sliver supports two types of SOCKS5 proxies, an "in-band" proxy that tunnels though any C2 protocol, and WireGuard SOCKS proxy (only available when using WireGuard C2).
+
 ## In-band SOCKS5
 
 An in-band reverse SOCKS5 proxy is supported in Sliver versions 1.5 and later. Note that the SOCKS proxy feature can only be used on sessions (i.e., interactive sessions) and not beacons.
