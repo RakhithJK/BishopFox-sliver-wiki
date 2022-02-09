@@ -6,7 +6,7 @@ Delve can be installed with the following command:
 go install github.com/go-delve/delve/cmd/dlv
 ```
 
-The following examples are specific to Visual Studio Code, but other IDEs using delve probably have similar configuration options.
+The following examples are specific to Visual Studio Code, but other IDEs using delve probably have similar configuration options. For more details please see https://github.com/go-delve/delve/tree/master/Documentation/installation#installation
 
 # Debugging the server
 
