@@ -8,7 +8,7 @@ go install github.com/go-delve/delve/cmd/dlv@latest
 
 For more details please see https://github.com/go-delve/delve/tree/master/Documentation/installation#installation
 
-# Debugging the server
+# Debugging the Server
 
 Debugging the Sliver needs to be done via delve [remote debugging](https://github.com/golang/vscode-go/blob/master/docs/debugging.md#remote-debugging) feature. This means you need to first start the binary with the following command:
 
@@ -75,7 +75,7 @@ Then, you need to create your `.vscode/launch.json` file containing the followin
 ```
 Once you're all set, start by running the `Run Debug Server` task, and then hit `F5` (or use the UI to start the debugging task).
 
-# Debugging the implant
+# Debugging the Implant
 
 To debug an implant, first make sure you built one by passing the `--debug` flag to the `generate` command. Then, add the following debug configuration to your `.vscode/launch.json` file:
 
