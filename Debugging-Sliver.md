@@ -1,12 +1,12 @@
-Debugging Sliver binaries (server, client and implant) can be done using the [delve](https://github.com/go-delve/delve) debugger.
+Debugging Sliver binaries (server, client and implant) can be done using the [delve](https://github.com/go-delve/delve) debugger. The following examples are specific to Visual Studio Code, but other IDEs using delve probably have similar configuration options.
 
-Delve can be installed with the following command:
+Delve can be installed with the following command, note that you'll need `$GOPATH/bin` on your `$PATH`:
 
 ```shell
 go install github.com/go-delve/delve/cmd/dlv@latest
 ```
 
-The following examples are specific to Visual Studio Code, but other IDEs using delve probably have similar configuration options. For more details please see https://github.com/go-delve/delve/tree/master/Documentation/installation#installation
+For more details please see https://github.com/go-delve/delve/tree/master/Documentation/installation#installation
 
 # Debugging the server
 
