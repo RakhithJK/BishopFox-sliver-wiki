@@ -22,7 +22,7 @@ dlv debug \
 github.com/bishopfox/sliver/server
 ```
 
-To simplify things, you can add this command as a VSCode task, by adding the following to your `.vscode/tasks.json` file:
+To simplify things, you can add this command as a VSCode task, by adding the following to your [`.vscode/tasks.json` file](https://code.visualstudio.com/docs/editor/tasks):
 
 ```json
         {
