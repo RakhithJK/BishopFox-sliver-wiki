@@ -10,7 +10,7 @@ Sliver implants support three different ways of loading third party tools:
 
 This feature is only supported on Windows.
 
-Using `execute-assembly`, one can run an arbitrary .NET assembly on a remote system via a Sliver implant. The implant will start a sacrificial process (`notepad.exe` by default) that will host a reflective DLL used to load the .NET CLR. The assembly will then be copied into this process and a new thread will start on the reflective DLL entrypoint, which will load and run the assembly in memory.
+Using `execute-assembly`, one can run an arbitrary .NET assembly on a remote system via a Sliver implant. The implant will start a sacrificial process (`notepad.exe` by default, you can change this by using the `--process`) that will host a reflective DLL used to load the .NET CLR. The assembly will then be copied into this process and a new thread will start on the reflective DLL entrypoint, which will load and run the assembly in memory.
 
 Here's an example with [Seatbelt](https://github.com/GhostPack/Seatbelt):
 
