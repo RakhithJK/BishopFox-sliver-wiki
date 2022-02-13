@@ -157,4 +157,4 @@ As the alias support relies on Sliver side loading capabilities, please make sur
 
 ⚠️  Extensions are currently only supported when using Windows implants, though we're actively working on MacOS/Linux support.
 
-Extensions are similar in structure to an alias, but internally work differently. An extension is a shared library that are reflectively loaded by the implant and passed certain callbacks. These callbacks allow the extension to return data to the C2 server. Extensions may also have dependencies (other extensions), which Sliver will load prior to the extension; circular dependencies are not allowed.
+Extensions are similar in structure to an alias, but internally work differently. An extension is an artifact of native code that is reflectively loaded by the implant and passed certain callbacks. These callbacks allow the extension to return data to the C2 server. Extensions may also have dependencies (other extensions), which Sliver will load prior to the extension; circular dependencies are not allowed. For example, all BOF extensions (`.o` files) rely on the COFF Loader extension (a `.dll`).
