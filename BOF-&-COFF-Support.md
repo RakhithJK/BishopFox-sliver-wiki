@@ -88,6 +88,7 @@ Looking at the script we can see the BOF requires a single integer argument. The
     "original_author": "jsecu",
     "repo_url": "https://github.com/sliverarmory/CredManBOF",
     "help": "Dump credentials using the CredsBackupCredentials API",
+    "long_help": "",
     "depends_on": "coff-loader",
     "entrypoint": "go",
     "files": [
