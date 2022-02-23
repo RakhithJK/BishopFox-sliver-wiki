@@ -71,7 +71,7 @@ beacon_command_register(
 Type| Description | Sliver Type |
 | ---- | ------------- | -------|
 b | binary data | `file` (path to binary data) |
-i | 4-byte integer | `integer` |
+i | 4-byte integer | `int` or `integer` |
 s | 2-byte short integer | `short` |
 z | zero-terminated+encoded string | `string` |
 Z | zero-terminated wide-char string | `wstring` |
