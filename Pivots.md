@@ -42,7 +42,7 @@ Named pipe pivots are only supported on Windows. Select a session to start a nam
 [*] Started named pipe pivot listener \\.\pipe\foobar with id 1
 ```
 
-Next we generate a named pipe implant using `generate --named-pipe 192.168.1.1/pipe/foobar` note here we may need to specify the IP address of the listener: `192.168.1.1`. The syntax is `<host>/pipe/<pipe name>`; this is just the standard syntax for Windows named pipes.
+Next we generate a named pipe implant using `generate --named-pipe 192.168.1.1/pipe/foobar` note here we may need to specify the IP address of the listener: `192.168.1.1`. The syntax is `<host>/pipe/<pipe name>`, note that `.` is equivalent to `127.0.0.1`. This is just the standard syntax for Windows named pipes.
 
 ```
 [*] Session 13f9ee6b ROUND_ATELIER - 192.168.1.178:59290->WARM_DRIVEWAY-> (WIN-1TT1Q345B37) - windows/amd64 - Mon, 07 Feb 2022 10:15:11 CST
