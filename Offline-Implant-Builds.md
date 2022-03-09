@@ -1,4 +1,6 @@
-By default when you build an implant for the first time Sliver will attempt to pull down the implant's Golang dependencies from the internet. However, the server will cache Go modules it downloads, so if you can compile one implant ahead of time you should be able to compile implants offline later (assuming you do not delete the `SLIVER_ROOT_DIR` directory (by default `~/.sliver`).
+By default when you build an implant for the first time Sliver will attempt to pull down the implant's Golang dependencies from the internet.
+
+Due nuances in the build process offline builds are not simple, though we're always looking at ways we can implement this "out of the box" in the future. A solution is outlined below, however the slimiest solution is to (if you can) generate implants ahead of time and use `regenerate`.
 
 ### GOPROXY
 
