@@ -22,7 +22,7 @@ Sliver implements staging by reusing the profiles feature. Profiles are sorts of
 The following command creates a new profile that we will use for our staging listener:
 
 ```
-sliver > profile new --profile-name win-shellcode --mtls 192.168.122.1 --skip-symbols --format shellcode
+sliver > profile new --mtls 192.168.122.1 --skip-symbols --format shellcode win-shellcode
 
 [*] Saved new profile win-shellcode
 
