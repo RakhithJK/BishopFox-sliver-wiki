@@ -18,11 +18,11 @@ For this to work, we need the following pieces:
 
 ## Example
 
-Sliver implements staging by reusing the profiles feature. Profiles are sorts of implant blueprints that define a configuration to be reused by the `profile generate` command.
+Sliver implements staging by reusing the profiles feature. Profiles are sorts of implant blueprints that define a configuration to be reused by the `profiles new` command.
 The following command creates a new profile that we will use for our staging listener:
 
 ```
-sliver > profile new --mtls 192.168.122.1 --skip-symbols --format shellcode win-shellcode
+sliver > profiles new --mtls 192.168.122.1 --skip-symbols --format shellcode win-shellcode
 
 [*] Saved new profile win-shellcode
 
