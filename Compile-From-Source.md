@@ -70,9 +70,9 @@ If you want to modify any of the `.proto` files you'll need to setup a few addit
 
 #### `protoc`
 
-First install your platform's version of `protoc` v3.15.8 or later:
+First install your platform's version of `protoc` v3.19.4 or later:
 
-https://github.com/protocolbuffers/protobuf/releases/tag/v3.15.8
+https://github.com/protocolbuffers/protobuf/releases/tag/v3.19.4
 
 Ensure that `protoc` v3.15.8 or later is on your `$PATH`, you can check with a simple `protoc --version`
 
@@ -81,8 +81,8 @@ Ensure that `protoc` v3.15.8 or later is on your `$PATH`, you can check with a s
 Assuming `$GOPATH/bin` is on your `$PATH` simply run the following commands to install the appropriate versions of `protoc-gen-go` and `protoc-gen-go-gprc`:
 
 ```
-go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26.0
-go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1.0
+go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.27.1
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2.0
 ```
 
 Ensure that these are both on your `$PATH` after running the commands, if not you probably need to add `$GOPATH/bin` to your `$PATH`. To regenerate the Protobuf and gRPC files run:
