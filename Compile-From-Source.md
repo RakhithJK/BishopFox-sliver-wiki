@@ -74,7 +74,7 @@ First install your platform's version of `protoc` v3.19.4 or later:
 
 https://github.com/protocolbuffers/protobuf/releases/tag/v3.19.4
 
-Ensure that `protoc` v3.15.8 or later is on your `$PATH`, you can check with a simple `protoc --version`
+Ensure that correct `protoc` version is on your `$PATH`, you can check with a simple `protoc --version`
 
 #### `protoc-gen-go` `protoc-gen-go-gprc`
 
