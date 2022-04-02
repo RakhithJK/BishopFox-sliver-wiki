@@ -1,6 +1,10 @@
 Advanced options, as the name suggests, are for advanced users that know what they're doing. Using these options isn't the best user experience and may result in broken or unexpected implant behavior. Only use these options if you understand what they do.
 
-Advanced options are configured per-C2 endpoint and are passed as URL encoded parameters to the C2 URL in the `generate` command.
+Advanced options are configured per-C2 endpoint and are passed as URL encoded parameters to the C2 URL in the `generate` command. For example:
+
+```
+generate --http http://example.com?force-http=true
+```
 
 ### HTTP C2 Advanced Options
 
