@@ -1,6 +1,6 @@
 By default when you build an implant for the first time Sliver will attempt to pull down the implant's Golang dependencies from the internet.
 
-Due nuances in the build process offline builds are not simple, though we're always looking at ways we can implement this "out of the box" in the future. A solution is outlined below, however the slimiest solution is to (if you can) generate implants ahead of time and use `regenerate`.
+Due nuances in the build process offline builds are not simple, though we're always looking at ways we can implement this "out of the box" in the future. A solution is outlined below, however the simplest solution is to (if you can) generate implants ahead of time and use `regenerate` once offline, though this will require you have advanced knowledge of callback addresses.
 
 ### GOPROXY
 
