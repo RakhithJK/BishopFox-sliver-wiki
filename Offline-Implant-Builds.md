@@ -4,7 +4,7 @@ Due nuances in the build process offline builds are not simple, though we're alw
 
 ### GOPROXY
 
-As of v1.5.0 Sliver also supports the Golang `GOPROXY` environment variable, which can be configured to point to a local Go Module Proxy that contains the implant's dependencies. A `GOPROXY` can also be configured in the server's configuration file, which will take precedence over any environment variable. 
+As of v1.5.0 Sliver also supports the Golang `GOPROXY` environment variable, which can be configured to point to a local Go Module Proxy that contains the implant's dependencies. A `GOPROXY` can also be configured in the server's configuration file, which will take precedence over any environment variable. Note that the dependencies required by the implant will vary depending on the flags used to generate it (we remove unused code prior to compilation), so ensure that you use similar flags then generating offline.
 
 For example, you can use the [Athens](https://docs.gomods.io/) proxy to cache modules locally:
 
