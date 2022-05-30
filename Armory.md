@@ -4,6 +4,8 @@ The armory downloads packages from `github.com` and `api.github.com` so you'll n
 
 Aliases and extensions are installed on the "sliver client"-side, and thus are not shared among operators in [multiplayer mode](https://github.com/BishopFox/sliver/wiki/Multiplayer-Mode).
 
+As of v1.5.14 you can also use `armory install all` to install _everything_ if you really want to.
+
 ## The Official Armory
 
 The official armory ships with Sliver binaries and is included by default in the `Makefile` when compiling from source. You can interact with the Armory using the `armory` command. Packages installed from the official armory are compiled and cryptographically signed by the Sliver authors. While we make a best effort to review 3rd party code, you are responsible for reviewing and understanding any 3rd party code before using it. Source code for any alias or extension can be found under the [Sliver Armory GitHub](https://github.com/sliverarmory) organization.
