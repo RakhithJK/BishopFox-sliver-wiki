@@ -76,9 +76,9 @@ https://github.com/protocolbuffers/protobuf/releases/tag/v3.19.4
 
 Ensure that correct `protoc` version is on your `$PATH`, you can check with a simple `protoc --version`
 
-#### `protoc-gen-go` `protoc-gen-go-gprc`
+#### `protoc-gen-go` `protoc-gen-go-grpc`
 
-Assuming `$GOPATH/bin` is on your `$PATH` simply run the following commands to install the appropriate versions of `protoc-gen-go` and `protoc-gen-go-gprc`:
+Assuming `$GOPATH/bin` is on your `$PATH` simply run the following commands to install the appropriate versions of `protoc-gen-go` and `protoc-gen-go-grpc`:
 
 ```
 go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.27.1
