@@ -20,6 +20,7 @@ generate --http http://example.com?driver=wininet
 * `proxy-username` - Specify a proxy username. Only valid with the Go HTTP driver.
 * `proxy-password` - Specify the proxy password. Only valid with the Go HTTP driver.
 * `ask-proxy-creds` - Set to `true` to ask the user for HTTP proxy credentials. Only valid when used with the `wininet` HTTP driver.
+* `host-header` - Used for domain fronting.
 
 ### DNS C2 Advanced Options
 
