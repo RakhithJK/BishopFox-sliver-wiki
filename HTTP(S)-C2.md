@@ -68,6 +68,10 @@ The priority of retrieval is the following:
    - Environment Variable: `HTTPS_PROXY`, `HTTP_PROXY`, `FTP_PROXY`, or `ALL_PROXY`. `NO_PROXY` is respected.
    - Network Settings: `scutil`
 
+#### NTLM/Kerberos Proxy Authentication 
+
+You can use [advanced options](https://github.com/BishopFox/sliver/wiki/C2-Advanced-Options) to enable the use of the `wininet` HTTP library, which supports NTLM/Kerberos authentication (Windows only). Using this library tends to be a little less stable (we have to covert Go calls to native DLL calls) and is generally more susceptible to introspection by security products as these functions are well-known and easy to hook. However, if you need NTLM/Kerberos authentication you don't have much of a choice. 
+
 
 ## Start the Listener 
 
