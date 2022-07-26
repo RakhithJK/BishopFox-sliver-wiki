@@ -2,7 +2,7 @@ Sliver v1.5 and later support the loading and execution of BOFs and COFFs, gener
 
 ### BOF Extensions
 
-BOF support is provided via the [COFF Loader](https://github.com/sliverarmory/COFFLoader) extension, you'll need it installed to run pretty much any BOF. However, the COFF Loader will be install automatically if you install a BOF extension from the [armory](https://github.com/BishopFox/sliver/wiki/Armory). 
+BOF support is provided via the [COFF Loader](https://github.com/sliverarmory/COFFLoader) extension, you'll need it installed to run pretty much any BOF. However, the COFF Loader will be installed automatically if you install a BOF extension from the [armory](https://github.com/BishopFox/sliver/wiki/Armory). 
 
 The easiest way to install a BOF extension, for example [`nanodump`](https://github.com/sliverarmory/nanodump), is using the [armory](https://github.com/BishopFox/sliver/wiki/Armory) package manager:
 
