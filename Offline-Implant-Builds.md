@@ -1,3 +1,9 @@
+# Versions 1.5.21+
+
+As of v1.5.21 offline implants builds are fully supported by Sliver.
+
+# Versions <= 1.5.20
+
 By default when you build an implant for the first time Sliver will attempt to pull down the implant's Golang dependencies from the internet.
 
 Due nuances in the build process offline builds are not simple, though we're always looking at ways we can implement this "out of the box" in the future. A solution is outlined below, however the simplest solution is to (if you can) generate implants ahead of time and use `regenerate` once offline, though this will require you have advanced knowledge of callback addresses.
