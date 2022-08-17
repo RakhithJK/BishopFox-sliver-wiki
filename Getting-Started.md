@@ -4,7 +4,7 @@ __⚠️ NOTE:__ This guide is intended for experienced red teamers, but we also
 
 ## Server Setup
 
-Download the latest sever [release](https://github.com/BishopFox/sliver/releases) for your platform, and just run the binary. That's it, you're pretty much done.
+Download the latest server [release](https://github.com/BishopFox/sliver/releases) for your platform, and just run the binary. That's it, you're pretty much done.
 
 Sliver is designed for a one server deployment per-operation. The server supports Linux, Windows, and MacOS however we strongly recommend running the server on a Linux (or MacOS, well really anything that isn't Windows), as some features may be more difficult to get working on a Windows server. The Windows client should work just fine when accessing a Linux/MacOS server from Windows, if for some odd reason your operators want to actually use Windows you'll just need to setup [multiplayer mode](https://github.com/BishopFox/sliver/wiki/Multiplayer-Mode).
 
