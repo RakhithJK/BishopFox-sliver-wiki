@@ -120,7 +120,7 @@ Sliver supports encryption and compression when serving stages. Compression opti
 stage-listener --url http://192.168.0.52:80 --profile win-shellcode --aes-encrypt-key D(G+KbPeShVmYq3t6v9y$B&E)H@McQfT --aes-encrypt-iv 8y/B?E(G+KbPeShV
 ```
 
-If aes-encrypt-iv is not set it defaults to `0000000000000000`. After the stage generation is completed AES key and iv are displayed.
+If aes-encrypt-iv is not set it defaults to `0000000000000000`. After the stage generation is completed AES key and iv are displayed. Note that this example does not include compression:
 
 ```csharp
 using System;
