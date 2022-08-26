@@ -6,6 +6,10 @@ Sliver implants support three different ways of loading third party tools:
 - `sideload`
 - `spawndll`
 
+## Known limitations
+
+Arguments passed to .NET assemblies and non-reflective PE extensions are limited to 256 characters. This is due to a limitation in the Donut loader Sliver is using. A workaround for .NET assemblies is to execute them in-process, using the `--in-process` flag, or a custom BOF extension like `inline-execute-assembly`. There is currently no workaround for non-reflective PE extension.
+
 ## .NET assemblies loading
 
 This feature is only supported on Windows.
