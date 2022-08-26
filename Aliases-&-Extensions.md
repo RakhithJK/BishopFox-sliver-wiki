@@ -44,6 +44,8 @@ Cannot enumerate antivirus. root\SecurityCenter2 WMI namespace is not available 
 
 Another trick is to provide a single empty string argument, after which all arguments will be parsed as positional e.g., `seatbelt '' -group=system`
 
+__⚠️ IMPORTANT:__ Arguments passed to .NET assemblies and non-reflective PE extensions are limited to 256 characters. This is due to a limitation in the Donut loader Sliver is using. A workaround for .NET assemblies is to execute them in-process, using the `--in-process` flag, or a custom BOF extension like `inline-execute-assembly`. There is currently no workaround for non-reflective PE extension.
+
 ## What's the difference between an alias and an extension? 
 
 From an end-user perspective there's not much of a difference between the two, except that extensions' arguments will show up in `--help` and may be required.
