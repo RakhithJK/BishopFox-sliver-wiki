@@ -202,7 +202,7 @@ You can view previous tasks executed by the active beacon using the `tasks` comm
  962978a6   completed   Ls             Sat, 22 Jan 2022 14:42:43 CST   Sat, 22 Jan 2022 14:43:53 CST   Sat, 22 Jan 2022 14:43:53 CST 
 ```
 
-You can get the old output from the task using `tasks fetch` and selecting the task you want to see the output from. Note that in this case these task output is stored on the server, so operators in multiplayer mode can fetch output from tasks issued by other operators. However, operators will only see the automatic results from tasks that they executed. You can disable the automatic display of task results using the `settings` command.
+You can get the old output from the task using `tasks fetch` and selecting the task you want to see the output from. Operators in multiplayer mode can fetch output from tasks issued by any other operator on the server. However, operators will only see the automatic results from tasks that they themselves executed. You can disable the automatic display of task results using the `settings` command.
 
 #### Switching from Beacon Mode to Session Mode
 
