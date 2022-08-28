@@ -224,13 +224,19 @@ When you're done using the interactive session use the `close` command to close 
 
 ## Multiple Domains/Protocols
 
-You can specify multiple domains and protocols during the generation process. Right now Sliver will attempt to use the most performant protocols first (MTLS -> WG -> HTTP(S) -> DNS) using subsequent domains/protocols when connections fail.
+You can specify multiple domains and protocols during the generation process. 
+
+By default Sliver will attempt to use the `s` sequential connection strategy: the most performant protocols are used first (MTLS -> WG -> HTTP(S) -> DNS) falling back to subsequent domains/protocols if/when connections fail.
 
 ```
 sliver > generate --mtls example.com --http foobar.com --dns 1.lil-peep.rip
 ```
 
-Eventually we'll add a feature to manually specify the fallback protocols, or you can add this feature and send up a PR :).
+You can modify the connection strategy at compile-time using the `--strategy` flag. For example, you can instruct the implant to `r` randomly connect to any specified C2 endpoint:
+
+```
+sliver > generate --mtls foo.com,bar.com,baz.com --strategy r
+```
 
 ## What Next?
 
