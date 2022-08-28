@@ -26,7 +26,7 @@ apt install mingw-w64
 brew install mingw-w64
 ```
 
-__Note:__ On MacOS may have to configure [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables) for MinGW.
+__Note:__ On MacOS you may need to configure [environment variables](https://github.com/BishopFox/sliver/wiki/Environment-Variables) for MinGW.
 
 See [cross-compiling implants](https://github.com/BishopFox/sliver/wiki/Cross-Compiling-Implants) for more details.
 
