@@ -55,4 +55,4 @@ Next we generate a named pipe implant using `generate --named-pipe 192.168.1.1/p
  a2615359   WARM_DRIVEWAY   mtls        192.168.1.178:59290                    WIN-1TT1Q345B37   WIN-1TT1Q345B37\Administrator   windows/amd64      Mon, 07 Feb 2022 10:15:11 CST   [ALIVE]
 ```
 
-__NOTE:__ In some environments you may need to use the `--allow-all` flag when starting the pviot listener to allow all users/groups
+⚠️ __IMPORTANT:__ In some environments you may need to use the `--allow-all` flag when starting the pviot listener to allow all users/groups
