@@ -28,7 +28,7 @@ We can now use `generate --tcp-pivot 192.168.1.1:9898` to generate an implant th
 
 ## Named Pipe Pivots (SMB)
 
-Named pipe pivots are only supported on Windows. Select a session to start a named pipe listener, and then use the `--bind` flag to specify a pipe name. Pipes are automatically started on the local machine so you only need to specify a named, remote clients are always allowed:
+Named pipe pivots are only supported on Windows. Select a session to start a named pipe listener, and then use the `--bind` flag to specify a pipe name. Pipes are automatically started on the local machine so you only need to specify a name, remote clients are always allowed to connect to the pipe, but the default ACL will only allow the current user/group. You can allow all user/groups by using the `--allow-all` flag:
 
 ```
 [*] Session a2615359 WARM_DRIVEWAY - 192.168.1.178:59290 (WIN-1TT1Q345B37) - windows/amd64 - Mon, 07 Feb 2022 10:09:20 CST
