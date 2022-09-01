@@ -64,7 +64,7 @@ Then, you need to create your `.vscode/launch.json` file containing the followin
             "request": "attach",
             "mode": "remote",
             "remotePath": "${workspaceFolder}",
-            "port": 2345,
+            "port": 8844,
             "host": "127.0.0.1",
             "trace": "log"
         },
