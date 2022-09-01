@@ -1,0 +1,1 @@
+Cursed Chrome/electron post-exploitation tool kit introduced in Sliver v`TBD`, which integrates with [CursedChrome](https://github.com/mandatoryprogrammer/CursedChrome).
