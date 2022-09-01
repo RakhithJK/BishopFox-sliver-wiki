@@ -1,6 +1,6 @@
 # Versions 1.5.21+
 
-As of v1.5.21 offline implants builds are fully supported by Sliver.
+As of v1.5.21 offline implants builds are fully supported by Sliver, and enabled by default.
 
 # Versions <= 1.5.20
 
