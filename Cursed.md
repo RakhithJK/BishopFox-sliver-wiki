@@ -17,3 +17,6 @@ The `cursed electron` command can be used to restart an Electron application wit
 ## Cursed Console
 
 The `cursed console` command can be used to start an interactive REPL with any cursed process. You will need to start a cursed process using `cursed chrome` or `cursed electron` before using `cursed console`. You can list cursed processes using the `cursed` command.
+
+<img width="1411" alt="Screen Shot 2022-09-02 at 4 31 44 PM" src="https://user-images.githubusercontent.com/875022/188246398-97e5c7dd-1c21-4aeb-a57e-222fda826e66.png">
+
