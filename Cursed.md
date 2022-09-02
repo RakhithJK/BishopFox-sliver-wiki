@@ -6,6 +6,10 @@ The `cursed chrome` command can be used to restart a remote system's Chrome brow
 
 If a payload is specified, the command will restart Chrome with remote debugging, enumerate installed browser extensions, determine if any extension has the required permissions for [CursedChrome](https://github.com/mandatoryprogrammer/CursedChrome), and inject the payload into the extension's execution context.
 
+## Cursed Edge
+
+Works identically to `cursed chrome` but the UI displays "Edge" instead of "Chrome" much like Edge itself.
+
 ## Cursed Electron
 
 The `cursed electron` command can be used to restart an Electron application with remote debugging enabled, you can subsequently use `cursed console` to interact with any debug target. Note that some Electron applications disable the remote debugging functionality will prevent this feature for functioning, however most Electron applications support remote debugging.
