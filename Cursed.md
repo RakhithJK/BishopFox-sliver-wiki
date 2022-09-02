@@ -12,7 +12,7 @@ Works identically to `cursed chrome` but the UI displays "Edge" instead of "Chro
 
 ## Cursed Electron
 
-The `cursed electron` command can be used to restart an Electron application with remote debugging enabled, you can subsequently use `cursed console` to interact with any debug target. Note that some Electron applications disable the remote debugging functionality, which will prevent this feature for functioning.
+The `cursed electron` command can be used to restart an Electron application with remote debugging enabled, you can subsequently use `cursed console` to interact with any debug target. Note that some Electron applications disable the remote debugging functionality, which will prevent this feature from functioning.
 
 ## Cursed Console
 
