@@ -8,4 +8,4 @@ If a payload is specified, the command will restart Chrome with remote debugging
 
 ## Cursed Console
 
-The `cursed console` command can be used to start an interactive REPL with any cursed process. You will need to start a cursed process using `cursed chrome` or `cursed electron` before using `cursed console`.
+The `cursed console` command can be used to start an interactive REPL with any cursed process. You will need to start a cursed process using `cursed chrome` or `cursed electron` before using `cursed console`. You can list cursed processes using the `cursed` command.
