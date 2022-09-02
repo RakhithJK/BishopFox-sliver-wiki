@@ -4,7 +4,11 @@ Cursed Chrome/electron post-exploitation tool kit introduced in Sliver v`TBD`, w
 
 The `cursed chrome` command can be used to restart a remote system's Chrome browser with remote debugging enabled. If no payload is specified using `--payload` the command will simply restart Chrome with remote debugging enabled, you can then use `cursed console` to interact with any debug target. 
 
-If a payload is specified, the command will restart Chrome with remote debugging, enumerate installed browser extensions, determine if any extension has the required permissions for [CursedChrome](https://github.com/mandatoryprogrammer/CursedChrome) and inject the payload into the extension's execution context.
+If a payload is specified, the command will restart Chrome with remote debugging, enumerate installed browser extensions, determine if any extension has the required permissions for [CursedChrome](https://github.com/mandatoryprogrammer/CursedChrome), and inject the payload into the extension's execution context.
+
+## Cursed Electron
+
+The `cursed electron` command can be used to restart an Electron application with remote debugging enabled, you can subsequently use `cursed console` to interact with any debug target. Note that some Electron applications disable the remote debugging functionality will prevent this feature for functioning, however most Electron applications support remote debugging.
 
 ## Cursed Console
 
