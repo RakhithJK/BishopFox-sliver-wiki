@@ -1,5 +1,7 @@
 Cursed Chrome/Chromium/Edge/Electron post-exploitation tool kit introduced in Sliver v1.5.25, which integrates with [CursedChrome](https://github.com/mandatoryprogrammer/CursedChrome). It can automatically find existing Chrome Extensions with the required permissions for [CursedChrome](https://github.com/mandatoryprogrammer/CursedChrome) and remotely inject it onto the target system, or you can start an interactive REPL to inject arbitrary code into any Chrome/Chromium/Edge/Electron context.
 
+Since web requests and other activity originate from the target machine/browser instance, Cursed Chrome and the Cursed tool kit are excellent options for bypassing U2F/Webauthn, hardware attestation, and geo-IP restrictions in web applications.
+
 ## Cursed Chrome
 
 The `cursed chrome` command can be used to restart a remote system's Chrome browser with remote debugging enabled. If no payload is specified using `--payload` the command will simply restart Chrome with remote debugging enabled, you can then use `cursed console` to interact with any debug target. 
