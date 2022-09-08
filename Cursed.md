@@ -8,6 +8,13 @@ The `cursed chrome` command can be used to restart a remote system's Chrome brow
 
 If a payload is specified, the command will restart Chrome with remote debugging, enumerate installed browser extensions, determine if any extension has the required permissions for [CursedChrome](https://github.com/mandatoryprogrammer/CursedChrome), and inject the payload into the extension's execution context.
 
+So a typical workflow looks like:
+1. Setup [CursedChrome](https://github.com/mandatoryprogrammer/CursedChrome)
+2. Pop Sliver session, or go interactive from a beacon
+3. `cursed chrome --payload background.js`
+4. Upstream browser to CursedChrome proxy
+5. Enjoy!
+
 ## Cursed Edge
 
 Works identically to `cursed chrome` but the UI displays "Edge" instead of "Chrome" much like Edge itself.
