@@ -1,0 +1,1 @@
+The `loot` command is a server-side store of looted files and credentials. Since this is implemented server-side, all files and credentials in the loot store are shared amongst all operators in multiplayer mode.
