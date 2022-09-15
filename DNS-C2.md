@@ -17,17 +17,6 @@ The final configuration should look like for the domain `lil-peep.rip`:
 
 __IMPORTANT:__ Remember to disable Cloudflare's "cloud" when configuring these records, and to adjust the TTLs.
 
-
-### DNS Canaries
-
-DNS Canaries are unique per-binary domains that are optionally inserted during the string obfuscation process. These domains are not actually used by the implant code and are deliberately _not obfuscated_ so that they show up if someone runs `strings` on the implant. If these domains are ever resolved (and you have a `dns` listener running) you'll get an alert telling which specific file was discovered by the blue team.
-
-Example `generate` command with canaries, make sure to use the FQDN:
-
-```
-sliver > generate --http foobar.com --canary 1.example.com.
-```
-
 ### DNS Listeners
 
 Make sure you have a DNS listener running, and to use the FQDN again. Sliver will not be able to correctly parse C2 traffic if the parent domain is misconfigured:
@@ -39,11 +28,21 @@ sliver > dns --domains 1.example.com.
 [*] Successfully started job #1
 ```
 
+### DNS Canaries
+
+DNS Canaries are unique per-binary domains that are optionally inserted during the string obfuscation process. These domains are not actually used by the implant code and are deliberately _not obfuscated_ so that they show up if someone runs `strings` on the implant. If these domains are ever resolved (and you have a `dns` listener running) you'll get an alert telling which specific file was discovered by the blue team.
+
+Example `generate` command with canaries, make sure to use the FQDN:
+
+```
+sliver > generate --http foobar.com --canary 1.example.com.
+```
+
 You can view previously generated canaries with the `canaries` command.
 
 ### Ubuntu
 
-__NOTE:__ On recent versions of Ubuntu, you may need to disable `systemd-resolved` as this binds to your local UDP:53 and fucks up everything about how DNS is supposed to work. To use a sane DNS configuration run the following commands as root because `resolved` probably broke `sudo` too:
+__NOTE:__ On recent versions of Ubuntu, you may need to disable `systemd-resolved` as this binds to your local UDP:53 and messes up everything about how DNS is supposed to work. To use a sane DNS configuration run the following commands as root because `resolved` probably broke `sudo` too:
 
 ```bash
 systemctl disable systemd-resolved.service
