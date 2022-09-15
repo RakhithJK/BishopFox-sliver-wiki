@@ -1,3 +1,5 @@
+DNS can be a finicky nuanced protocol, if you're unfamiliar with DNS and related concepts I'd recommending reading up on the protocol and ecosystem a bit before leveraging it for C2.
+
 # Setup
 
 Use the following steps to configure a domain for DNS C2 (and DNS Canaries), you can use any DNS provider you wish as long as you setup the records correctly. I recommend setting a TTL of ~5 minutes for each record.
