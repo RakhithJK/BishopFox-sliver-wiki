@@ -18,6 +18,9 @@ sliver (STUCK_ARTICLE) > portfwd add --remote 10.10.10.10:22
 
 By default all port forwards will be bound to the `127.0.0.1` interface, but you can override this using the `--bind` flag. Port forwarding also works in `multiplayer` mode and will forward ports to your local system.
 
+#### Reverse Port Forwarding
+
+As of v1.5.27 Sliver also supports reverse port forwarding via the `rportfwd` command.
 
 ## WireGuard Port Forwarding
 
