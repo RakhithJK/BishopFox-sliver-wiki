@@ -3,7 +3,7 @@ These guides were NOT created by the Sliver authors (keep in mind these may be o
 ### Books
 * https://www.amazon.com/Adversarial-Tradecraft-Cybersecurity-real-time-computer/dp/1801076200/
 
-### Video Guides
+### Videos
 * https://youtu.be/3R6WKUgN0K4?t=456
 * https://www.youtube.com/watch?v=QO_1UMaiWHk
 * https://www.youtube.com/watch?v=izMMmOaLn9g
