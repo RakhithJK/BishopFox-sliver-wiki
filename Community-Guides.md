@@ -8,5 +8,5 @@ These guides were NOT created by the Sliver authors (keep in mind these may be o
 * https://www.youtube.com/watch?v=QO_1UMaiWHk
 * https://www.youtube.com/watch?v=izMMmOaLn9g
 
-### Written
+### Blogs
 * https://tishina.in/opsec/sliver-opsec-notes
