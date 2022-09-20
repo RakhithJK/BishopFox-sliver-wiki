@@ -11,7 +11,6 @@
 A command and control (C2) framework allows attackers to fully leverage existing access to computer systems or networks, it by itself will not get you access to systems that you do not already have. There are many techniques for gaining initial access, however some of the most common are exploiting software vulnerabilities using something like [Metasploit](https://www.metasploit.com/), or by social engineering a user to inadvertently execute a C2 payload. This is referred to as "post-exploitation."
 
 Throughout this guide and the Sliver code base the following terms of art are used. These definitions may vary slightly across the industry but this is how we define them:
-Implant - A piece of software used to maintain access to an environment or system, generally through the use of command and control (C&C, C2, etc.).
 
 * __Implant__ - A generic term for piece of software used to maintain access to an environment or system, generally through the use of command and control (C&C, C2, etc.), this is the code that the attack executes on the target machine as well as maintain access.
 
