@@ -244,6 +244,7 @@ Most commands have a `--help` and support tab complete, you may also find the fo
 
 * [Armory](https://github.com/BishopFox/sliver/wiki/Armory)
 * [Stagers](https://github.com/BishopFox/sliver/wiki/Stagers)
+* [Community Guides](https://github.com/BishopFox/sliver/wiki/Community-Guides)
 * [Port Forwarding](https://github.com/BishopFox/sliver/wiki/Port-Forwarding)
 * [Reverse SOCKS](https://github.com/BishopFox/sliver/wiki/Reverse-SOCKS)
 * [BOF/COFF Support](https://github.com/BishopFox/sliver/wiki/BOF-&-COFF-Support)
