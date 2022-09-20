@@ -8,7 +8,7 @@
 
 ### What's a C2?
 
-A command and control (C2) framework allows attackers to fully leverage existing access to computer systems or networks. C2 frameworks such as Sliver by themselves will generally not get you access to systems that you do not already have. There are many techniques for gaining initial access, however some of the most common are exploiting software vulnerabilities using something like [Metasploit](https://www.metasploit.com/), or by social engineering a user to inadvertently execute a C2 payload. This is referred to as "post-exploitation."
+A command and control (C2) framework allows attackers to fully leverage existing access to computer systems or networks. C2 frameworks such as Sliver by themselves will generally not get you access to systems that you do not already have. There are many techniques for gaining initial access, however some of the most common are exploiting software vulnerabilities using something like [Metasploit](https://www.metasploit.com/), or by social engineering a user to inadvertently execute a C2 payload. Regardless of the initial access method, the subsequent steps taken by an attacker are referred to as "post-exploitation" activities.
 
 Throughout this guide and the Sliver code base the following terms of art are used. These definitions may vary slightly across the industry but this is how we define them:
 
