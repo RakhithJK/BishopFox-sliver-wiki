@@ -7,3 +7,6 @@ These guides were NOT created by the Sliver authors (keep in mind these may be o
 * https://youtu.be/3R6WKUgN0K4?t=456
 * https://www.youtube.com/watch?v=QO_1UMaiWHk
 * https://www.youtube.com/watch?v=izMMmOaLn9g
+
+### Write Ups
+* https://tishina.in/opsec/sliver-opsec-notes
