@@ -14,6 +14,6 @@ Throughout this guide and the Sliver code base the following terms of art are us
 
 * __Implant__ - A generic term for piece of software used to maintain access to an environment or system, generally through the use of command and control (C&C, C2, etc.), this is the code that the attack executes on the target machine as well as maintain access.
 
-* __Beacon__ - May refer to (1) a communication pattern where an implant periodically connects to the C2 server as apposed to using a stateful/real time connection (2) Cobalt Strike's primary implant, more often called "CS Beacon."
+* __Beacon__ - May refer to (1) a communication pattern where an implant periodically connects to the C2 server as apposed to using a stateful/real time connection (2) [Cobalt Strike's](https://www.cobaltstrike.com/) primary implant, more often called "CS Beacon."
 
 
