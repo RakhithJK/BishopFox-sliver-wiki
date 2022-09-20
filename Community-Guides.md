@@ -9,4 +9,5 @@ These guides were NOT created by the Sliver authors (keep in mind these may be o
 * https://www.youtube.com/watch?v=izMMmOaLn9g
 
 ### Blogs
+* https://dominicbreuker.com/post/learning_sliver_c2_01_installation/
 * https://tishina.in/opsec/sliver-opsec-notes
