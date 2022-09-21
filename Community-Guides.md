@@ -1,4 +1,4 @@
-These guides were NOT created by the Sliver authors (keep in mind these may be out of date or contain slight inaccuracies by the time you're reading this), but may also be helpful:
+These guides were NOT created by the Sliver authors. Please keep in mind these may be out of date or contain slight inaccuracies by the time you're reading this:
 
 ### Books
 * https://www.amazon.com/Adversarial-Tradecraft-Cybersecurity-real-time-computer/dp/1801076200/
