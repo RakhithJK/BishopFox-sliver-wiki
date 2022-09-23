@@ -72,7 +72,7 @@ If you want to modify any of the `.proto` files you'll need to setup a few addit
 
 First install your platform's version of `protoc` v3.19.4 or later:
 
-https://github.com/protocolbuffers/protobuf/releases/tag/v3.19.4
+https://github.com/protocolbuffers/protobuf/releases/latest
 
 Ensure that correct `protoc` version is on your `$PATH`, you can check with a simple `protoc --version`
 
