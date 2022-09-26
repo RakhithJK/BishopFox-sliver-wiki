@@ -154,7 +154,7 @@ Starting in v1.5 you can make extensive customizations to the HTTP C2 traffic ge
 | Field Name | Description |
 | ---------- | ----------- |
 | `random_version_headers` | Boolean value, if enabled the server will return random Apache/Nginx and PHP version numbers (default: `false`) |
-| `headers` | A list of objects containing a `name`, `value`, and a `probability` that should be included as response headers. Probability may be 1-99, any other value will be treated as 100. |
+| `headers` | A list of objects containing a `name`, `value`, and a `probability` that should be included as response headers. Probability may be 1-100, any other value will be treated as 100. |
 | `cookies` | A list of strings to use as cookie names |
 
 # Under the Hood
