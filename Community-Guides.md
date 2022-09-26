@@ -12,3 +12,9 @@ These guides were NOT created by the Sliver authors. Please keep in mind these m
 * https://dominicbreuker.com/post/learning_sliver_c2_01_installation/
 * https://tishina.in/opsec/sliver-opsec-notes
 * https://vk9-sec.com/how-to-set-up-use-c2-sliver/
+
+### Threat Intel Reports
+* https://www.microsoft.com/security/blog/2022/08/24/looking-for-the-sliver-lining-hunting-for-emerging-command-and-control-frameworks/
+* https://www.team-cymru.com/post/sliver-case-study-assessing-common-offensive-security-tools
+* https://blog.tofile.dev/2021/09/04/sliver.html
+* https://www.ncsc.gov.uk/files/Advisory%20Further%20TTPs%20associated%20with%20SVR%20cyber%20actors.pdf
