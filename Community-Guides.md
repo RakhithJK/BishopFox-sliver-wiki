@@ -1,4 +1,4 @@
-⚠️ __IMPORTANT:__ This content was NOT created by the Sliver authors. Please keep in mind these may be out of date or contain slight inaccuracies:
+⚠️ __IMPORTANT:__ This content was NOT created by the Sliver authors. Please keep in mind it may be out of date or contain slight inaccuracies:
 
 ### Books
 * https://www.amazon.com/Adversarial-Tradecraft-Cybersecurity-real-time-computer/dp/1801076200/
