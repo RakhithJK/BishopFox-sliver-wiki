@@ -32,7 +32,7 @@ See [cross-compiling implants](https://github.com/BishopFox/sliver/wiki/Cross-Co
 
 ### Metasploit Setup (Optional)
 
-We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers), Sliver expects MSF version 5+.
+We strongly recommend using the [nightly framework installers](https://github.com/rapid7/metasploit-framework/wiki/Nightly-Installers), Sliver expects MSF version 6.2+.
 
 ## Implants Beacon vs. Session
 
