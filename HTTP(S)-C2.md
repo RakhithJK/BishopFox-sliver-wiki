@@ -132,7 +132,7 @@ Starting in v1.5 you can make extensive customizations to the HTTP C2 traffic ge
 | Field Name | Description |
 | ---------- | ----------- |
 |`user_agent`|The implant's user agent, a blank string will randomly generate a platform appropriate user-agent and version (default: blank) |
-|`chrome_base_version`| The Chrome version to put into the user agent head, plus a random value up to 3 (default: 100) |
+|`chrome_base_version`| The Chrome version to put into the user agent head, plus a random value up to 3 (default: `100`) |
 |`url_parameters`| A list of objects that contain a `name`, `value`, and a `probability` that should be included as URL query parameters in addition to the ones used by encoders (default: `null`). Probability may be 1-100, any other value will be treated as 100. URL parameter names must be 3 or more characters. |
 |`headers`|A list of objects that contain a `name`, `value` and a `probability ` to add as request headers (default: `null`)|
 |`max_files`| Max number of random file names to use (default: `8`) |
