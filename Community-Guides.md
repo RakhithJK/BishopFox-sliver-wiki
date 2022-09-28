@@ -8,11 +8,13 @@
 * https://www.youtube.com/watch?v=QO_1UMaiWHk
 * https://www.youtube.com/watch?v=izMMmOaLn9g
 
-### Blogs
-* https://dominicbreuker.com/post/learning_sliver_c2_01_installation/
+### Beginner Friendly Blogs 
 * https://notateamserver.xyz/sliver-101/
-* https://tishina.in/opsec/sliver-opsec-notes
+* https://dominicbreuker.com/post/learning_sliver_c2_01_installation/
 * https://vk9-sec.com/how-to-set-up-use-c2-sliver/
+
+### Opsec Blogs
+* https://tishina.in/opsec/sliver-opsec-notes
 
 ### Threat Intel Reports
 * https://www.microsoft.com/security/blog/2022/08/24/looking-for-the-sliver-lining-hunting-for-emerging-command-and-control-frameworks/
