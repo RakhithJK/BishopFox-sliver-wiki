@@ -17,7 +17,7 @@ There are four major components to the Sliver ecosystem:
 └─────────┘             └───────────────┘
                                ▲
                                │
-                               │mTLS
+                               │gRPC/mTLS
                                │
                           ┌────┴────┐
                           │ Client  │
