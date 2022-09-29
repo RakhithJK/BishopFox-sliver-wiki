@@ -20,8 +20,8 @@ There are four major components to the Sliver ecosystem:
                                │gRPC/mTLS
                                │
                           ┌────┴────┐
+                          │ Sliver  │
                           │ Client  │
-                          │ Console │
                           └─────────┘
 ```
 
