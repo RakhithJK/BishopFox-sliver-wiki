@@ -30,7 +30,7 @@ Both the Sliver server and implant are written in golang. This makes setup of a 
 
 #### [Mythic](https://github.com/its-a-feature/Mythic)
 
-A Mythic deployment consists of several components implemented in a variety of languages, setup of a deployment is relatively automated however isn't as simple as Sliver or Merlin. However, Mythic makes it much easier to integrate 3rd party or modified implants to avoid detection in comparison to Sliver or Merlin. Mythic also features a multi-user web interface making collaboration between operators easy.
+A Mythic deployment consists of several components implemented in a variety of languages, setup of a deployment is relatively automated however isn't as simple as Sliver or Merlin. However, Mythic makes it much easier to integrate 3rd party or modified implants to avoid detection in comparison to Sliver or Merlin. Mythic also features a multi-user web interface making collaboration between operators easy. The stability, features, and stealth of Mythic implants varies depending on the agent implementation you choose, which is important to keep in mind during operational planning. 
 
 #### [Merlin](https://github.com/Ne0nd0g/merlin)
 
