@@ -16,7 +16,7 @@ Throughout this guide and the Sliver code base the following terms of art are us
 
 * __Beacon__ - May refer to (1) a communication pattern where an implant periodically connects to the C2 server as apposed to using a stateful/real time connection (2) [Cobalt Strike's](https://www.cobaltstrike.com/) primary implant, more often called "CS Beacon." In the context of Sliver, "Beacon" specifically refers to a Sliver implant that implements definition (1) communication style.
 
-* __Stage__ - A "stage" or "staged payload" is a method of loading a piece of code, typically over a network, onto a remote machine. Traditionally staging was used in conjunction with exploits that had size limitations. Typically the goal is to execute a small piece of code, the "stager," which in turn loads a larger piece of code. Staged payloads are still used in this way today, however they are also often useful for bypassing anti-virus detection since the majority of the malicious code is loaded directly into memory. Stages are sometimes number e.g. a "stage 0" will load a "stage 1" which loads a "stage 2" payload.
+* __Stage__ - A "stage" or "staged payload" is a method of loading a piece of code, typically over a network, onto a remote machine. Traditionally staging was used in conjunction with exploits that had size limitations. Typically the goal is to execute a small piece of code, i.e. the "stager," which in turn loads a larger piece of code. Staged payloads are still used in this way today, however they are also often useful for bypassing anti-virus detection since the majority of the malicious code is loaded directly into memory. Stages are sometimes number e.g. a "stage 0" will load a "stage 1" which loads a "stage 2" payload.
 
 #### Other C2s
 
