@@ -18,7 +18,23 @@ Throughout this guide and the Sliver code base the following terms of art are us
 
 * __Stage__ - A "stage" or "staged payload" is a method of loading a piece of code, typically over a network, onto a remote machine. Traditionally staging was used in conjunction with exploits that had size limitations. Typically the goal is to execute a small piece of code, i.e. the "stager," which in turn loads a larger piece of code. Staged payloads are still used in this way today, however they are also often useful for bypassing anti-virus detection since the majority of the malicious code is loaded directly into memory. Stages are sometimes number e.g. a "stage 0" will load a "stage 1" which loads a "stage 2" payload.
 
-#### Other C2s
+### Selecting a C2 Framework
 
+You should always choose the right tool for the right job. There are many open source, as well as commercially available C2 frameworks to choose from. A key element to successful red teams, is the ability understand how all these tools work, and when best to apply them given the contextual variables of an operation or action. The [C2 Matrix](https://www.thec2matrix.com/) has a good overview of both commercial and open source frameworks -though the Sliver entry is a bit out of date.
+
+Here is a high level overview of open source frameworks we recommend in addition to Sliver, and some advantages/disadvantages of each:
+
+#### [Sliver](https://github.com/BishopFox/sliver)
+
+Both the Sliver server and implant are written in golang. This makes setup of a basic Sliver deployment as easy as running the server binary. The Sliver implant is also written in Golang, which means it's easy to cross-compile to a variety of platforms. 
+
+#### [Mythic](https://github.com/its-a-feature/Mythic)
+
+A Mythic deployment consists of several components implemented in a variety of languages, setup of a deployment is relatively automated however isn't as simple as Sliver or Merlin. Mythic makes it much easier to integrate 3rd party or modified implants to avoid detection in comparison to Sliver or Merlin.
+
+
+#### [Merlin](https://github.com/Ne0nd0g/merlin)
+
+The Merlin server and implant are also implemented in Golang.
 
 
