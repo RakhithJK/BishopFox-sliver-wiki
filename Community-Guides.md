@@ -17,7 +17,7 @@
 ### Opsec Blogs
 * https://tishina.in/opsec/sliver-opsec-notes
 
-### Development
+### Development Blogs
 * https://github.com/thelikes/blog/blob/master/posts/sliver-bof-dev-quickstart.md 
 
 ### Threat Intel Reports
