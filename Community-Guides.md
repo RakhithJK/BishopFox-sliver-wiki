@@ -17,6 +17,9 @@
 ### Opsec Blogs
 * https://tishina.in/opsec/sliver-opsec-notes
 
+### Development
+* https://github.com/thelikes/blog/blob/master/posts/sliver-bof-dev-quickstart.md 
+
 ### Threat Intel Reports
 * https://www.microsoft.com/security/blog/2022/08/24/looking-for-the-sliver-lining-hunting-for-emerging-command-and-control-frameworks/
 * https://www.team-cymru.com/post/sliver-case-study-assessing-common-offensive-security-tools
