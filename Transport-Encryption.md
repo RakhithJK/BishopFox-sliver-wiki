@@ -16,7 +16,7 @@ The following keys are embedded in each implant at compile time, the server also
 1. Implant generates random 256-bit symmetric "session key"
 2. Implant generates:
  * Current TOTP code using SHA2-256, Unix UTC, 8-digit numeric code
- * SHA256 hash of its own ECC public key
+ * SHA2-256 hash of its own ECC public key
  * Uses Nacl Box (Curve25519, XSalsa20, and Poly1305) to encrypt session key with server's public ECC key
 3. Implant sends `[ TOTP Code | SHA2-256 Hash of Public Key | Nacl Box Ciphertext ]` to server, note: in this scheme no ECC keys (even public keys) are ever sent over the wire, instead we only send the hash of the public key.
 4. Server verifies TOTP Code (can optionally be disabled per listener server-side).
