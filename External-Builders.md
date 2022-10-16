@@ -24,7 +24,7 @@ External builders can also be used to create custom modifications to the implant
 
 #### Setup
 
-Any `sliver-server` binary can be started as a builder process using [operator configuration files from multiplayer-mode](https://github.com/BishopFox/sliver/wiki/Multiplayer-Mode), for example:
+Any `sliver-server` binary can be started as a builder process using [operator configuration files from multiplayer-mode](https://github.com/BishopFox/sliver/wiki/Multiplayer-Mode) from the server you want to connect the builder to, for example:
 
 ```
 ./sliver-server builder -c operator-multiplayer.cfg
