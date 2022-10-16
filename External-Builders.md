@@ -71,3 +71,13 @@ sliver > generate --mtls localhost --os mac --arch arm64 --external-builder
 ```
 
 If a given format/target combination is supported by multiple external builders you will be prompted to select one for the build.
+
+## Implant Customization
+
+You are welcome to customize the implant source code under the terms of Sliver's [GPLv3 license](https://github.com/BishopFox/sliver/blob/master/LICENSE). While we plan to improve the workflow over time, currently the easiest way to operationalize changes to the implant source code is:
+
+1. Fork the main Sliver Github repository
+1. Make modifications to the source code
+1. Compile a Sliver server binary
+1. Connect that Sliver server binary to any other C2 server as an external builder
+1. Operators can generate the customized builds via the `--external-builder` flag
