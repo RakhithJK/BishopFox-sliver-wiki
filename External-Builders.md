@@ -80,4 +80,4 @@ You are welcome to customize the implant source code under the terms of Sliver's
 1. Make modifications to the source code
 1. [Compile a Sliver server binary](https://github.com/BishopFox/sliver/wiki/Compile-From-Source)
 1. Connect the customized Sliver server binary to any other C2 server (including mainline servers) as an external builder
-1. Operators can generate the customized implant builds via the `--external-builder` flag
+1. Operators can generate the customized implant builds via the `generate --external-builder` flag
