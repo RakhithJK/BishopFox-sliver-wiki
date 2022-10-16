@@ -79,5 +79,5 @@ You are welcome to customize the implant source code under the terms of Sliver's
 1. Fork the main Sliver Github repository
 1. Make modifications to the source code
 1. Compile a Sliver server binary
-1. Connect that Sliver server binary to any other C2 server as an external builder
+1. Connect the customized Sliver server binary to any other C2 server (including mainline servers) as an external builder
 1. Operators can generate the customized builds via the `--external-builder` flag
