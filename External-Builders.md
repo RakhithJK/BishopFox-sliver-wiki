@@ -72,6 +72,10 @@ sliver > generate --mtls localhost --os mac --arch arm64 --external-builder
 
 If a given format/target combination is supported by multiple external builders you will be prompted to select one for the build.
 
+#### Limitations
+
+Currently external builds do not support DNS canaries. 
+
 ## Implant Customization
 
 You are welcome to customize the implant source code under the terms of Sliver's [GPLv3 license](https://github.com/BishopFox/sliver/blob/master/LICENSE). While we plan to improve the workflow over time, currently the easiest way to operationalize changes to the implant source code is:
