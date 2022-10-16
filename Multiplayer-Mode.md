@@ -1,5 +1,24 @@
 Multiplayer-mode allows multiple operators (players) to connect to the same Sliver server and collaborate on engagements. The easiest way to setup a server for multiplayer is to use the [Linux install script](https://github.com/BishopFox/sliver/wiki/Linux-Install-Script) which will configure the server as a systemd service. However, any Sliver server binary supports multiplayer mode.
 
+```
+                    ┌──────────────────┐
+                    │                  │
+                    │ Sliver C2 Server │
+                    │                  │
+                    └──────────────────┘
+                            ▲
+                            │
+         gRPC/mTLS          │
+      ┌────────────┬────────┴─────┐
+      │            │              │
+┌─────┴──┐         │              │
+│Windows │    ┌────┴───┐     ┌────┴───┐
+│Operator│    │Linux   │     │MacOS   │
+└────────┘    │Operator│     │Operator│
+              └────────┘     └────────┘
+```
+
+
 ## New Operators
 
 Operators will need to download their preferred platform's client software from the releases page. Clients can connect to servers of differing platforms (e.g. a Windows client can connect to a Linux server). Operators and servers authenticate using Mutual TLS, however all the certificates are managed automatically for you.
