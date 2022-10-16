@@ -2,6 +2,24 @@ Starting in v1.5.30 Sliver supports "external builders," which allow a Sliver se
 
 External builders can also be used to create custom modifications to the implant source code, or potentially replace the default Sliver implant entirely.
 
+```
+          MacOS .dylib Implant Builds
+      ┌─────────────────────────────────────┐
+      │                                     │
+      ▼                                     │
+┌───────────┐                         ┌─────┴─────┐
+│ MacOS     │ Multiplayer             │ Linux     │
+│ Builder   ├────────────────────────►│ Server    │
+│           │                         │           │
+└───────────┘                         └───────────┘
+                                          ▲
+┌───────────┐                             │
+│Windows    │ Multiplayer                 │
+│ Operator  ├─────────────────────────────┘
+│           │
+└───────────┘
+```
+
 ## Builders
 
 #### Setup
