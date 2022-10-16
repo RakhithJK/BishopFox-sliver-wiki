@@ -43,7 +43,7 @@ sliver > builders
 Use the `--external-builder` flag to offload a `generate` or `generate beacon` command onto an external builder:
 
 ```
-[server] sliver > generate --mtls localhost --os mac --arch arm64 --external-builder
+sliver > generate --mtls localhost --os mac --arch arm64 --external-builder
 
 [*] Using external builder: molochs-MacBook-Pro-111.local
 [*] Externally generating new darwin/arm64 implant binary
