@@ -41,7 +41,7 @@ sliver > builders
 
  Name                            Operator   Templates   Platform       Compiler Targets         
 =============================== ========== =========== ============== ==========================
- molochs-MacBook-Pro-111.local   builder    sliver      darwin/arm64   EXECUTABLE:linux/386     
+ molochs-MacBook-Pro-111.local   moloch     sliver      darwin/arm64   EXECUTABLE:linux/386     
                                                                        EXECUTABLE:linux/amd64   
                                                                        EXECUTABLE:windows/386   
                                                                        EXECUTABLE:windows/amd64 
