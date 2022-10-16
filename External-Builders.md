@@ -70,4 +70,4 @@ sliver > generate --mtls localhost --os mac --arch arm64 --external-builder
 [*] Build completed in 1m19s
 ```
 
-If a given format/target combination is supported by multiple external builders you will be prompted to select on for the build.
+If a given format/target combination is supported by multiple external builders you will be prompted to select one for the build.
