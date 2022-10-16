@@ -1,10 +1,10 @@
 Multiplayer-mode allows multiple operators (players) to connect to the same Sliver server and collaborate on engagements. The easiest way to setup a server for multiplayer is to use the [Linux install script](https://github.com/BishopFox/sliver/wiki/Linux-Install-Script) which will configure the server as a systemd service. However, any Sliver server binary supports multiplayer mode.
 
 ```
-                    ┌──────────────────┐
-                    │                  │
-                    │ Sliver C2 Server │
-                    │                  │
+                    ┌──────────────────┐C2
+                    │                  │Protocol ┌─────────┐
+                    │ Sliver C2 Server ├────────►│ Implant │
+                    │                  │         └─────────┘
                     └──────────────────┘
                             ▲
                             │
