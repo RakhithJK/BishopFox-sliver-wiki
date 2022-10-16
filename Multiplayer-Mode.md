@@ -11,10 +11,10 @@ Multiplayer-mode allows multiple operators (players) to connect to the same Sliv
          gRPC/mTLS          │
       ┌────────────┬────────┴─────┬───────────┐
       │            │              │           │
-┌─────┴──┐         │              │      ┌────┴───┐
-│Windows │    ┌────┴───┐     ┌────┴───┐  │Windows │
-│Operator│    │Linux   │     │MacOS   │  │Operator│
-└────────┘    │Operator│     │Operator│  └────────┘
+┌─────┴──┐         │              │        ┌──┴─────┐
+│Windows │    ┌────┴───┐     ┌────┴───┐    │Windows │
+│Operator│    │Linux   │     │MacOS   │    │Operator│
+└────────┘    │Operator│     │Operator│    └────────┘
               └────────┘     └────────┘
 ```
 
