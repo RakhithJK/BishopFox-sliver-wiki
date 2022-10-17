@@ -34,7 +34,7 @@ When started as a builder, the Sliver process will mirror log output to stdout b
 
 __⚠️  IMPORTANT:__ Make sure the builder and server have identical `http-c2.json` configuration files to avoid incompatibility problems.
 
-__⚠️  IMPORTANT:__ Builders must have unique names, by default the builder's hostname will be used.
+__⚠️  IMPORTANT:__ Builders must have unique names, by default the builder's hostname will be used, but this can be changed using the `--name` cli flag.
 
 #### External Builds
 
