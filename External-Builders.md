@@ -1,4 +1,4 @@
-Starting in v1.5.30 Sliver supports "external builders," which allow a Sliver server to offload implant builds onto other systems. This can be used to increase platform support (e.g. connecting a MacBook to a Linux server to enable additional MacOS targets) or increasing performance (e.g. having a low powered cloud host offload a local PC).
+Starting in v1.5.30 Sliver supports "external builders," which allow a Sliver server to offload implant builds onto other systems. This can be used to increase platform support (e.g. connecting a MacBook to a Linux server to enable additional MacOS compiler targets) or increasing performance (e.g. having a low powered cloud host offload a local PC).
 
 External builders can also be used to create custom modifications to the implant source code, or potentially replace the default Sliver implant entirely.
 
