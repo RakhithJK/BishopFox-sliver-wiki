@@ -8,6 +8,7 @@
 * https://www.youtube.com/watch?v=QO_1UMaiWHk
 * https://www.youtube.com/watch?v=izMMmOaLn9g
 * https://www.youtube.com/watch?v=qIbrozlf2wM
+* https://www.youtube.com/watch?v=CKfjLnEMfvI
 
 ### Beginner Friendly Blogs 
 * https://notateamserver.xyz/sliver-101/
