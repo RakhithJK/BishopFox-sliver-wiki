@@ -3,6 +3,9 @@ __NOTE:__ Any platform can cross-compile a standalone executable to any other pl
 Sliver can tell you which platforms it can likely target based on the server's platform and available cross-compilers by running the `generate info` command in the console.
 
 
+Sliver v1.5.30 and later also support [External Builders](https://github.com/BishopFox/sliver/wiki/External-Builders), which can be used to easily cross-compile implants.
+
+
 ## From Linux to MacOS/Windows
 
 To compile Windows shared library and shellcode implants from Linux, install mingw from your local package manager: 
