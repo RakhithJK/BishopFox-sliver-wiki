@@ -1,4 +1,4 @@
-__Important:__ You must have MinGW installed on your Sliver server to get some staged (e.g., Windows DLLs) payloads to work.
+__⚠️  Important:__ You must have MinGW installed on your Sliver server to get some staged (e.g., Windows DLLs) payloads to work.
 
 ## Overview
 
