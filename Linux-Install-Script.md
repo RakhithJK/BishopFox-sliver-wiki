@@ -4,7 +4,7 @@ https://github.com/BishopFox/sliver/blob/master/docs/install
 
 This script should work on Kali, Ubuntu, and RHEL (CentOS, etc) distributions of Linux.
 
-__⚠️ OPSEC:__ By default the Linux install script will bind multiplayer listener to `:31337` i.e. all interfaces. Ensure your firewalls are properly configured if this is a concern, or reconfigure the server to bind to localhost. Multiplayer is implemented using mTLS and per-operator bearer tokens, so this doesn't present a security problem (notwithstanding bugs in our implementation), but publicly exposing your multiplayer listener will make it trivial to identify what the server is running.
+__⚠️ OPSEC:__ By default the Linux install script will bind multiplayer listener to `:31337` i.e. all interfaces. Ensure your firewalls are properly configured if this is a concern, or reconfigure the server to bind to localhost if you only wish to allow local users. Multiplayer Mode is authenticated using mTLS/gRPC and per-operator bearer tokens, so this doesn't present a security problem (notwithstanding bugs in our implementation), but publicly exposing your multiplayer listener will make it trivial to identify what the server is running.
 
 ### One Liner
 
