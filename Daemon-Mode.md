@@ -1,4 +1,4 @@
-Starting in v1.0.0 Sliver supports running in "daemon mode," which automatically starts a client listener (but not an interactive console). In order to connect to a server running in daemon mode you'll need to have already setup and configured [multiplayer mode](https://github.com/BishopFox/sliver/wiki/Multiplayer-Mode). 
+Starting in v1.0.0 Sliver supports running in "daemon mode," which automatically starts a client listener (but not an interactive console). In order to connect to a server running in daemon mode you'll need to use [multiplayer mode](https://github.com/BishopFox/sliver/wiki/Multiplayer-Mode).
 
 There are two ways to start the server in daemon mode:
 
