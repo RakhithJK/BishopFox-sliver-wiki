@@ -1,4 +1,4 @@
-You'll want to compile from a MacOS or Linux machine, compiling from native Windows in theory should be possible, but none of the scripts are designed to run on Windows (you can cross-compile the Windows server/client binaries from a better operating system like Linux or MacOS). If you only have a Windows machine see "Windows Builds" below (TL;DR use WSL).
+You'll want to compile from a MacOS or Linux machine, compiling from native Windows in theory is possible, but none of the asset scripts are designed to run on Windows (you can cross-compile the Windows server/client binaries from a better operating system like Linux or MacOS). If you only have a Windows machine see "Windows Builds" below (TL;DR use WSL).
 
 ### Compile From Source (No Docker)
 
@@ -7,7 +7,7 @@ From scratch without Docker, requirements for compiling:
 * Go v1.18 or later (check with `go version`)
 * `make`, `sed`, `tar`, `curl`, `zip`, `cut` commands; most of these are installed by default but you may need to install `make`, `curl`, and `zip` depending on your distribution. On MacOS you may need to install XCode and accompanying cli tools.
 
-**IMPORTANT:** The Sliver makefile requires version information from the git repository, so you must `git clone` the repository. Using GitHub's "download zip" feature may omit the `.git` directory and result in broken builds.
+**IMPORTANT:** The Sliver Makefile requires version information from the git repository, so you must `git clone` the repository. Using GitHub's "download zip" feature may omit the `.git` directory and result in broken builds.
 
 #### Compiling
 
@@ -18,13 +18,9 @@ $ git clone https://github.com/BishopFox/sliver.git
 $ cd sliver
 ```
 
-Sliver embeds its own copy of the Go compiler and related tools. Run the following script to download these static assets. You only need to do this once before running `make`:
+Sliver embeds its own copy of the Go compiler and a few internal tools, the first time your run `make` a bash script will run to download these assets to your local system. This means the first build will take much longer than subsequent builds, especially if your internet connection is slow.
 
-```
-$ ./go-assets.sh
-```
-
-Then compile the code, by default `make` will build whatever platform you're currently running on:
+By default `make` will build whatever platform you're currently running on:
 
 ```
 $ make
@@ -40,6 +36,7 @@ You can also specify a target platform for the `make` file, though you may need 
 $ make macos
 $ make macos-arm64
 $ make linux
+$ make linux-arm64
 $ make windows
 ```
 
