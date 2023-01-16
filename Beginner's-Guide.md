@@ -26,7 +26,7 @@ Here is a high level overview of open source frameworks we recommend in addition
 
 #### [Sliver](https://github.com/BishopFox/sliver)
 
-Both the Sliver server and implant are written in golang. This makes setup of a basic Sliver deployment as easy as running the server binary. The Sliver implant is also written in Golang, which means it's easy to cross-compile to a variety of platforms. 
+Both the Sliver server and implant are written in Golang (the Go programming language). This makes setup of a basic Sliver deployment as easy as running the server binary. The Sliver implant is also written in Golang, which means it's easy to cross-compile to a variety of platforms. However, the tradeoff here is that the executable files (e.g., a .exe) can be sizable (up to 20Mb depending on options), as in life nothing is free.
 
 #### [Mythic](https://github.com/its-a-feature/Mythic)
 
