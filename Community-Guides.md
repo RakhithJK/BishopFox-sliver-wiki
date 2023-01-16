@@ -22,8 +22,12 @@
 ### Development Blogs
 * https://github.com/thelikes/blog/blob/master/posts/sliver-bof-dev-quickstart.md 
 
+### Detection & Analysis
+* https://blogs.vmware.com/security/2023/01/detection-of-lateral-movement-with-the-sliver-c2-framework.html
+* https://michaelkoczwara.medium.com/sliver-c2-implant-analysis-62773928097f
+* https://blog.tofile.dev/2021/09/04/sliver.html
+
 ### Threat Intel Reports
 * https://www.microsoft.com/security/blog/2022/08/24/looking-for-the-sliver-lining-hunting-for-emerging-command-and-control-frameworks/
 * https://www.team-cymru.com/post/sliver-case-study-assessing-common-offensive-security-tools
-* https://blog.tofile.dev/2021/09/04/sliver.html
 * https://www.ncsc.gov.uk/files/Advisory%20Further%20TTPs%20associated%20with%20SVR%20cyber%20actors.pdf
