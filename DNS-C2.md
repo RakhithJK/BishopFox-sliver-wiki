@@ -137,12 +137,13 @@ To account for this, Sliver wraps the message of `n` bytes in a protobuf message
 message DNSMessage {
     DNSMessageType Type = 1; // An enum type
     uint32 ID = 2; // 8 bit message id + 24 bit dns session ID
-    uint32 Start = 3; // Bytes start at
-    uint32 Stop = 4; // Bytes stop at
-    uint32 Size = 5; // Total size
+    uint32 Start = 3; // These bytes of `Data` start at
+    uint32 Stop = 4; // These bytes of `Data` stop at
+    uint32 Size = 5; // Total message size (e.g. last message Stop = Size)
     bytes Data = 6; // Actual data
 }
 ```
 
 This does result in some overhead, and we must account for this as part of the bytes-per-query math.
 
+Since each message contains ordering and size data the server can now receive any part of the message in any order and sort/reconstruct the original message. 
