@@ -1,6 +1,6 @@
 ⚠️  This page describes an unreleased feature from an upcoming version ⚠️
 
-As of v1.6.0 Sliver supports user-defined "Traffic Encoders," which can be used to arbitrarily modify the Sliver implant's network communication traffic over HTTP(S). Traffic Encoders are WASM-based callback functions that encode/decode network traffic between the implant and the server. Traffic encoders can be written in any language that compiles to WASM. 
+As of v1.6.0 Sliver supports user-defined "Traffic Encoders," which can be used to arbitrarily modify the Sliver implant's network communication over HTTP(S). Traffic Encoders are WASM-based callback functions that encode/decode network traffic between the implant and the server. Traffic encoders can be written in any language that compiles to WASM. 
 
 [Examples](https://github.com/BishopFox/sliver/tree/v1.6.0/master/server/assets/traffic-encoders) are provided in this repository of a [Rust](https://www.rust-lang.org/)-based and a [TinyGo](https://tinygo.org/)-based encoder. For performance reasons we recommend implementing Traffic Encoders in Rust. 
 
