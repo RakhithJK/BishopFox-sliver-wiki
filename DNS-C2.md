@@ -146,4 +146,4 @@ message DNSMessage {
 
 This does result in some overhead, and we must account for this as part of the bytes-per-query math.
 
-Since each message contains ordering and size data the server can now receive any part of the message in any order and sort/reconstruct the original message. 
+Since each message contains ordering and size data the server can now receive any part of the message in any order and sort/reconstruct the original message once all the pieces have been received. 
