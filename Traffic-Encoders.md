@@ -14,8 +14,8 @@ Traffic encoders are implemented in WASM, and must export the following function
 decode(ptr, size uint32) (ptrSize uint64)
 encode(ptr, size uint32) (ptrSize uint64)
 
-malloc(size uint64)
-free(ptr uint64)
+malloc(size uint32) uint64
+free(ptr uint32, size uint32)
 ```
 
 The `encode` function takes a `uint32` pointer to a buffer and the `uint32` size of the buffer, and returns a `uint64` value where the upper 32 bits are a pointer to the address of the buffer and the lower 32 bits are the size of the buffer.
@@ -24,7 +24,7 @@ The `decode` function takes a `uint32` pointer to a buffer and the `uint32` size
 
 The `malloc` function takes a `uint64` size. The function should allocate a buffer of the given size in bytes, and return a pointer to.
 
-The `free` function takes a pointer to memory which should be freed.
+The `free` function takes a pointer to memory which should be freed and a size.
 
 
 For example, a return value in Go may look like:
