@@ -11,7 +11,6 @@ Traffic encoders are implemented in WASM, and must export the following function
 decode(ptr, size uint32) (ptrSize uint64)
 encode(ptr, size uint32) (ptrSize uint64)
 
-// These will typically be exported for you by the language runtime
 malloc(size uint64)
 free(ptr uint64)
 ```
