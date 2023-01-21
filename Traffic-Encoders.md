@@ -4,7 +4,7 @@ As of v1.6.0 Sliver supports user-defined "Traffic Encoders," which can be used 
 
 [Example](https://github.com/BishopFox/sliver/tree/v1.6.0/master/server/assets/traffic-encoders) are provided in this repository of a [Rust](https://www.rust-lang.org/)-based and a [TinyGo](https://tinygo.org/)-based encoder. For performance reasons we recommend implementing Traffic Encoders in Rust. 
 
-For performance reasons, by default C2 messages over 2Mb are NOT passed through user-defined Traffic Encoders, but instead always use a native built-in encoder.
+For performance reasons, by default C2 messages over 2Mb in size are NOT passed through user-defined Traffic Encoders, but instead always use a native built-in encoder; this limit can be configured at compile-time.
 
 ### Traffic Encoder Specification
 
