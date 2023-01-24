@@ -1,4 +1,4 @@
-You'll want to compile from a MacOS or Linux machine, compiling from native Windows in theory is possible, but none of the asset scripts are designed to run on Windows (you can cross-compile the Windows server/client binaries from a better operating system like Linux or MacOS). If you only have a Windows machine see "Windows Builds" below (TL;DR use WSL).
+You'll want to compile from a MacOS or Linux machine, compiling from native Windows in theory is possible, but none of the asset scripts are designed to run on Windows, you can cross-compile the Windows server/client binaries from a better operating system like Linux or MacOS. If you only have a Windows machine see "Windows Builds" below (TL;DR use WSL).
 
 ### Compile From Source (No Docker)
 
