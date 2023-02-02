@@ -8,7 +8,7 @@ For performance reasons, by default C2 messages over 2Mb in size are NOT passed 
 
 ### Traffic Encoder Specification
 
-Traffic encoders are implemented in WASM, and must export the following functions:
+Traffic encoders are implemented in Wasm, and must export the following functions:
 
 ```go
 decode(ptr, size uint32) (ptrSize uint64)
